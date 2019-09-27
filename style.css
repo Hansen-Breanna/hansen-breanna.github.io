@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- header ----- */
+
+header, footer {
+    background-color: slategray;
+    color: #fff;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+.page-header {
+    display: block;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* ----- body ----- */
+
+main {
+    margin: auto;
+    width: 90%;
+}
+
+.sub-topics {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        width: 100%;
+    }
+    .sub-topics {
+        flex-flow: row wrap;
+    }
+    .link-list {
+        background-color: lightgray;
+        width: 15%;
+    }
+    .content-body {
+        width: 70%;
+    }
+    .content-body, .link-list {
+        padding: 20px 50px;
+    }
+} 

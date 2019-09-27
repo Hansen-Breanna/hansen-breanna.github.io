@@ -5,10 +5,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
 </head>
 <body>
-    <h1>JavaScript - Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
-    <p>Add info to this topic as you learn it.</p>
-    <p></p>
+
+    <header>
+        <h1><span class="page-header">Javascript</span>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
+    </header>
+
+    <main>        
+        <article class="sub-topics">
+            <aside class="link-list">
+                <h3>Link List</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.w3schools.com/js/js_loop_for.asp">W3Schools - JavaScript For Loop</a>
+                    </li>
+                    <li>
+                        <a href="https://www.learn-js.org/en/Loops">Learn-JS.org - Loops</a>
+                    </li>
+                    <li>
+                        <a href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php">JavaScript Loops</a>
+                    </li>
+                    <li>
+                            <a href="https://www.amazon.com/gp/product/0996246312/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=budgetmealrecipesfb-20&creative=9325&link
+                            Code=as2&creativeASIN=0996246312&linkId=5d6ad19b9c692678db3fc8bcabde53d3">The Handbook for Beginning Programmers with Examples in JavaScript</a> by Rex Barzee
+                    </li>
+                </ul>
+                
+            </aside>
+            <div class="content-body">
+                <h2>
+                    Loops
+                </h2>
+
+                <p>W3Schools states that Loops can execute a block of code a number of times. Loops are handy, if you want to run the 
+                    same code over and over again, each time with a different value. This saves you from having to retype code over and over again.</p>
+
+                <h3>Five Different Kinds of Loops</h3>
+                <ol>
+                    <li>
+                        <p>for - loops through a block of code a number of times</p>
+                        <h4>Syntax</h4>
+                        <pre>
+                                for (statement 1; statement 2; statement 3) {
+                                    // code block to be executed
+                                  }
+                        </pre>
+                        <h4>Example</h4>
+                        <pre>
+                                var i;
+                                for (i = 0; i &#60; cars.length; i++) {
+                                  text += cars[i];
+                                }
+                        </pre>
+                    </li>
+                    <li>
+                        <p>for/in - loops through the properties of an object</p>
+                        <h4>Syntax</h4>
+                        <h4>Example</h4>
+                        <pre>
+                                var person = {fname:"John", lname:"Doe", age:25};
+
+                                var text = "";
+                                var x;
+                                for (x in person) {
+                                  text += person[x];
+                                }
+                        </pre>
+                    </li>
+                    <li>for/of - loops through the values of an iterable object
+                        <h4>Syntax</h4>
+                        <pre>
+                                for (variable of iterable) {
+                                    // code block to be executed
+                                  }
+                        </pre>
+                        <h4>Example</h4>
+                        <pre>
+                                var cars = ['BMW', 'Volvo', 'Mini'];
+                                var x;
+                                
+                                for (x of cars) {
+                                  document.write(x + "<br >");
+                                }
+                        </pre>
+                    </li>
+                    <li>while - loops through a block of code while a specified condition is true</li>
+                        <pre>
+                            var i = 1;
+                            while (i &#60; 3) {
+                                window.alert(i);
+                                i++;
+                            }
+                        </pre>
+                    <li>do/while - also loops through a block of code while a specified condition is true</li>
+                </ol>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s9wW2PpJsmQ" frameborder="0" allow="accelerometer; autoplay;
+                     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </article>
+
+        <article class="sub-topics">
+            <aside class="link-list">
+                <h3>Link List</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </aside>
+            <div class="content-body">
+               <h2>Conditional Statements</h2>
+            </div>
+        </article>
+
+        <article class="sub-topics">
+                <aside class="link-list">
+                    <h3>Link List</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </aside>
+                <div class="content-body">
+                   <h2>Functions</h2>
+                </div>
+            </article>
+
+            <article class="sub-topics">
+                    <aside class="link-list">
+                        <h3>Link List</h3>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                    <div class="content-body">
+                       <h2>Variables</h2>
+                    </div>
+                </article>
+
+                <article class="sub-topics">
+                        <aside class="link-list">
+                            <h3>Link List</h3>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </aside>
+                        <div class="content-body">
+                           <h2>Parameters</h2>
+                        </div>
+                    </article>
+
+                    <article class="sub-topics">
+                            <aside class="link-list">
+                                <h3>Link List</h3>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </aside>
+                            <div class="content-body">
+                               <h2>Arrays</h2>
+                            </div>
+                        </article>
+
+                        <article class="sub-topics">
+                                <aside class="link-list">
+                                    <h3>Link List</h3>
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </aside>
+                                <div class="content-body">
+                                   <h2>Associate Arrays</h2>
+                                </div>
+                            </article>
+    </main>
+
+    <footer>
+        
+    </footer>
 </body>
 </html>
