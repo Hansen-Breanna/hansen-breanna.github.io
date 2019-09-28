@@ -1,4 +1,5 @@
 body {
+    background-color: #bababa;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,10 +8,11 @@ body {
 /* ----- header ----- */
 
 header, footer {
-    background-color: slategray;
+    background-color: #244d78;
+    background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
     color: #fff;
     margin: 0;
-    padding: 40px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -21,31 +23,83 @@ header, footer {
     text-transform: uppercase;
 }
 
+/* ----- nav ----- */
+
+nav {
+    background-color: #244873;
+    background-image: repeating-linear-gradient(to right, #3c76a6, #244873, #3c76a6);
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    color: white;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
 /* ----- body ----- */
 
 main {
-    margin: auto;
-    width: 90%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
 }
-
 .sub-topics {
     display: flex;
     flex-flow: column nowrap;
 }
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: #2a5381;
+    color: #fff;
+}
+th, td {
+    border: 1px solid #000;
+    margin: 0;
+    padding: 5px;
+}
 
 @media only screen and (min-width: 800px) {
+    header {
+        height: auto;
+    }
+    nav ul {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+    nav li {
+        display: inline-block;
+    }
     main {
-        width: 100%;
+        max-width: 1200px;
+        padding: 0;
     }
     .sub-topics {
         flex-flow: row wrap;
     }
     .link-list {
-        background-color: lightgray;
         width: 15%;
     }
     .content-body {
-        width: 70%;
+        width: 68%;
+    }
+    .double-column {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
     }
     .content-body, .link-list {
         padding: 20px 50px;

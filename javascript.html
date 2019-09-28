@@ -13,25 +13,57 @@
         <h1><span class="page-header">Javascript</span>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>JavaScript</li>
+            <li>Objects</li>
+            <li>JSON</li>
+            <li>AJAX</li>
+            <li>Local Storage</li>
+            <li><a href="DOM.html">DOM</a></li>
+            <li>CSS Class Properties Using JavaScript</li>
+            <li>CSS Transition with Animations</li>
+            <li>JavaScript Events</li>
+            <li>HTML5 Tags</li>
+            <li>CSS3 Transitions</li>
+            <li>CSS3 Transforms</li>
+            <li>CSS3 Animations</li>
+        </ul>
+    </nav>
+
     <main>        
         <article class="sub-topics">
             <aside class="link-list">
                 <h3>Link List</h3>
                 <ul>
                     <li>
-                        <a href="https://www.w3schools.com/js/js_loop_for.asp">W3Schools - JavaScript For Loop</a>
+                        <a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">W3Schools - JavaScript For Loop</a>
                     </li>
                     <li>
-                        <a href="https://www.learn-js.org/en/Loops">Learn-JS.org - Loops</a>
+                        <a href="https://www.learn-js.org/en/Loops"> target="_blank"Learn-JS.org - Loops</a>
                     </li>
                     <li>
-                        <a href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php">JavaScript Loops</a>
+                        <a href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-loops.php" target="_blank">JavaScript Loops</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/jsref/jsref_forin.asp" target="_blank">W3Schools - For/in Loops</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank">W3Schools - While Loops</a>
                     </li>
                     <li>
                             <a href="https://www.amazon.com/gp/product/0996246312/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=budgetmealrecipesfb-20&creative=9325&link
-                            Code=as2&creativeASIN=0996246312&linkId=5d6ad19b9c692678db3fc8bcabde53d3">The Handbook for Beginning Programmers with Examples in JavaScript</a> by Rex Barzee
+                            Code=as2&creativeASIN=0996246312&linkId=5d6ad19b9c692678db3fc8bcabde53d3" target="_blank">The Handbook for Beginning Programmers with Examples in JavaScript</a> by Rex Barzee
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?time_continue=6&v=s9wW2PpJsmQ" target="_blank">JavaScript Loops - Video</a>
+                    </li>
+                    <li>
+                        <a href="https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-these-incredible-tricks-a5da1aa1d6c5/">Master the art of looping in JavaScript with these incredible tricks</a>
                     </li>
                 </ul>
+                <h3><a href="https://byui.zoom.us/recording/share/88PKX-Wn52dfc5b_D-Qco85nqF4scwJwrIXAvuKbyGuwIumekTziMw">Zoom recording - starts at 21:49</a></h3>
                 
             </aside>
             <div class="content-body">
@@ -43,26 +75,60 @@
                     same code over and over again, each time with a different value. This saves you from having to retype code over and over again.</p>
 
                 <h3>Five Different Kinds of Loops</h3>
-                <ol>
-                    <li>
-                        <p>for - loops through a block of code a number of times</p>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td>for</td>
+                        <td>loops through a block of code a number of times</td>
+                    </tr>
+                    <tr>
+                        <td>for&sol;in</td>
+                        <td>for&sol;in - loops through the properties of an object</td>
+                    </tr>
+                    <tr>
+                        <td>for&sol;of</td>
+                        <td>for&sol;of - loops through the values of an iterable object</td>
+                    </tr>
+                    <tr>
+                        <td>while</td>
+                        <td>while - loops through a block of code while a specified condition is true</td>
+                    </tr>
+                    <tr>
+                        <td>do&sol;while</td>
+                        <td>do&sol;while - also loops through a block of code while a specified condition is true</td>
+                    </tr>
+                </table>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/s9wW2PpJsmQ" frameborder="0" allow="accelerometer; autoplay;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div>
+                    <h3>For</h3>
+                    <div class="double-column">
+                        <div>
+                            <h4>Syntax</h4>
+                            <img src="images/syntax/for-loop-syntax.JPG" alt="For Loop Syntax">
+                        </div>
+                        <div>
+                            <h4>Example</h4>
+                            <p>DOM Elements can be styled with a For loop. The links and headings on this page are styled with JavaScript For loops, as the example below shows.</p>
+                            <img src="images/scripts/for-loop-script-for-link-styling.JPG" alt="Link Style For Loop Source Code">
+                            <img src="images/scripts/for-loop-script-for-heading-styles.JPG" alt="Heading Style For Loop Source Code"
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                        <h3>For/in</h3>
                         <h4>Syntax</h4>
                         <pre>
-                                for (statement 1; statement 2; statement 3) {
-                                    // code block to be executed
+                                for (var in object) {
+                                    code block to be executed
                                   }
                         </pre>
-                        <h4>Example</h4>
-                        <pre>
-                                var i;
-                                for (i = 0; i &#60; cars.length; i++) {
-                                  text += cars[i];
-                                }
-                        </pre>
-                    </li>
-                    <li>
-                        <p>for/in - loops through the properties of an object</p>
-                        <h4>Syntax</h4>
                         <h4>Example</h4>
                         <pre>
                                 var person = {fname:"John", lname:"Doe", age:25};
@@ -73,8 +139,10 @@
                                   text += person[x];
                                 }
                         </pre>
-                    </li>
-                    <li>for/of - loops through the values of an iterable object
+                </div>
+
+                <div>
+                        <h3>For/of</h3>
                         <h4>Syntax</h4>
                         <pre>
                                 for (variable of iterable) {
@@ -90,8 +158,17 @@
                                   document.write(x + "<br >");
                                 }
                         </pre>
-                    </li>
-                    <li>while - loops through a block of code while a specified condition is true</li>
+                </div>
+
+                <div>
+                        <h3>While</h3>
+                        <h4>Syntax</h4>
+                        <pre>
+                                while (condition) {
+                                    // code block to be executed
+                                  }
+                        </pre>
+                        <h4>Example</h4>
                         <pre>
                             var i = 1;
                             while (i &#60; 3) {
@@ -99,10 +176,11 @@
                                 i++;
                             }
                         </pre>
-                    <li>do/while - also loops through a block of code while a specified condition is true</li>
-                </ol>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/s9wW2PpJsmQ" frameborder="0" allow="accelerometer; autoplay;
-                     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div>
+                    <h3>Do/while</h3>
+                </div>
             </div>
         </article>
 
@@ -110,11 +188,60 @@
             <aside class="link-list">
                 <h3>Link List</h3>
                 <ul>
-                    <li></li>
+                    <li>
+                        <a href="https://www.w3schools.com/jsref/jsref_if.asp" target="_blank">JavaScript if/else Statement</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank">if...else</a>
+                    </li>
+                    <li>
+                        <a href="https://www.guru99.com/how-to-use-conditional-statements-in-javascript.html" target="_blank">JavaScript Conditional Statements: If, Else, Else If (Example)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=IsG4Xd6LlsM" target="_blank">JavaScript if...else - video</a>
+                    </li>
                 </ul>
             </aside>
             <div class="content-body">
                <h2>Conditional Statements</h2>
+               <p>The if/else statement executes a block of code if a specified condition is true. If the condition is false, another block of code can be executed.</p>
+               <img src="https://www.guru99.com/images/JavaScript/javascript5_1.png" alt="JavaScript Conditional Statements">
+               
+               <h3>3 Different Kinds of Conditional Statements</h3><ol>
+                   <li>if statement</li>
+                   <li>if...else statement</li>
+                   <li>if...else if...else statement</li>
+               </ol>
+
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/IsG4Xd6LlsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+               <div class="double-column">
+                    <div>
+                        <h4>Syntax</h4>
+                        <pre>
+                                if (condition) {
+                                    // block of code to be executed if the condition is true
+                                  } else {
+                                    // block of code to be executed if the condition is false
+                                  }
+                        </pre>
+                    </div>
+                    <div>
+                        <h4>Example</h4>
+                        <pre>
+                                function testNum(a) {
+                                    if (a > 0) {
+                                      return "positive";
+                                    } else {
+                                      return "NOT positive";
+                                    }
+                                  }
+                                  
+                                  console.log(testNum(-5));
+                                  // expected output: "NOT positive"
+                        </pre>
+                    </div>
+               </div>
             </div>
         </article>
 
@@ -122,65 +249,156 @@
                 <aside class="link-list">
                     <h3>Link List</h3>
                     <ul>
-                        <li></li>
+                        <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a></li>
                     </ul>
                 </aside>
                 <div class="content-body">
                    <h2>Functions</h2>
+                   <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+                   <div class="double-column">
+                       <div>
+                           <h4>Syntax</h4>
+                           <pre>
+                                function name(parameter1, parameter2, parameter3) {
+                                    // code to be executed
+                                  }
+                           </pre>
+                       </div>
+                       <div>
+                           <h4>Example</h4>
+                           <pre>
+                               <code>
+                                    var x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+                                    function myFunction(a, b) {
+                                    return a * b;             // Function returns the product of a and b
+                                    }
+                                </code>
+                           </pre>
+                       </div>
+                   </div>
                 </div>
             </article>
 
             <article class="sub-topics">
-                    <aside class="link-list">
-                        <h3>Link List</h3>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </aside>
-                    <div class="content-body">
-                       <h2>Variables</h2>
+                <aside class="link-list">
+                    <h3>Link List</h3>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank">JavaScript Variables</a></li>
+                    </ul>
+                </aside>
+                <div class="content-body">
+                    <h2>Variables</h2>
+                    <p>JavaScript variables are named containers for storing data values.</p>
+                    <h3>JavaScript Identifiers Naming Rules</h3>
+                    <ul>
+                        <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+                        <li>Names must begin with a letter, &, or _</li>
+                        <li>Names are case sensitive</li>
+                        <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+                    </ul>
+                    <pre>
+                        var x = 5;
+                        var costOfMeal = $20.15
+                        var text = document.getElementById('celsiusInputBox').value;
+                    </pre>
+                    <h3>JavaScript Variable Types</h3>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Purpose</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>stores true or false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>a number with or without a decimal point</td>
+                            <td>74.3</td>
+                        </tr>
+                        <tr>
+                            <td>string</td>
+                            <td>a string of text</td>
+                            <td>"San Diego"</td>
+                        </tr>
+                        <tr>
+                            <td>function</td>
+                            <td>a part of a program created using the keyword function</td>
+                            <td>function () {return 27;}</td>
+                        </tr>
+                        <tr>
+                            <td>object</td>
+                            <td>an object such as an Array or Date</td>
+                            <td>{name: "Sam", phone:"1788"}</td>
+                        </tr>
+                    </table>
+                    <h4>Working Example</h4>
+                    <script type="text/javascript">
+                    /* Defining table
+                    *Input: A person's name
+                    *Procesing: Create a greeting for that person *Output: The greeting
+                    */
+                    function greetUser(){
+                        //This line prompts the user to type in his name.
+                        var name = window.prompt("Please enter your name");
+                        
+                        //Create a personalized greeting for the user.
+                        var greeting = "Hello " + name + ". It is nice to meet you.";
+                        
+                        //The next line causes the computer to display a greeting to the user in a popup window.
+                        window.alert(greeting);
+                    }
+                    </script>
+                    <div>
+                        <button type="button" onclick="greetUser()">Hello</button>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="sub-topics">
-                        <aside class="link-list">
-                            <h3>Link List</h3>
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </aside>
-                        <div class="content-body">
-                           <h2>Parameters</h2>
-                        </div>
-                    </article>
+            <article class="sub-topics">
+                <aside class="link-list">
+                    <h3>Link List</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </aside>
+                <div class="content-body">
+                    <h2>Parameters</h2>
+                </div>
+            </article>
 
-                    <article class="sub-topics">
-                            <aside class="link-list">
-                                <h3>Link List</h3>
-                                <ul>
-                                    <li></li>
-                                </ul>
-                            </aside>
-                            <div class="content-body">
-                               <h2>Arrays</h2>
-                            </div>
-                        </article>
+            <article class="sub-topics">
+                <aside class="link-list">
+                    <h3>Link List</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </aside>
+                <div class="content-body">
+                    <h2>Arrays</h2>
+                </div>
+            </article>
 
-                        <article class="sub-topics">
-                                <aside class="link-list">
-                                    <h3>Link List</h3>
-                                    <ul>
-                                        <li></li>
-                                    </ul>
-                                </aside>
-                                <div class="content-body">
-                                   <h2>Associate Arrays</h2>
-                                </div>
-                            </article>
+            <article class="sub-topics">
+                <aside class="link-list">
+                    <h3>Link List</h3>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </aside>
+                <div class="content-body">
+                    <h2>Associate Arrays</h2>
+                </div>
+            </article>
     </main>
 
     <footer>
         
     </footer>
+
+    <script src="scripts/styles.js"></script>
 </body>
 </html>

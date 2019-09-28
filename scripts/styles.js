@@ -1,0 +1,21 @@
+/* ----- LINKS ----- */
+
+//Change all links to a certain color
+var links = document.querySelectorAll("a");
+for (var i= 0; i < links.length; i++) {
+    links[i].style.color = "#2477CA";
+}
+
+//Change all visited links to a certain color
+var visitedLinks = document.querySelectorAll("a:visited");
+for (var i = 0; i < visitedLinks.length; i++) {
+    visitedLinks[i].style.color = "#6e7822";
+}
+
+/* ----- HEADINGS ----- */
+
+//Change all h2 tags to a certain color
+var headings = document.querySelectorAll("h2, h3, h4, h5, h6");
+for (var i = 0; i < headings.length; i++) {
+    headings[i].style.color = "#244873";
+}
