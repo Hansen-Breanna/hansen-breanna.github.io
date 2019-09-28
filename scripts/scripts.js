@@ -9,3 +9,5 @@ var h2 = document.querySelectorAll("h2");
 for (var i = 0; i < h2.length; i++) {
     h2[i].style.color = "green";
 }
+
+/* ----- footer ----- */
