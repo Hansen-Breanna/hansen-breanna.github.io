@@ -1,13 +1,13 @@
-//Change all links to a certain color
-var links = document.querySelectorAll("a");
-for (var i= 0; i < links.length; i++) {
-    links[i].style.color = "red";
-}
+/* ----- Working Examples ----- */
 
-//Change all h2 tags to a certain color
-var h2 = document.querySelectorAll("h2");
-for (var i = 0; i < h2.length; i++) {
-    h2[i].style.color = "green";
-}
-
-/* ----- footer ----- */
+//Object Reference Using Bracket Notation
+var navMenu = {
+    javascript: "javascript.html",
+    object : "javascript-objects.html",
+    json     :  "json.html"
+};
+    // Display some data from the object:
+document.getElementById("objReference").innerHTML =
+"Uses bracket notation to reference<br>" + navMenu["javascript"];
+document.getElementById("objReferenceDot").innerHTML =
+"Uses dot method to reference<br>" + navMenu.javascript;

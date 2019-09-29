@@ -6,6 +6,11 @@ for (var i= 0; i < links.length; i++) {
     links[i].style.color = "#2477CA";
 }
 
+var navli = document.querySelectorAll("nav * a");
+for (var i = 0; i < navli.length; i++) {
+    navli[i].style.color = "#ffffff";
+}
+
 //Change all visited links to a certain color
 var visitedLinks = document.querySelectorAll("a:visited");
 for (var i = 0; i < visitedLinks.length; i++) {
@@ -15,7 +20,7 @@ for (var i = 0; i < visitedLinks.length; i++) {
 /* ----- HEADINGS ----- */
 
 //Change all h2 tags to a certain color
-var headings = document.querySelectorAll("h2, h3, h4, h5, h6");
+var headings = document.querySelectorAll("main * h2, h3, h4, h5, h6");
 for (var i = 0; i < headings.length; i++) {
     headings[i].style.color = "#244873";
 }
