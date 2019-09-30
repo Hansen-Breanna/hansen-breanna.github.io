@@ -1,6 +1,6 @@
 {
-    home : "index.html",
-    javascript : "javascript.html",
-    javaScriptObjects : "javascript-objects.html",
-    JSON : "json.html",
+    "home" : "index.html",
+    "javascript" : "javascript.html",
+    "javaScriptObjects" : "javascript-objects.html",
+    "JSON" : "json.html"
 }

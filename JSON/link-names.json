@@ -1,23 +1,23 @@
 {
-    home : "index.html",
-    weeklyReflections : [
-        { week1 : "week-1-reflection.html",
-          week2 : "week-2-reflection.html",
-          week3 : "week-3-reflection.html",
-          week4 : "week-4-reflection.html",
-          week5 : "week-5-reflection.html",
-          week6 : "week-6-reflection.html",
-          week7 : "week-7-reflection.html",
-          week8 : "week-8-reflection.html",
-          week9 : "week-9-reflection.html",
-          week10 : "week-10-reflection.html",
-          week11 : "week-11-reflection.html",
-          week12 : "week-12-reflection.html",
-          week13 : "week-13-reflection.html",
-          week14 : "week-14-reflection.html"
+    "home" : "index.html",
+    "weeklyReflections" : [
+        { "week1" : "week-1-reflection.html",
+          "week2" : "week-2-reflection.html",
+          "week3" : "week-3-reflection.html",
+          "week4" : "week-4-reflection.html",
+          "week5" : "week-5-reflection.html",
+          "week6" : "week-6-reflection.html",
+          "week7" : "week-7-reflection.html",
+          "week8" : "week-8-reflection.html",
+          "week9" : "week-9-reflection.html",
+          "week10" : "week-10-reflection.html",
+          "week11" : "week-11-reflection.html",
+          "week12" : "week-12-reflection.html",
+          "week13" : "week-13-reflection.html",
+          "week14" : "week-14-reflection.html"
         }
     ],
-    javascript : "javascript.html",
-    javaScriptObjects : "javascript-objects.html",
-    JSON : "json.html",
+    "javascript" : "javascript.html",
+    "javaScriptObjects" : "javascript-objects.html",
+    "JSON" : "json.html",
 }

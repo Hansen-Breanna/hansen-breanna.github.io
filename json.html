@@ -41,6 +41,8 @@
                     Programming A Brain-Friendly Guide</a>
                 </li>
                 <li><a href="https://www.w3schools.com/js/js_json_intro.asp">JSON - Introduction</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a></li>
+                <li><a href="http://jsoneditoronline.org/>JSON Editor Online</li>
             </ul>
         </section>
 
@@ -53,14 +55,14 @@
                 <h3>Example of a String</h3>
                 <p>Note the single quotes around the object. This object has been made into a string and can be passed through the server.
                     Since the string contains double quotes, then single quotes have to be used to create the string to not confuse the 
-                    server.</p>
-<pre><code>var menu = '{ javascript : "javascript.html", objects : "javascript-objects.html", JSON : "json.html" }';</code></pre>
+                    server. Property names must also be double-quoted strings. There is no comma after the last key:value pair.</p>
+<pre><code>var menu = '{ "javascript" : "javascript.html", "objects" : "javascript-objects.html", "JSON" : "json.html" }';</code></pre>
             </section>
 
             <section>
-                <p>In order to send the string or object back and forth and be usable, it needs to be changed. To take a JSON string and 
-                    turn it into an object we need to use <code>JSON.parse</code>. To do the opposite and  turn it into a string we need
-                    to use <code>JSON.stringify</code>.
+                <p>In order to send the string or object back and forth between a browser and a server, it needs to be changed. To take a JSON string and 
+                    turn it into an object we need to use <code>JSON.parse()</code>. To do the opposite and  turn it into a string we need
+                    to use <code>JSON.stringify()</code>.
                 </p>
 
 
