@@ -34,11 +34,12 @@
        var nav = JSON.parse(newNav.responseText);
        console.log(nav.urlList);
        var finalString = "";
-       for(var i=0; i<nav.urlList.length; i++){
+       for(var i = 0; i < nav.urlList.length; i++){
          var navItem = nav.urlList[i];
-         finalString += "<a href='" + navItem.url + "'>" + navItem.name + "</a><br>";
+         finalString += "<li class='jsonList'><a style='color:#fff;' href='" + navItem.url + "'>" + 
+         navItem.name + "</a></li><br>";
        }
-       document.getElementById('nav-menu').innerHTML = finalString;
+       document.getElementById('nav-menu').innerHTML = "<ul>" + finalString + "</ul>";
        console.log(nav);
    }
 

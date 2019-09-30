@@ -38,6 +38,9 @@ nav {
     color: #fff;
     padding: 10px;
 }
+nav a {
+    text-decoration: none;
+}
 nav p {
     color: #fff;
     margin: 0;
@@ -50,10 +53,13 @@ nav ul {
     padding: 0;
 }
 nav ul li {
-    color: white;
     font-size: 0.8em;
     margin: 0;
-    padding: 10px;
+    padding: 10px;  
+}
+
+li.jsonList {
+    padding: 0 10px;
 }
 
 /* ----- body ----- */
