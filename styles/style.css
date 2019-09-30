@@ -15,6 +15,14 @@ header, footer {
     padding: 20px;
     text-align: center;
 }
+header h1 {
+    margin: 0;
+}
+header h2 {
+    font-weight: normal;
+    font-size: 1.25em;
+    margin: 0;
+}
 
 .page-header {
     display: block;
@@ -38,7 +46,6 @@ nav ul li {
     font-size: 0.8em;
     margin: 0;
     padding: 10px;
-    width: 100%;
 }
 
 /* ----- body ----- */
@@ -70,10 +77,9 @@ th, td {
 iframe {
     padding-top: 20px;
 }
+
 pre {
-    background-color: #d4d4d4;
-    border: 2px inset #bababa;
-    padding: 10px 5px;
+    padding-left: 10px;
 }
 
 main * h2 {
