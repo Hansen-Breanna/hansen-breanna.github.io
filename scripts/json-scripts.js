@@ -32,6 +32,14 @@
    //Functions that parses string and displays output
    newNav.onload = function parseNav() {
        var nav = JSON.parse(newNav.responseText);
-       document.getElementById('nav-menu').innerHTML = "&lt;a href&equals;&quot;" + nav.javascript + "&quot;&gt;Javascript&lt;&sol;a&gt";
+       console.log(nav.urlList);
+       var finalString = "";
+       for(var i=0; i<nav.urlList.length; i++){
+         var navItem = nav.urlList[i];
+         finalString += "<a href='" + navItem.url + "'>" + navItem.name + "</a><br>";
+       }
+       document.getElementById('nav-menu').innerHTML = finalString;
        console.log(nav);
    }
+
+   

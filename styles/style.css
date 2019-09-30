@@ -35,6 +35,14 @@ header h2 {
 
 nav {
     background-color: #244873;
+    color: #fff;
+    padding: 10px;
+}
+nav p {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
 }
 nav ul {
     list-style: none;

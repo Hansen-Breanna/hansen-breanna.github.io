@@ -1,33 +1,20 @@
-{
-    "home" : "index.html",
-    "weeklyReflections" : [
-        { "week1" : "week-1-reflection.html",
-          "week2" : "week-2-reflection.html",
-          "week3" : "week-3-reflection.html",
-          "week4" : "week-4-reflection.html",
-          "week5" : "week-5-reflection.html",
-          "week6" : "week-6-reflection.html",
-          "week7" : "week-7-reflection.html",
-          "week8" : "week-8-reflection.html",
-          "week9" : "week-9-reflection.html",
-          "week10" : "week-10-reflection.html",
-          "week11" : "week-11-reflection.html",
-          "week12" : "week-12-reflection.html",
-          "week13" : "week-13-reflection.html",
-          "week14" : "week-14-reflection.html"
-        }
-    ],
-    "javascript" : "javascript.html",
-    "JSObjects" : "javascript-objects.html",
-    "JSON" : "json.html",
-    "AJAX" : "ajax.html",
-    "localStorage" : "local-storage.html",
-    "DOM" : "dom.html",
-    "CSSclass" : "css-class-properties-using-javascript.html",
-    "TransAnim" : "css-transition-with-animations",
-    "Events" : "javascript-events.html",
-    "HTML5" : "html5-tags.html",
-    "Transitions" : "css3-transitions.html",
-    "Transforms" : "css3-transforms.html",
-    "Animations" : "css3-animations.html"
+{   
+    "urlList":[ 
+        {"name":"Home", "url" : "index.html"},
+        {"name":"Reflections", "url":"reflections.html"},
+        {"name":"Javascript", "url" :"javascript.html"},
+        {"name":"JSObjects","url" : "javascript-objects.html"},
+        {"name":"JSON" ,"url": "json.html"},
+        {"name":"AJAX" ,"url": "ajax.html"},
+        {"name":"localStorage" ,"url": "local-storage.html"},
+        {"name":"DOM" ,"url": "dom.html"},
+        {"name":"CSSclass" ,"url": "css-class-properties-using-javascript.html"},
+        {"name":"TransAnim" ,"url": "css-transition-with-animations"},
+        {"name":"Events" ,"url": "javascript-events.html"},
+        {"name":"HTML5" ,"url": "html5-tags.html"},
+        {"name":"Transitions" ,"url": "css3-transitions.html"},
+        {"name":"Transforms" ,"url": "css3-transforms.html"},
+        {"name":"Animations" ,"url": "css3-animations.html"}]
 }
+
+
