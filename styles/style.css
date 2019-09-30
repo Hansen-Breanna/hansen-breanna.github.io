@@ -85,3 +85,7 @@ pre {
 main * h2 {
     border-bottom: 1px solid #bababa;
 }
+
+.small-text {
+    font-size: 0.75em;
+}

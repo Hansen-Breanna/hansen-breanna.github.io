@@ -7,8 +7,7 @@ var navMenu = {
     json : "json.html"
 };
     // Display some data from the object:
-document.getElementById("objReference").innerHTML =
-"Uses bracket notation to reference<br>&quot;" + navMenu["javascript"] + "&quot;";
+document.getElementById("objReference").innerHTML = "Uses bracket notation to reference<br>&quot;" + navMenu["javascript"] + "&quot;";
 document.getElementById("objReferenceDot").innerHTML =
 "Uses dot method to reference<br>&quot;" + navMenu.javascript + "&quot;";
 

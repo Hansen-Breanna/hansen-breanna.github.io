@@ -42,7 +42,10 @@
                 </li>
                 <li><a href="https://www.w3schools.com/js/js_json_intro.asp">JSON - Introduction</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a></li>
-                <li><a href="http://jsoneditoronline.org/>JSON Editor Online</li>
+                <li><a href="http://jsoneditoronline.org/">JSON Editor Online</a></li>
+                <li><a href="https://www.w3schools.com/js/js_json_parse.asp">JSON.parse()</a></li>
+                <li><a href="https://www.w3schools.com/js/js_json_stringify.asp">JSON.stringiy()</a></li>
+                <li><a href="https://www.quackit.com/json/tutorial/json_with_http.cfm">How to use JSON to do an HTTP Request</a></li>
             </ul>
         </section>
 
@@ -56,35 +59,62 @@
                 <p>Note the single quotes around the object. This object has been made into a string and can be passed through the server.
                     Since the string contains double quotes, then single quotes have to be used to create the string to not confuse the 
                     server. Property names must also be double-quoted strings. There is no comma after the last key:value pair.</p>
-<pre><code>var menu = '{ "javascript" : "javascript.html", "objects" : "javascript-objects.html", "JSON" : "json.html" }';</code></pre>
+<pre><code>var menu = '{ <br>"javascript" : "javascript.html",<br> "objects" : "JSObjects.html",<br> "JSON" : "json.html"<br> }';</code></pre>
             </section>
 
             <section>
-                <p>In order to send the string or object back and forth between a browser and a server, it needs to be changed. To take a JSON string and 
-                    turn it into an object we need to use <code>JSON.parse()</code>. To do the opposite and  turn it into a string we need
-                    to use <code>JSON.stringify()</code>.
+                <p>In order to send the string or object back and forth between a browser and a server, it needs to be changed. To take a 
+                    JSON string and turn it into an object we need to use <code>JSON.parse()</code>. To do the opposite and  turn it into 
+                    a string we need to use <code>JSON.stringify()</code>.
                 </p>
 
-
                 <section>
-                    <h3>Parse</h3>
-                    <p>If we use <code>JSON.parse</code> on the JSON above, we get back <code>var object = JSON.parse(menu);</code>
-                    This returns the object:</p>
-<pre><code></code></pre>
+
+    <h4>JSON.parse()</h4>
+    <p>Parsing the file <a href="JSON.sample.json">Sample JSON</a> will return the following object:</p>
+<pre><code>Code used:
+var menu = JSON.parse(newMenu.responseText);
+    
+Returns:
+{
+    javascript : "javascript.html",
+    objects : "javascript-objects.html",
+    JSON : "json.html"
+}
+
+<div id="JSONparse"></div></code></pre>
                 </section>
                 
                 <section>
                     <H3>Stringify</H3>
-<pre><code></code></pre>
+                    Now that we have retrieved the JSON file and parsed it into an object. We can turn it back into a string with 
+                    JSON.stringify().
+<pre><code>code used: 
+var stringifyObject = JSON.stringify(parseMenu); 
+
+Returns:
+{
+    "javascript":"javascript.html",
+    "JSObjects":"javascript-objects.html",
+    "JSON":"json.html" 
+}
+
+</code></pre>
                 </section>
             </section>
         </section>
+       
+<section id="nav-menu"></section>
+        <p class="small-text">
+            &ast;Due to long strings on mobile, please see console for actual outputs versus typed text displayed.
+        </p>
+        
     </main>
 
     <footer></footer>
 
     <script src="scripts/styles.js"></script>
-    <script src="scripts/scripts.js"></script>
+    <script src="scripts/json-scripts.js"></script>
 
 </body>
 </html>
