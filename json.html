@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
 </head>
 <body>
     <header>
@@ -35,16 +36,53 @@
         <section>
             <h2>Link List</h2>
             <ul>
-                <li></li>
+                <li><a href="https://www.amazon.com/gp/product/144934013X/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=budgetmealrecipesfb-20&
+                    creative=9325&linkCode=as2&creativeASIN=144934013X&linkId=690f4031a035d9818037bb71769b3c15">Head First JavaScript 
+                    Programming A Brain-Friendly Guide</a>
+                </li>
+                <li><a href="https://www.w3schools.com/js/js_json_intro.asp">JSON - Introduction</a></li>
             </ul>
         </section>
 
         <section>
-            
+            <h2>What is JSON?</h2>
+            <p>JSON is an acronym for "<strong>J</strong>avaScript <strong>O</strong>bject <strong>N</strong>otation". Any data sent to
+                or from the server needs to be in a string format. The JSON format takes objects and represents them as strings so they
+                can be sent back and forth.</p>
+            <section>
+                <h3>Example of a String</h3>
+                <p>Note the single quotes around the object. This object has been made into a string and can be passed through the server.
+                    Since the string contains double quotes, then single quotes have to be used to create the string to not confuse the 
+                    server.</p>
+<pre><code>var menu = '{ javascript : "javascript.html", objects : "javascript-objects.html", JSON : "json.html" }';</code></pre>
+            </section>
+
+            <section>
+                <p>In order to send the string or object back and forth and be usable, it needs to be changed. To take a JSON string and 
+                    turn it into an object we need to use <code>JSON.parse</code>. To do the opposite and  turn it into a string we need
+                    to use <code>JSON.stringify</code>.
+                </p>
+
+
+                <section>
+                    <h3>Parse</h3>
+                    <p>If we use <code>JSON.parse</code> on the JSON above, we get back <code>var object = JSON.parse(menu);</code>
+                    This returns the object:</p>
+<pre><code></code></pre>
+                </section>
+                
+                <section>
+                    <H3>Stringify</H3>
+<pre><code></code></pre>
+                </section>
+            </section>
         </section>
     </main>
 
     <footer></footer>
+
+    <script src="scripts/styles.js"></script>
+    <script src="scripts/scripts.js"></script>
 
 </body>
 </html>
