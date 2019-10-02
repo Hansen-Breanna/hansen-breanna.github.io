@@ -32,11 +32,23 @@ var jacksBook = new Books("Marvel Adventures", "Disney", "movies");
 var janesBook = new Books("Chemistry for Beginner's", "Chris Hollis", "non-fiction");
 var mine = JSON.stringify(myBook);
 var jack = JSON.stringify(jacksBook);
-var jane = JSON.stringify(myBook);
+var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-document.getElementById("objInstances").innerHTML = mine + "<br>" + jack + "<br>" + jane;
+var mineSplit1 = mine.slice(0, 31);
+var mineSplit2 = mine.slice (32, 54);
+var mineSplit3 = mine.slice (55, 72);
+var jackSplit1 = jack.slice(0, 29);
+var jackSplit2 = jack.slice (30, 47);
+var jackSplit3 = jack.slice (48, 64);
+var janeSplit1 = jane.slice(0, 36);
+var janeSplit2 = jane.slice (37, 60);
+var janeSplit3 = jane.slice (61, 82);
+document.getElementById("objInstances").innerHTML = mineSplit1 + "<br>&nbsp;&nbsp;" + mineSplit2 
+    + "<br>&nbsp;&nbsp;" + mineSplit3 + "<br>" + jackSplit1 + "<br>&nbsp;&nbsp;" + jackSplit2 
+    + "<br>&nbsp;&nbsp;" + jackSplit3 + "<br>" + janeSplit1 + "<br>&nbsp;&nbsp;" + janeSplit2 
+    + "<br>&nbsp;&nbsp;" + janeSplit3;
 
 //Property Instantiation
 Books.prototype.section = null;
@@ -45,8 +57,24 @@ jacksBook.section = 'teen';
 janesBook.section = "adult non-fiction";
 var mine = JSON.stringify(myBook);
 var jack = JSON.stringify(jacksBook);
-var jane = JSON.stringify(myBook);
+var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-document.getElementById("propInstance").innerHTML = mine + "<br>" + jack + "<br>" + jane;
+var mineSplit1 = mine.slice(0, 31);
+var mineSplit2 = mine.slice (32, 54);
+var mineSplit3 = mine.slice (55, 72);
+var mineSplit4 = mine.slice (73, 98);
+var jackSplit1 = jack.slice(0, 29);
+var jackSplit2 = jack.slice (30, 47);
+var jackSplit3 = jack.slice (48, 64);
+var jackSplit4 = jack.slice (65, 81);
+var janeSplit1 = jane.slice(0, 36);
+var janeSplit2 = jane.slice (37, 60);
+var janeSplit3 = jane.slice (61, 82);
+var janeSplit4 = jane.slice (83, 112);
+document.getElementById("propInstance").innerHTML = mineSplit1 + "<br>&nbsp;&nbsp;" + mineSplit2 
+    + "<br>&nbsp;&nbsp;" + mineSplit3 + "<br>&nbsp;&nbsp;" + mineSplit4 + "<br>" + jackSplit1 
+    + "<br>&nbsp;&nbsp;" + jackSplit2 + "<br>&nbsp;&nbsp;" + jackSplit3 + "<br>&nbsp;&nbsp;" + jackSplit4 
+    + "<br>" + janeSplit1 + "<br>&nbsp;&nbsp;" + janeSplit2 + "<br>&nbsp;&nbsp;" + janeSplit3 
+    + "<br>&nbsp;&nbsp;" + janeSplit4;
