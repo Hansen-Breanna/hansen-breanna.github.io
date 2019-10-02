@@ -58,9 +58,9 @@
                     Since the string contains double quotes, then single quotes have to be used to create the string to not confuse the 
                     server. Property names must also be double-quoted strings. There is no comma after the last key:value pair.</p>
 <!-- Pre Code -->
-<pre><code>var menu = '{ <br>
-    "javascript" : "javascript.html",<br> 
-    "objects" : "JSObjects.html",<br> 
+<pre><code>var menu = '{
+    "javascript" : "javascript.html",
+    "objects" : "JSObjects.html", 
     "JSON" : "json.html"<br> }';</code></pre>
             </section>
 
@@ -72,8 +72,8 @@
 
                 <section>
 
-    <h4>JSON.parse()</h4>
-    <p>Parsing the file <a href="JSON.sample.json">Sample JSON</a> will return the following object:</p>
+    <h3>JSON.parse()</h3>
+    <p>Parsing the file <a href="JSON/sample.json" target="_blank">Sample JSON</a> will return the following object:</p>
 <!-- Pre Code -->
 <pre><code>Code used:
 var menu = JSON.parse(newMenu.responseText);
@@ -89,12 +89,12 @@ Returns:
                 </section>
                 
                 <section>
-                    <H3>Stringify</H3>
+                    <H3>JSON.stringify()</H3>
                     Now that we have retrieved the JSON file and parsed it into an object. We can turn it back into a string with 
                     JSON.stringify().
 <!-- Pre Code -->
 <pre><code>code used: 
-var stringifyObject = JSON.stringify(parseMenu); 
+var stringifyObject = JSON.stringify(menu);
 
 Returns:
 <div id="objStringify"></div>
