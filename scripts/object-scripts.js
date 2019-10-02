@@ -6,8 +6,10 @@ var navMenu = {
     object : "javascript-objects.html",
     json : "json.html"
 };
+
     // Display some data from the object:
-document.getElementById("objReference").innerHTML = "Uses bracket notation to reference<br>&quot;" + navMenu["javascript"] + "&quot;";
+document.getElementById("objReference").innerHTML = "Uses bracket notation to reference<br>&quot;" 
+    + navMenu["javascript"] + "&quot;";
 document.getElementById("objReferenceDot").innerHTML =
 "Uses dot method to reference<br>&quot;" + navMenu.javascript + "&quot;";
 
@@ -19,7 +21,8 @@ var navMenu2 = {
         return arg1 + this.url + arg2 + this.name + arg3;
     }
 };
-document.getElementById("objMethod").innerHTML = navMenu2.createText("&lt;a href&equals;&quot;", "&quot;&gt;", "&lt;&sol;a&gt");
+document.getElementById("objMethod").innerHTML = navMenu2.createText("&lt;a href&equals;&quot;", 
+    "&quot;&gt;", "&lt;&sol;a&gt");
 
 //Object Instantiation
 function Books(title, author, genre) {
@@ -37,7 +40,7 @@ console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
 var mineSlice1 = mine.slice(0, 31);
-var mineSlice2 = mine.slice (32, 54);
+var mineSlice2 = mine.slice (31, 54);
 var mineSlice3 = mine.slice (55, 72);
 var jackSlice1 = jack.slice(0, 29);
 var jackSlice2 = jack.slice (30, 47);
