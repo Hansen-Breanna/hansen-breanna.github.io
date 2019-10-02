@@ -14,7 +14,11 @@
 
       //Returns the object to a string
       var stringifyObject = JSON.stringify(menu);
-
+      var stringSlice1 = stringifyObject.slice(0, 32);
+      var stringSlice2 = stringifyObject.slice(32, 70);
+      var stringSlice3 = stringifyObject.slice(70, 89);
+      document.getElementById('objStringify').innerHTML = stringSlice1 + "<br>&nbsp;&nbsp;" + stringSlice2
+        + "<br>&nbsp;&nbsp;" + stringSlice3;
       console.log(stringifyObject);
       console.log(menu);
     };

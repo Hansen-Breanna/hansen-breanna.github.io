@@ -36,19 +36,19 @@ var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-var mineSplit1 = mine.slice(0, 31);
-var mineSplit2 = mine.slice (32, 54);
-var mineSplit3 = mine.slice (55, 72);
-var jackSplit1 = jack.slice(0, 29);
-var jackSplit2 = jack.slice (30, 47);
-var jackSplit3 = jack.slice (48, 64);
-var janeSplit1 = jane.slice(0, 36);
-var janeSplit2 = jane.slice (37, 60);
-var janeSplit3 = jane.slice (61, 82);
-document.getElementById("objInstances").innerHTML = mineSplit1 + "<br>&nbsp;&nbsp;" + mineSplit2 
-    + "<br>&nbsp;&nbsp;" + mineSplit3 + "<br>" + jackSplit1 + "<br>&nbsp;&nbsp;" + jackSplit2 
-    + "<br>&nbsp;&nbsp;" + jackSplit3 + "<br>" + janeSplit1 + "<br>&nbsp;&nbsp;" + janeSplit2 
-    + "<br>&nbsp;&nbsp;" + janeSplit3;
+var mineSlice1 = mine.slice(0, 31);
+var mineSlice2 = mine.slice (32, 54);
+var mineSlice3 = mine.slice (55, 72);
+var jackSlice1 = jack.slice(0, 29);
+var jackSlice2 = jack.slice (30, 47);
+var jackSlice3 = jack.slice (48, 64);
+var janeSlice1 = jane.slice(0, 36);
+var janeSlice2 = jane.slice (37, 60);
+var janeSlice3 = jane.slice (61, 82);
+document.getElementById("objInstances").innerHTML = mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
+    + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>" + jackSlice1 + "<br>&nbsp;&nbsp;" + jackSlice2 
+    + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 
+    + "<br>&nbsp;&nbsp;" + janeSlice3;
 
 //Property Instantiation
 Books.prototype.section = null;
@@ -61,20 +61,20 @@ var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-var mineSplit1 = mine.slice(0, 31);
-var mineSplit2 = mine.slice (32, 54);
-var mineSplit3 = mine.slice (55, 72);
-var mineSplit4 = mine.slice (73, 98);
-var jackSplit1 = jack.slice(0, 29);
-var jackSplit2 = jack.slice (30, 47);
-var jackSplit3 = jack.slice (48, 64);
-var jackSplit4 = jack.slice (65, 81);
-var janeSplit1 = jane.slice(0, 36);
-var janeSplit2 = jane.slice (37, 60);
-var janeSplit3 = jane.slice (61, 82);
-var janeSplit4 = jane.slice (83, 112);
-document.getElementById("propInstance").innerHTML = mineSplit1 + "<br>&nbsp;&nbsp;" + mineSplit2 
-    + "<br>&nbsp;&nbsp;" + mineSplit3 + "<br>&nbsp;&nbsp;" + mineSplit4 + "<br>" + jackSplit1 
-    + "<br>&nbsp;&nbsp;" + jackSplit2 + "<br>&nbsp;&nbsp;" + jackSplit3 + "<br>&nbsp;&nbsp;" + jackSplit4 
-    + "<br>" + janeSplit1 + "<br>&nbsp;&nbsp;" + janeSplit2 + "<br>&nbsp;&nbsp;" + janeSplit3 
-    + "<br>&nbsp;&nbsp;" + janeSplit4;
+var mineSlice1 = mine.slice(0, 31);
+var mineSlice2 = mine.slice (32, 54);
+var mineSlice3 = mine.slice (55, 72);
+var mineSlice4 = mine.slice (73, 98);
+var jackSlice1 = jack.slice(0, 29);
+var jackSlice2 = jack.slice (30, 47);
+var jackSlice3 = jack.slice (48, 64);
+var jackSlice4 = jack.slice (65, 81);
+var janeSlice1 = jane.slice(0, 36);
+var janeSlice2 = jane.slice (37, 60);
+var janeSlice3 = jane.slice (61, 82);
+var janeSlice4 = jane.slice (83, 112);
+document.getElementById("propInstance").innerHTML = mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
+    + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>&nbsp;&nbsp;" + mineSlice4 + "<br>" + jackSlice1 
+    + "<br>&nbsp;&nbsp;" + jackSlice2 + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>&nbsp;&nbsp;" + jackSlice4 
+    + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 + "<br>&nbsp;&nbsp;" + janeSlice3 
+    + "<br>&nbsp;&nbsp;" + janeSlice4;
