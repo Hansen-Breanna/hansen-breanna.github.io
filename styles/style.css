@@ -99,3 +99,8 @@ main * h2 {
 .small-text {
     font-size: 0.75em;
 }
+
+iframe {
+    height: 192px;
+    width: 335px;
+}
