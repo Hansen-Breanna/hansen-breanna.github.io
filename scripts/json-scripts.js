@@ -10,7 +10,7 @@
     //Function that formats the string, parses, and outputs result
     newMenu.onload = function parse() {
       var menu = JSON.parse(newMenu.responseText);
-      document.getElementById('JSONparse').innerHTML = "The URL '" + menu.javascript + "' is from a JSON.";
+      document.getElementById('JSONparse').innerHTML = "<pre><code>The URL '" + menu.javascript + "' is from a JSON.</code></pre>";
 
       //Returns the object to a string
       var stringifyObject = JSON.stringify(menu);
