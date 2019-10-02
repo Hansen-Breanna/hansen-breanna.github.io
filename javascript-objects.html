@@ -52,51 +52,56 @@
                 <li><a href="https://www.geeksforgeeks.org/object-create-javascript/">Object.create() In JavaScript</a></li>
                 <li><a href="https://whatis.techtarget.com/definition/instantiation">Instantiation</a></li>
                 <li><a href="https://www.w3schools.com/js/js_object_methods.asp">JavaScript Object Methods</a></li>
-                <li><a href="https://www.amazon.com/gp/product/0996246312/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=budgetmealrecipesfb
-                    -20&creative=9325&linkCode=as2&creativeASIN=0996246312&linkId=5d6ad19b9c692678db3fc8bcabde53d3" target="_blank">
+                <li><a href="https://www.amazon.com/gp/product/0996246312/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=budgetmealrecipesfb-20&creative=9325&linkCode=as2&creativeASIN=0996246312&linkId=5d6ad19b9c692678db3fc8bcabde53d3" target="_blank">
                     The Handbook for Beginning Programmers with Examples in JavaScript</a> by Rex Barzee
                 </li>
                 <li><a href="https://www.geeksforgeeks.org/objects-in-javascript/">Objects in JavaScript</a></li>
                 <li><a href="https://www.w3schools.com/js/js_function_parameters.asp">JavaScript Function Parameters</a></li>
+                <li><a href="https://tylermcginnis.com/beginners-guide-to-javascript-prototype/">A Beginner's Guide to JavaScript Prototype</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with Objects</a></li>
             </ul>
         </section>
 
         <section>
         <h2>What is a JavaScript Object?</h2>
             <p>
-               A JavaScript Object is unordered data in the form of "key:value" or "name:value" pairs. They are the most 
+               A JavaScript Object is unordered data in the form of <code>key:"value"</code> or <code> name:"value"</code> pairs. They are the most 
                complex of data types. The data can be referenced by using a reference pointer. All keys/names are strings. 
                Values can be numbers, strings, or methods. If the keys have a space between words, they need to be enclosed 
                in quotation marks.
             </p>
-            <iframe width="335" height="192" src="https://www.youtube.com/embed/wA5vU_HQfVI" frameborder="0" allow="accelerometer; 
+            <iframe src="https://www.youtube.com/embed/wA5vU_HQfVI" allow="accelerometer; 
             autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
         </section>
         <section>
             <h3>Example of an Object</h3>
 <!-- pre tag -->
-<pre><code>var menu {
+<pre><code>Object Initializer Syntax:
+
+    var obj {
+    property1 : "value",
+    property2 : "value",
+    property3 : "value"
+}
+
+Example:
+
+var menu {
     javascript : "javascript.html",
     objects : "javascript-objects.html",
     JSON : "json.html"
 }</code></pre>
         </section>
-
-        </section>
-        <section>
-            <h3>How to Reference an Object</h3>
-            <p>An object can be referenced with bracket notation or with the dot method</p>
-<!-- pre tag -->
-<pre><code>menu.javascript
-menu["javascript"]
-</code></pre>
-<h3>Working Example</h3>
-<pre><code><div id="objReference"></div><br>
-<div id="objReferenceDot"></div></code></pre>
-
+                    
         <section>
             <h2>Object Creation Functions</h2>
-            <p></p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Working with objects</a></li>
+                <li><a href="https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47">JavaScript - Multiple ways to create an object</a></li>
+            </ul>
+            <p>Objects are created with an object initializer, which is also referred to as creating objects 
+                with literal notation.
+            </p>
         </section>
 
         <section>
@@ -106,15 +111,27 @@ menu["javascript"]
 
         <section>
             <h2>Properties</h2>
-            <p></p>
+            <p>Object properties can be defined by using the <code>prototype</code> and dot methods.</p>
+            <p>An object property can be referenced with bracket notation or with the dot method</p>
+<!-- pre tag -->
+<pre>Dot method: 
+<code>menu.javascript
+
+Bracket notation: 
+menu["javascript"]
+</code></pre>
+<h3>Working Example</h3>
+<pre><code><div id="objReference"></div><br>
+<div id="objReferenceDot"></div></code></pre>
+
         </section>
 
         <section>
             <h2>Methods</h2>
             <p>
-                A method is a function or action that is part of an object. To access a method you call the function like you would a value. 
+                A method is a function or action that is property value of an object. To access a method you call the function like you would a value. 
                 Arguments can be passed into the function. When writing a method, sometimes "this" is used to reference parts of an object
-                instead of the key name. For instance, in the object above "this.javascript" is the same as "menu.javascript". 
+                instead of the key name. For instance, in the object above <code>this.javascript</code> is the same as <code>menu.javascript</code>. 
             </p>
 <pre><code>objName.function(arg1, arg2, arg);
 menu.function("li", "&lt;a href&equals;&quot;&quot;&gt;&lt;&sol;a&gt;")
@@ -123,8 +140,8 @@ menu.function("li", "&lt;a href&equals;&quot;&quot;&gt;&lt;&sol;a&gt;")
 
         <section>
             <h3>Working Example</h3>
-            <p>This example was written with the method as the third key:value pair of the object. The method then referenced the other
-                key:value pairs and passed in arguments to create the text shown. The actual code may be viewed on the <a href="scripts/scripts.js">
+            <p>This example was written with the method as the third <code>key:"value"</code> pair of the object. The method then referenced the other
+                <code>key:"value"</code> pairs and passed in arguments to create the text shown. The actual code may be viewed on the <a href="scripts/scripts.js">
                     scripts.js</a> page.
             </p>
 <pre><code>The object method with arguments returns&colon;<div id="objMethod"></div></code></pre>
@@ -132,7 +149,51 @@ menu.function("li", "&lt;a href&equals;&quot;&quot;&gt;&lt;&sol;a&gt;")
 
         <section>
             <h2>Instantiation</h2>
-            <p></p>
+            <p>To create a new object from a previous object is called instantiation. Basically, you are taking a cookie cutter
+                (constructor) and creating multiple cutouts of the same cookie (object). One way to do this is by starting with 
+                a function for the object type.</p>
+                <section>
+                    <h3>Object Instantiation</h3>
+                    <h4>Example</h4>
+<!-- Pre Code -->
+<pre><code>Initial function:
+function Books(title, author, genre) {
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+}
+
+Create object:
+var myBook = new Books('Pride and Prejudice', 'Jane Austen', 'fiction');
+    
+Create new instances:
+var jacksBook = new Books('Marvel Adventures', 'Disney', 'movies');
+var janesBook = new Books('Chemistry for Beginner's', 'Chris Hollis', 'non-fiction');
+</code></pre>
+                <h4>Working Example</h4>
+<!-- Pre Code -->
+<pre><code>Display new instances:
+<div id="objInstances"></div></code></pre>
+                </section>
+
+                <section>
+                    <h3>Reinstantiating Objects with New Properties</h3>
+            <p>As well as instantiating objects, you can also add new properties and reinstantiate the original object plus
+                all instances of it. If we wanted to add reading section for a library to our previous instances,
+                it could add a section property onto the objects</p>
+                <h4>Example</h4>
+<!-- Pre Code -->
+<pre><code>Books.prototype.section = null;
+myBook.section = "adult fiction";
+jacksBook.section = 'teen';
+janesBook.section = "adult non-fiction"
+</code></pre>
+
+                <h4>Working Example</h4>
+<!-- Pre Code -->
+<pre><code>New properties added:</code><div id="propInstance"></div></code></pre>
+                </section>
+
         </section>
 
     </main>

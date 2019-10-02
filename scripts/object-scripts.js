@@ -20,3 +20,33 @@ var navMenu2 = {
     }
 };
 document.getElementById("objMethod").innerHTML = navMenu2.createText("&lt;a href&equals;&quot;", "&quot;&gt;", "&lt;&sol;a&gt");
+
+//Object Instantiation
+function Books(title, author, genre) {
+    this.title = title;
+    this.author = author;
+    this.genre = genre;
+}
+var myBook = new Books("Pride and Prejudice", "Jane Austen", "fiction");
+var jacksBook = new Books("Marvel Adventures", "Disney", "movies");
+var janesBook = new Books("Chemistry for Beginner's", "Chris Hollis", "non-fiction");
+var mine = JSON.stringify(myBook);
+var jack = JSON.stringify(jacksBook);
+var jane = JSON.stringify(myBook);
+console.log(myBook);
+console.log(jacksBook);
+console.log(janesBook);
+document.getElementById("objInstances").innerHTML = mine + "<br>" + jack + "<br>" + jane;
+
+//Property Instantiation
+Books.prototype.section = null;
+myBook.section = "adult fiction";
+jacksBook.section = 'teen';
+janesBook.section = "adult non-fiction";
+var mine = JSON.stringify(myBook);
+var jack = JSON.stringify(jacksBook);
+var jane = JSON.stringify(myBook);
+console.log(myBook);
+console.log(jacksBook);
+console.log(janesBook);
+document.getElementById("propInstance").innerHTML = mine + "<br>" + jack + "<br>" + jane;
