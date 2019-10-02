@@ -8,17 +8,18 @@ var navMenu = {
 };
 
     // Display some data from the object:
-document.getElementById("objReference").innerHTML = "Uses bracket notation to reference<br>&quot;" 
-    + navMenu["javascript"] + "&quot;";
+document.getElementById("objReference").innerHTML = "<pre><code>Uses bracket notation to reference<br>&quot;" 
+    + navMenu["javascript"] + "&quot;</pre></code>";
 document.getElementById("objReferenceDot").innerHTML =
-"Uses dot method to reference<br>&quot;" + navMenu.javascript + "&quot;";
+"<pre><code>Uses dot method to reference<br>&quot;" + navMenu.javascript + "&quot;</pre></code>";
 
 //Object Method Example
 var navMenu2 = {
     name : "Javascript",
     url : "javascripts.html",
     createText : function(arg1, arg2, arg3) {
-        return arg1 + this.url + arg2 + this.name + arg3;
+        return "<code><pre>The object method with arguments returns&colon;<br>" + arg1 + this.url + arg2 + this.name + arg3 
+            + "</code></pre>";
     }
 };
 document.getElementById("objMethod").innerHTML = navMenu2.createText("&lt;a href&equals;&quot;", 
@@ -48,10 +49,10 @@ var jackSlice3 = jack.slice (48, 64);
 var janeSlice1 = jane.slice(0, 36);
 var janeSlice2 = jane.slice (37, 60);
 var janeSlice3 = jane.slice (61, 82);
-document.getElementById("objInstances").innerHTML = mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
+document.getElementById("objInstances").innerHTML = "<pre><code>Display new instances&colon;<br>" + mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
     + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>" + jackSlice1 + "<br>&nbsp;&nbsp;" + jackSlice2 
     + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 
-    + "<br>&nbsp;&nbsp;" + janeSlice3;
+    + "<br>&nbsp;&nbsp;" + janeSlice3 + "</code></pre>";
 
 //Property Instantiation
 Books.prototype.section = null;
@@ -76,8 +77,8 @@ var janeSlice1 = jane.slice(0, 36);
 var janeSlice2 = jane.slice (37, 60);
 var janeSlice3 = jane.slice (61, 82);
 var janeSlice4 = jane.slice (83, 112);
-document.getElementById("propInstance").innerHTML = mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
+document.getElementById("propInstance").innerHTML = "<pre><code>New properties added&colon;<br>" + mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
     + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>&nbsp;&nbsp;" + mineSlice4 + "<br>" + jackSlice1 
     + "<br>&nbsp;&nbsp;" + jackSlice2 + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>&nbsp;&nbsp;" + jackSlice4 
     + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 + "<br>&nbsp;&nbsp;" + janeSlice3 
-    + "<br>&nbsp;&nbsp;" + janeSlice4;
+    + "<br>&nbsp;&nbsp;" + janeSlice4 + "</code></pre>";

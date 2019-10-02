@@ -43,11 +43,7 @@ nav p {
     padding: 10px;
     text-align: center;
 }
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+
 nav ul li {
     font-size: 0.8em;
     margin: 0;
@@ -64,14 +60,12 @@ main {
     background-color: #fff;
     padding: 20px;
 }
-.sub-topics {
-    display: flex;
-    flex-flow: column nowrap;
-}
 ul {
     list-style: none;
     padding: 0;
 }
+
+/* -- table -- */
 table {
     border-collapse: collapse;
 }
@@ -84,9 +78,7 @@ th, td {
     margin: 0;
     padding: 5px;
 }
-iframe {
-    padding-top: 20px;
-}
+/* -- end table --*/
 
 pre {
     padding-left: 10px;
@@ -96,6 +88,10 @@ main * h2 {
     border-bottom: 1px solid #bababa;
 }
 
+h3 {
+    font-size: 1.2em;
+}
+
 .small-text {
     font-size: 0.75em;
 }
@@ -103,14 +99,5 @@ main * h2 {
 iframe {
     height: 192px;
     width: 335px;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
-/* ----- Working Example Div's ----- */
-
-#propInstance {
-    width: 300px;
+    padding-top: 20px;
 }
