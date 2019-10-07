@@ -8,20 +8,24 @@
     newMenu.send();
 
     //Function that formats the string, parses, and outputs result
-    newMenu.onload = function parse() {
+    function parse() {
       var menu = JSON.parse(newMenu.responseText);
       document.getElementById('JSONparse').innerHTML = "<pre><code>The URL '" + menu.javascript + "' is from a JSON.</code></pre>";
+      console.log(menu);
+    }
 
-      //Returns the object to a string
+    //Returns the object to a string
+    function stringify() {
+      var menu = JSON.parse(newMenu.responseText);
       var stringifyObject = JSON.stringify(menu);
       var stringSlice1 = stringifyObject.slice(0, 32);
       var stringSlice2 = stringifyObject.slice(32, 70);
       var stringSlice3 = stringifyObject.slice(70, 89);
-      document.getElementById('objStringify').innerHTML = stringSlice1 + "<br>&nbsp;&nbsp;" + stringSlice2
-        + "<br>&nbsp;&nbsp;" + stringSlice3;
+      document.getElementById('objStringify').innerHTML = "<pre><code>" + stringSlice1 + "<br>&nbsp;&nbsp;" + stringSlice2
+        + "<br>&nbsp;&nbsp;" + stringSlice3 + "</code></pre>";
       console.log(stringifyObject);
-      console.log(menu);
-    };
+    }
+    
 
 // NAVIGATION MENU
 
