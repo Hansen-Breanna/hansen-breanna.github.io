@@ -101,3 +101,13 @@ iframe {
     width: 335px;
     padding-top: 20px;
 }
+
+h3 {
+    text-decoration: underline #bababa;
+}
+
+.external-image {
+    width: 350px;
+    height: auto;
+    margin: auto;
+}
