@@ -87,7 +87,10 @@
             </aside>
 
             <p>W3Schools states that Loops can execute a block of code a number of times. Loops are handy, if you want to run the 
-                same code over and over again, each time with a different value. This saves you from having to retype code over and over again.</p>
+                same code over and over again, each time with a different value. This saves you from having to retype code over and over 
+                again. Both pre-test and post-test loops can be created. The pre-test has a condition at the top of a loop and the condition 
+                is evaluted before the computer executes the statements. The post-test loop evaluates the condition after the statements
+                are run.</p>
 
             <section>
                 <h3>Five Different Kinds of Loops</h3>
@@ -119,21 +122,38 @@
                 </table>
             </section>
 
-            <iframe src="https://www.youtube.com/embed/s9wW2PpJsmQ" allow="accelerometer; autoplay;
-            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/s9wW2PpJsmQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             <section>
-                <h3>For</h3>      
+                <h3>For</h3>  
+                <p>
+                    A For loop runs through a block of code until it meets a certain condition. This is a good loop for counting.
+                </p>    
                 <section>
                     <h4>Syntax</h4>
-                    <img src="images/syntax/for-loop-syntax.JPG" alt="For Loop Syntax">
+<!-- Pre Code -->
+<pre><code>for (initialization; condition; update) {
+    statements;
+}</code></pre>
                 </section>  
                 <section>
                         <h4>Example</h4>
                         <p>DOM Elements can be styled with a For loop. The links and headings 
                             on this page are styled with JavaScript For loops, as the example below shows.</p>
-                        <img src="images/scripts/for-loop-script-for-link-styling.JPG" alt="Link Style For Loop Source Code">
-                        <img src="images/scripts/for-loop-script-for-heading-styles.JPG" alt="Heading Style For Loop Source Code">
+<!-- Pre Code-->
+<pre><code>//Change all links to a certain color
+var links = document.querySelectorAll("a");
+for (var i= 0; i < links.length; i++) {
+    links[i].style.color = "#2477CA";
+}
+
+//Change all h2 tags to a certain color
+var headings = document.querySelectorAll(
+    "main * h2, h3, h4, h5, h6");
+    for (var i = 0; i < headings.length; i++) {
+    headings[i].style.color = "#244873";
+}
+</pre></code>
                 </section>
             </section>
             
@@ -152,14 +172,16 @@ for (var in object) {
                 <section>
                     <h4>Example</h4>
 <!-- Pre Code -->
-<pre><code>var person = {fname:"John", lname:"Doe", age:25};
+<pre><code>var car = {year:"2010", make:"Ford", model:"Mustang"};
 
     var text = "";
     var x;
-    for (x in person) {
-        text += person[x];
-    }
-    </code></pre>
+    for (x in car) {
+        text += car[x];
+    }</code></pre>
+
+                    <button type="button" onclick="cars()">Click to Run</button>
+                    <div id="for-in--loop-cars"></div>
                 </section>
             </section>
 
@@ -447,5 +469,6 @@ for (var in object) {
     </footer>
 
     <script src="scripts/styles.js"></script>
+    <script src="scripts/javascript.js"></script>
 </body>
 </html>
