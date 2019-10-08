@@ -1,22 +1,18 @@
-//Get JSON link-names.json file
-var newMenu = new XMLHttpRequest();
-var requestURL = '../JSON/sample.json';
+// Request JSON file to create nav with DOM Manipulation
+var newNav = new XMLHttpRequest();
+var requestURL = 'JSON/link-names.json';
 
 //HTTP call using the requestURL variable
-newMenu.open("Get", requestURL, true);
-newMenu.send();
+newNav.open("Get", requestURL, true);
+newNav.send();
 
-//Function that formats the string, parses, and outputs result
-function parse() {
-  var menu = JSON.parse(newMenu.responseText);
-  document.getElementById('append-nav-menu').innerHTML = "<pre><code>The URL '" + menu.javascript + "' is from a JSON.</code></pre>";
-  console.log(menu);
-}
-
-function createNav {
-    // Create an li node
-    var links = document.createElement('li');
-
-    var text = document.createTextNode("Water");
-
+//Functions that parses string and displays output
+newNav.onload = function parseNav() {
+    var nav = JSON.parse(newNav.responseText);
+    var navIntro = 
+    var list = document.createElement("ul");                 // Create a <li> node
+    var textnode = document.createTextNode("Water");         // Create a text node
+    list.appendChild(textnode);                              // Append the text to <li>
+    document.getElementById("nav-menu").appendChild(list); 
+    console.log(nav);
 }
