@@ -55,3 +55,9 @@ function greetUser(){
     //The next line causes the computer to display a greeting to the user in a popup window.
     window.alert(greeting);
 }
+
+// How to index a value in an array
+function indexArray() {
+    var colors = ["Blue", "Red", "Green", "Yellow"];
+    document.getElementById("indexArray").innerHTML = "<pre><code>" + colors[3] + "</code></pre>";
+}

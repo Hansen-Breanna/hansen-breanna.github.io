@@ -424,8 +424,11 @@ function myFunction(a, b) {
                 <h4>Example</h4>
 <!-- Pre Code-->
 <pre><code>function greetUser() {
-    var name = window.prompt("Please enter your name");
-    var greeting = "Hello " + name + ". Welcome to my site!";
+    var name = window.prompt(
+        "Please enter your name");
+    var greeting = "Hello " 
+        + name + ". 
+        Welcome to my site!";
     window.alert(greeting);
 }</code></pre>
 
@@ -448,9 +451,48 @@ function myFunction(a, b) {
             <aside class="link-list">
                 <h3>Link List</h3>
                 <ul>
-                    <li></li>
+                    <li><a href="https://www.w3schools.com/js/js_arrays.asp">JavaScript Arrays</a></li>
                 </ul>
             </aside>
+            <section>
+                <h3>Declaring and Creating Arrays</h3>
+                <p>
+                    Arrays are used to store multiple values together into one variable and can be strings or numbers. There are several ways
+                    to declare an array.
+                </p>
+        
+<!-- Pre Code -->
+<pre><code>Declare an array:
+var <i>arrayName</i>;
+
+Create an array:
+arrayName = new Array(size);
+colors = new Array(6);
+
+Declare and create array:
+var arrayName = new Array(size);
+var colors = new Array(6);
+
+Array example:
+var colors = ["Blue",
+    "Red",
+    "Green",
+    "Yellow"];</code></pre>
+            </section>
+
+            <section>
+                <h3>Accessing an Array</h3>
+                <p>All values in an array are given an index number. Arrays start at 0 and count up. To access an array, you write the 
+                    array name and the index number with square brackets.
+                </p>
+                <h4>Example</h4>
+<!-- Pre Code-->
+<pre><code>var colors[3];
+</code></pre>
+
+                <button type="button" onclick="indexArray()">Click to Index Array</button>
+                <div id="indexArray"></div>
+            </section>
         </section>
 
         <section>
@@ -458,9 +500,17 @@ function myFunction(a, b) {
             <aside class="link-list">
                 <h3>Link List</h3>
                 <ul>
-                    <li></li>
+                    <li>
+                        <a href="https://www.i-programmer.info/programming/javascript/1441-javascript-data-structures-the-associative-array.html">
+                        JavaScript Data Structures - The Associative Array</a>
+                    </li>
                 </ul>
             </aside>
+            <p>Associative Arrays are also called a hash, map structure, or dictionaries. It is a set of <code>key:value</code> pairs.
+                The value is stored with the key, which is used to access the value. These types of arrays look like objects when 
+                written out. JavaScript doesn't support associative arrays and they must be referenced like an object.</p>
+                <!-- Pre Code-->
+                <pre><code>array = {key1: "value1", key2: "value2"};</code></pre>
         </section>
 
     </main>
