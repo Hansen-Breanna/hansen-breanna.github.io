@@ -16,4 +16,12 @@ newNav.send();
 //Functions that parses string and displays output
 newNav.onload = function parseNav() {
     var nav = JSON.parse(newNav.responseText);
+    console.log(nav);
+    var list = document.createElement("ul");
+    for (var i = 0; i < nav.urlList.length; i++){
+        var navItem = nav.urlList[i];
+        list.appendChild(document.createElement("li"));
+        i++;
+    }
+    document.getElementById("nav-menu").innerHTML = list;
 }
