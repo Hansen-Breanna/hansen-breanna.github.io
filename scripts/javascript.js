@@ -21,3 +21,37 @@ function forOfLoop() {
       console.log(x);
     }
 }
+
+// While loop
+function whileLoop() {
+    var i = 1;
+    while (i < 3) {
+        window.alert(i);
+        i++;
+    }
+    document.getElementById("whileLoop").innerHTML = "<pre><code>" + i + "</code></pre>";
+}
+
+// Do/while Loop
+function doWhileLoop() {
+    var text = ""
+    var i = 0;
+    do {
+      text += "<br>Start at 0 and count by 2's to 10: " + i;
+      i+=2;
+    }
+    while (i < 10);
+    document.getElementById("doWhileLoop").innerHTML = text;
+}
+
+// Function using just variables.
+function greetUser(){
+    //This line prompts the user to type in his name.
+    var name = window.prompt("Please enter your name");
+    
+    //Create a personalized greeting for the user.
+    var greeting = "Hello, " + name + ". Welcome to my site!";
+    
+    //The next line causes the computer to display a greeting to the user in a popup window.
+    window.alert(greeting);
+}

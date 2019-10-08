@@ -237,11 +237,27 @@ for (var in object) {
         window.alert(i);
         i++;
     }</code></pre>
+                        <button type="button" onclick="whileLoop()">Click to Run While Loop</button>
+                        <div id="whileLoop"></div>
                     </section>
             </section>
 
             <section>
                 <h3>Do/while</h3>
+                <p>Do/while Loop is the only post-test loops. All others are pre-test loops. The do statements will run as long as the 
+                    conditions are met for while.
+                </thead></thead></p>
+                <section>
+                        <h4>Example</h4>
+<!-- Pre Code -->
+<pre><code>var i = 1;
+    while (i &#60; 3) {
+        window.alert(i);
+        i++;
+    }</code></pre>
+                        <button type="button" onclick="doWhileLoop()">Click to Run Do/While Loop</button>
+                        <div id="doWhileLoop"></div>
+                    </section>
             </section>
 
         </section>
@@ -283,9 +299,10 @@ for (var in object) {
 <!-- Pre Code -->
 <pre><code>if (condition) {
     // code executed if condition is true
-    } else {
+    } 
+else {
     // code executed if condition is false
-    }</code></pre>
+}</code></pre>
             </section>
 
             <section>
@@ -294,10 +311,11 @@ for (var in object) {
 <pre><code>function testNum(a) {
     if (a > 0) {
         return "positive";
-    } else {
+    } 
+    else {
         return "NOT positive";
     }
-    }
+}
     
     console.log(testNum(-5));
     // expected output: "NOT positive"</code></pre>
@@ -312,7 +330,9 @@ for (var in object) {
                         <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a></li>
                     </ul>
                 </aside>
-            <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+            <p>A JavaScript function is a block of code designed to perform a particular task. You can pass in arguments to a function.
+                To call a function in a HTML page, you must include the function name plus () at the end. i.e. myFunction().
+            </p>
             <section>
                 <h4>Syntax</h4>
 <!-- Pre Code -->
@@ -401,23 +421,14 @@ function myFunction(a, b) {
             </section>
 
             <section>
-                <h4>Working Example</h4>
-                <script>
-                /* Defining table
-                *Input: A person's name
-                *Procesing: Create a greeting for that person *Output: The greeting
-                */
-                function greetUser(){
-                    //This line prompts the user to type in his name.
-                    var name = window.prompt("Please enter your name");
-                    
-                    //Create a personalized greeting for the user.
-                    var greeting = "Hello " + name + ". It is nice to meet you.";
-                    
-                    //The next line causes the computer to display a greeting to the user in a popup window.
-                    window.alert(greeting);
-                }
-                </script>
+                <h4>Example</h4>
+<!-- Pre Code-->
+<pre><code>function greetUser() {
+    var name = window.prompt("Please enter your name");
+    var greeting = "Hello " + name + ". Welcome to my site!";
+    window.alert(greeting);
+}</code></pre>
+
                 <button type="button" onclick="greetUser()">Hello</button>
             </section>
         </section>
