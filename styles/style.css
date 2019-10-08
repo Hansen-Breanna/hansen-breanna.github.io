@@ -16,7 +16,7 @@ header, footer {
     text-align: center;
 }
 header h1 {
-    margin: 0;
+    margin: auto;
     font-size: 3em;
     padding-bottom: 10px;
     text-transform: uppercase;
@@ -24,7 +24,8 @@ header h1 {
 header h2 {
     font-weight: normal;
     font-size: 1.25em;
-    margin: 0;
+    margin: auto;
+    width: 90%;
 }
 
 /* ----- nav ----- */
@@ -68,6 +69,8 @@ ul {
 /* -- table -- */
 table {
     border-collapse: collapse;
+    max-width: 90%;
+    margin: auto;
 }
 th {
     background-color: #2a5381;
@@ -98,7 +101,7 @@ h3 {
 
 iframe {
     height: 192px;
-    width: 335px;
+    width: 325px;
     padding-top: 20px;
 }
 
@@ -107,7 +110,11 @@ h3 {
 }
 
 .external-image {
-    width: 350px;
+    width: 325px;
     height: auto;
     margin: auto;
+}
+
+p, li {
+    padding-right: 20px;
 }
