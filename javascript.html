@@ -183,14 +183,17 @@ for (var in object) {
         text += car[x];
     }</code></pre>
 
-                    <button type="button" onclick="cars()">Click to Run</button>
+                    <button type="button" onclick="cars()">Click to Run For/in Loop</button>
                     <div id="for-in--loop-cars"></div>
                 </section>
             </section>
         
             <section>
                 <h3>For/of</h3>  
-
+                <p>The For/of loops lets you loop through a variety of structures including arrays, strings, maps, and nodelists.
+                    An interable is something that you can step through the properties as a collection. If you would like to display
+                    the all items from an object or array, change the &equals; to &plus;&equals;.
+                </p>
                 <section>
                     <h4>Syntax</h4>
 
@@ -210,6 +213,8 @@ for (var in object) {
     for (x of cars) {
         document.write(x + "<br >");
     }</code></pre>
+                        <button type="button" onclick="forOfLoop()">Click to Run For/of Loop</button>
+                        <div id="forOfLoop"></div>
                     </section>
             </section>
 
