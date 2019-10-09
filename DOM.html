@@ -33,12 +33,23 @@
         <section>
             <h2>Link List</h2>
             <ul>
-                <li><a href="https://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array" target="_blank">Create a &ltul&gt and fill it based on a passed array</a>
+                <li><a href="https://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array" target="_blank">
+                    Create a &ltul&gt and fill it based on a passed array</a>
                 </li>
                 <li><a href="https://www.w3schools.com/jsref/met_node_insertbefore.asp">HTML DOM insertBefore() Method</a></li>
                 <li><a href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf">Eloquent JavaScript</a></li>
+                <li><a href="https://www.hongkiat.com/blog/dom-manipulation-javascript-methods/">15 JavaScript Methods for DOM 
+                    Manipulation for Web Developers</a>
+                </li>
+                <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/js-and-the-dom/pt/the-dom-document-object-model">
+                    The DOM (Document Object Model)</a>
+                </li>
+                <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/pt/finding-multiple-dom-elements-by-tag-or-class-name">
+                    Finding multiple DOM elements by tag or class name</a>
+                </li>
             </ul>
         </section>
+
         <p>DOM stands for Document Object Model. The model is used to change how HTML is added, deleted or changed on a page. For 
             instance, you can add on sections to a list or change how headers are styled. All HTML elements are defined as objects. 
             A property is value you can get or set and method is an action you can do. The most common way to access an element is 
@@ -47,11 +58,140 @@
         </p>
 
         <p>HTML elements can be found with a script using their "id", tag name, or class name. When searching a whole document you use
-                <code>document.getElementBy...</code>
+            <code>document.getElementBy...</code>
+        </p>
+
+        <section>
+            <section>
+                <h3>querySelector()</h3>
+                <p><code>var ele = document.querySelector(selector);</code></p>
+                <p>Turn this paragraph red.</p>
+            </section>
+
+            <section>
+                <h3>querySelectorAll()</h3>
+                <p>All links in this website are styled using querySelectorAll.</p>
+<!-- Pre Code--><pre><code>var links = document.querySelectorAll("a");
+    for (var i= 0; i < links.length; i++) {</links.length>
+        links[i].style.color = "#2477CA";
+    }</code></pre>
+            </section>
+
+            <section>
+                <h3>addEventListener()</h3>
+                <p><code></code></p>
+            </section>
+            
+            <section>
+                <h3>removeEventListener()</h3>
+                <p><code></code></p>
+            </section>
+
+            <section>
+                <h3>createElement</h3>
+                <p><code>document.createElement(tagName);<br>
+                var pEle = document.createElement('p');</code></p>
+            </section>
+
+            <section>
+                <h3>appendChild()</h3>
+                <p>
+                    <code>
+                    ele.appendChild(childEle)<br>
+                    Example:<br>
+                    var div = document.querySelector('div');<br>
+                    var strong = document.createElement('strong');<br>
+                    strong.textContent = 'Hello';<br>
+                    div.appendChild(strong);
+                    </code>
+                </p>
+            </section>
+
+            <section>
+                <h3>removeChild()</h3>
+                <p><code>ele.removeChild(childEle);<br>
+                        Example:<br>
+                        div.removeChild(strong);</code></p>
+            </section>
+
+            <section>
+                <h3>replaceChild()</h3>
+                    <p><code>ele.replaceChild(newChildEle, oldChileEle);<br>
+                    Example:<br>
+                    var em = document.createElement('em');<br>
+                    var strong = document.querySelector('strong');<br>
+                    var div = document.querySelector('div');<br>
+                    em.textContent = 'hi';<br>
+                    div.replaceChild(em, strong);</code></p>
+            </section>
+
+            <section>
+                <h3>cloneNode()</h3>
+                    <p><code>var dupeEle = ele.cloneNode([deep]);<br>
+                    Example:<br>
+                    var strong = document.querySelector('strong');<br>
+                    var copy = strong.cloneNode(true);<br>
+                    var div = document.querySelector('div');<br>
+                    div.appendChild(copy);</code></p>
+            </section>
+
+            <section>
+                <h3></h3>
+                <p><code></code></p>
+            </section>
+
+            <section>
+                <h3>insertBefore()</h3>
+                <p>Adds a specified element before another child element. The method is called by the parent method.</p>
+                <p><code>ele.insertBefore(newEle, refEle);<br>
+                    Example:<br>
+                    var em = document.createElement('em');<br>
+                    var strong = document.querySelector('strong');<br>
+                    var div = document.querySelector('div');<br>
+                    em.textContent = 'hi';<br>
+                    div.insertBefore(em, strong);</code></p>
+            </section>
+
+            <section>
+                <h3>createDocumentFragment()</h3>
+                <p><code>document.createDocumentFragment();</code></p>
+            </section>
+
+            <section>
+                <h3>getComputerStyle()</h3>
+                <p><code>var style = getComputedStyle(ele, [pseudoEle])<br>
+                Example:<br>
+                var style = getComputedStyle(document.querySelector('div'));<br>
+                alert(style.width);</code></p>
+            </section>
+
+            <section>
+                <h3>setAttribute()</h3>
+                <p><code>ele.setAttribute(name, value);<br>
+                    var div = document.querySelector('div');<br>
+                    div.setAttribute('contenteditable', '')</code></p>
+            </section>
+
+            <section>
+                <h3>getAttribute()</h3>
+                <p><code>ele.getAttribute(name);<br>
+                Example:<br>
+                var div = document.querySelector('div');
+                alert(div.getAttribute('contenteditable'))</code></p>
+            </section>
+
+            <section>
+                <h3>removeAttribute()</h3>
+                <p><code>ele.removeAttribute(name);<br>
+                Example:<br>
+                var div = document.querySelector('div');<br>
+                div.removeAttribute('contenteditable');</code></p>
+            </section>
+        </section>
 
     </main>
 
-    <footer></footer>
+    <footer id="footer"></footer>
 
     <script src="scripts/styles.js"></script>
     <script src="scripts/DOM.js"></script>

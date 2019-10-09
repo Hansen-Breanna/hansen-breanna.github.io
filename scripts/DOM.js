@@ -25,3 +25,10 @@ newNav.onload = function parseNav() {
     }
     document.getElementById("nav-menu").innerHTML = list;
 }
+
+// querySelector
+var footerEL = document.querySelector("footer");
+footerEL.innerHTML = "This footer is created using querySelector.<br><br>&copy; 2019 Breanna Hansen<br>CIT 261 Mobile Applications";
+
+// createElement
+
