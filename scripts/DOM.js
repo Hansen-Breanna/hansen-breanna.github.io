@@ -1,9 +1,9 @@
-// Paragraph stating how nav was made
-var statement = document.createElement("p");                 // Create a <li> node
-var textnode = document.createTextNode("This nav was built using DOM Manipulation.");         // Create a text node
-statement.appendChild(textnode);                              // Append the text to <li>
+// createElement and appendChild - paragraph stating how nav was made
+var statement = document.createElement("p");                 
+var textnode = document.createTextNode("This nav was built using DOM Manipulation.");        
+statement.appendChild(textnode);                        
 document.getElementById("introPara").appendChild(statement); 
-console.log(statement);
+console.log(statement); 
 
 // Request JSON file to create nav with DOM Manipulation
 var newNav = new XMLHttpRequest();
@@ -13,22 +13,59 @@ var requestURL = 'JSON/link-names.json';
 newNav.open("Get", requestURL, true);
 newNav.send();
 
-//Functions that parses string and displays output
+// createElement for nav
 newNav.onload = function parseNav() {
     var nav = JSON.parse(newNav.responseText);
-    console.log(nav);
-    var list = document.createElement("ul");
+    var list = document.createElement("li");
+    var links = list.appendChild(document.createElement("a"));
+    var string = "";
     for (var i = 0; i < nav.urlList.length; i++){
         var navItem = nav.urlList[i];
-        list.appendChild(document.createElement("li"));
-        i++;
+        var list = document.createElement("li");
+        var links = list.appendChild(document.createElement("a"));
+        links.href = navItem.url;
+        var linkNodes = document.createTextNode(navItem.name);
+        links.appendChild(linkNodes);
+        console.log(list);
     }
     document.getElementById("nav-menu").innerHTML = list;
-}
+} 
+
+/* // createElement for nav
+newNav.onload = function parseNav() {
+    var nav = JSON.parse(newNav.responseText);
+    var list = document.createElement("li");
+    var string = "";
+    for (var i = 0; i < nav.urlList.length; i++){
+        var navItem = nav.urlList[i];
+        list.appendChild(document.createElement("a"));
+        string += "<a style='color:#fff;' href='" + navItem.url + "'>" + navItem.name + "</a><br>";
+        console.log(string);
+    }
+    document.getElementById("nav-menu").innerHTML = list;
+}*/
 
 // querySelector
 var footerEL = document.querySelector("footer");
 footerEL.innerHTML = "This footer is created using querySelector.<br><br>&copy; 2019 Breanna Hansen<br>CIT 261 Mobile Applications";
 
-// createElement
+// removeChild
+function removeItem() {
+    var removeEL = document.getElementById("removeEL");
+    removeEL.removeChild(removeEL.childNodes[3]);
+}
 
+// replaceChild()
+function replaceItem() {
+    var replaceEL = document.getElementById("replaceEL");
+    replaceEL.replaceChild(replaceEL.childNodes[1], replaceEL.childNodes[3]);
+}
+
+// cloneNode() 
+
+// insertBefore()
+var para = document.createElement('p');
+var newPara = document.querySelector('p');
+var sectionID = document.getElementById('insertBeforeP');
+para.textContent = 'hi';
+sectionID.insertBefore(para, newPara);

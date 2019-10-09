@@ -46,12 +46,11 @@ nav p {
 }
 
 nav ul li {
-    font-size: 0.8em;
     margin: 0;
     padding: 10px;  
 }
 
-li.jsonList {
+li.urlList {
     padding: 0 10px;
 }
 

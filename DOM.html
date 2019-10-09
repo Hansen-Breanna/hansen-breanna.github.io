@@ -26,7 +26,9 @@
 
     <nav>
         <div id="introPara"></div>
-        <div id="nav-menu"></div>
+        <ul>
+            <div id="nav-menu"></div>
+        </ul>
     </nav>
 
     <main>
@@ -47,6 +49,11 @@
                 <li><a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/pt/finding-multiple-dom-elements-by-tag-or-class-name">
                     Finding multiple DOM elements by tag or class name</a>
                 </li>
+                <li>
+                    <a href="https://www.khanacademy.org/computing/computer-programming/html-css-js#html-js-dom-access">
+                    HTML/JS: Making webpages interactive</a>
+                </li>
+                <li><a href="https://www.w3schools.com/jsref/met_node_removechild.asp">HTML DOM removeChild() Method</a></li>
             </ul>
         </section>
 
@@ -89,15 +96,16 @@
 
             <section>
                 <h3>createElement</h3>
-                <p><code>document.createElement(tagName);<br>
-                var pEle = document.createElement('p');</code></p>
+                <p>This statement in the nav was created using createElement.</p>
+                <p><code>Syntax: document.createElement(tagName);<br>
+                    var statement = document.createElement("p");</code></p>
             </section>
 
             <section>
                 <h3>appendChild()</h3>
                 <p>
                     <code>
-                    ele.appendChild(childEle)<br>
+                    parent.appendChild(child)<br>
                     Example:<br>
                     var div = document.querySelector('div');<br>
                     var strong = document.createElement('strong');<br>
@@ -109,15 +117,29 @@
 
             <section>
                 <h3>removeChild()</h3>
-                <p><code>ele.removeChild(childEle);<br>
-                        Example:<br>
-                        div.removeChild(strong);</code></p>
+                <p>We can remove an item from a list with <code>parent.removeChild(child);</code></p>
+                <p>Example:</p>
+                <p><code>removeEL.removeChild(removeEL.childNodes[3]);</code></p>
+                <button type="button" onclick="removeItem()">Click to Remove Item</button>
+                <ul id="removeEL">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
             </section>
 
             <section>
                 <h3>replaceChild()</h3>
-                    <p><code>ele.replaceChild(newChildEle, oldChileEle);<br>
-                    Example:<br>
+                    <p>We can replace an item on a list with something different with <code>parent.replaceChild(newChild, oldChild);</code></p>
+                    <p>Example:</p>
+                    <p><code></code></p>
+                    <button type="button" onclick="replaceItem()">Click to Replace Item</button>
+                    <ul id="replaceEL">
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li><strong>Item 3</strong></li>
+                    </ul>
+
                     var em = document.createElement('em');<br>
                     var strong = document.querySelector('strong');<br>
                     var div = document.querySelector('div');<br>
@@ -127,12 +149,22 @@
 
             <section>
                 <h3>cloneNode()</h3>
-                    <p><code>var dupeEle = ele.cloneNode([deep]);<br>
-                    Example:<br>
-                    var strong = document.querySelector('strong');<br>
-                    var copy = strong.cloneNode(true);<br>
-                    var div = document.querySelector('div');<br>
-                    div.appendChild(copy);</code></p>
+                    <p>The clone node is used when you want to copy an already existing element. The item in the array is a boolean value.
+                        If it is true, the clone will have all the child elements the parent element does. 
+                        <code>var duplicateElement = parent.cloneNode([deep]);<br>
+                        <p>Example:</p>
+                        <p><code></code></p>
+                        <button type="button" onclick="cloneItem()">Click to Replace Item</button>
+                        <ul id="cloneEL">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+
+                        <p><code>var strong = document.querySelector('strong');<br>
+                        var copy = strong.cloneNode(true);<br>
+                        var cloneEL = document.getElementById('cloneEL');<br>
+                        cloneEL.appendChild(copy);</code></p>
             </section>
 
             <section>
@@ -140,11 +172,13 @@
                 <p><code></code></p>
             </section>
 
-            <section>
+            <section id="insertBeforeP">
                 <h3>insertBefore()</h3>
                 <p>Adds a specified element before another child element. The method is called by the parent method.</p>
-                <p><code>ele.insertBefore(newEle, refEle);<br>
-                    Example:<br>
+                <p><code>parent.insertBefore(newEle, refEle);<br></p>
+                <p>Example: </p>
+                
+                <ul></ul>
                     var em = document.createElement('em');<br>
                     var strong = document.querySelector('strong');<br>
                     var div = document.querySelector('div');<br>
@@ -154,20 +188,27 @@
 
             <section>
                 <h3>createDocumentFragment()</h3>
-                <p><code>document.createDocumentFragment();</code></p>
+                <p>Creating document fragments allows you to add multiple elements in bulk. This saves on power and the possiblity
+                    of layout change problems.<code>document.createDocumentFragment();</code></p>
             </section>
 
             <section>
                 <h3>getComputerStyle()</h3>
-                <p><code>var style = getComputedStyle(ele, [pseudoEle])<br>
-                Example:<br>
-                var style = getComputedStyle(document.querySelector('div'));<br>
+                <p>This method checks for any CSS styling for an element before you make any changes. It returns the read-only values off
+                    all properties of an element. The pseudo element is optional and is for <code>:before</code>, <code>:visited</code>, 
+                    etc.</code>
+                </p>
+                <p><code>var style = getComputedStyle(element, [pseudoEle])</code></p>
+                <p>Example:</p>
+                <p><code>var style = getComputedStyle(document.querySelector('div'));<br>
                 alert(style.width);</code></p>
             </section>
 
             <section>
                 <h3>setAttribute()</h3>
-                <p><code>ele.setAttribute(name, value);<br>
+                <p>The setAttribute either adds to or changes the attribute of an element.</p>
+                <p><code>element.setAttribute(name, value);</p>
+                    <p>Example: </p>
                     var div = document.querySelector('div');<br>
                     div.setAttribute('contenteditable', '')</code></p>
             </section>

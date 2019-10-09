@@ -44,11 +44,9 @@
        var finalString = "";
        for(var i = 0; i < nav.urlList.length; i++){
          var navItem = nav.urlList[i];
-         finalString += "<li class='jsonList'><a style='color:#fff;' href='" + navItem.url + "'>" + 
+         finalString += "<li class='urlList'><a style='color:#fff;' href='" + navItem.url + "'>" + 
          navItem.name + "</a></li><br>";
        }
        document.getElementById('nav-menu').innerHTML = "<ul>" + finalString + "</ul>";
        console.log(nav);
    }
-
-   
