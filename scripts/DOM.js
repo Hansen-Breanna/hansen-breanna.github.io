@@ -67,5 +67,5 @@ function replaceItem() {
 var para = document.createElement('p');
 var newPara = document.querySelector('p');
 var sectionID = document.getElementById('insertBeforeP');
-para.textContent = 'hi';
-sectionID.insertBefore(para, newPara);
+para.textContent = 'This paragraph is created using <code>insertBefore()</code>.';
+sectionID.insertBefore(para, sectionID);
