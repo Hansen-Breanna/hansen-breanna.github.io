@@ -62,6 +62,10 @@ function replaceItem() {
 }
 
 // cloneNode() 
+var strong = document.querySelector('strong');
+var copy = strong.cloneNode(true);
+var cloneEL = document.getElementById('cloneEL');
+cloneEL.appendChild(copy);
 
 // insertBefore()
 var para = document.createElement('p');
