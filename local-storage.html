@@ -35,19 +35,42 @@
                 an Array from Local Storage</a></li>
                 <li><a href="https://www.w3schools.com/html/html5_webstorage.asp">w3schools - HTML5 Web Storage</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a></li>
-                <li><a href=""></a></li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Videos</h2>
+            <iframe src="https://www.youtube.com/embed/k8yJCeuP6I8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
         <section>
             <h2>What is Web Storage?</h2>
             <p>Web Storage is where you store data on the a user's browser instead of on the server. There two types of storage are local 
-                and session storage.
+                and session storage. Data is stored using <code>key:value</code> pairs.
             </p>
 
             <section>
                 <h3>Local Storage</h3>
-                <p></p>
+                <p>There are several methods you can use for local storage: setItem, getItem, key, length, removeItem, and clear.</p>
+                
+                <div>
+                    <code>localStorage.setItem("key", "value");</code><br>
+                    <button type="button" onclick="setItem()">Click to setItem</button>
+                    <div id="setItem"></div>
+                </div>
+                <div>
+                    <code>localStorage.getItem("key", "value");</code><br>
+                    <button type="button" onclick="getItem()">Click to getItem</button>
+                    <div id="getItem"></div>
+                </div>
+                    
+                    <li><code>localStorage.getItem("key");</code></li>
+                    <li><code>localStorage.removeItem("key");</code></li>
+                    <li><code>localStorage.length("key");</code></li>
+                    <li><code>localStorage.removeItem("key");></code><br>
+                        <button type="button" onclick="removeItem()">Click to Remove Item</button></li>
+                    <li><code>localStorage.clear()</code> empties local storage.</code></li>
+                </ol>
             </section>
     
             <section>
@@ -60,7 +83,7 @@
             <h2>Storing and Retrieving Different Types of Data</h2>
             <section>
                 <h3>Simple Data</h3>
-                <p></p>
+                <p id="simpleData"></p>
             </section>
 
             <section>
@@ -85,6 +108,7 @@
 
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
+    <script src="scripts/local-storage.js"></script>
 
 </body>
 </html>

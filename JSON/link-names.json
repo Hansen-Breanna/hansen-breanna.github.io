@@ -6,7 +6,7 @@
         {"name":"JSObjects","url" : "javascript-objects.html"},
         {"name":"JSON" ,"url": "json.html"},
         {"name":"AJAX" ,"url": "ajax.html"},
-        {"name":"localStorage" ,"url": "local-storage.html"},
+        {"name":"Local Storage" ,"url": "local-storage.html"},
         {"name":"DOM" ,"url": "DOM.html"},
         {"name":"CSS Class Properties Using JavaScript" ,"url": "css-class-properties-using-javascript.html"},
         {"name":"CSS Transition with Animations" ,"url": "css-transition-with-animations.html"},

@@ -96,6 +96,7 @@ h3 {
 }
 
 iframe {
+    border: none;
     height: 192px;
     width: 325px;
     padding-top: 20px;
@@ -113,4 +114,12 @@ h3 {
 
 p, li {
     padding-right: 20px;
+}
+
+button {
+    background-color: #759ae9;
+    background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
 }
