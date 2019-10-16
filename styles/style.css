@@ -8,6 +8,11 @@ body {
 
 /* ----- header ----- */
 
+header {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 header, footer {
     background-color: #244d78;
     background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
@@ -35,9 +40,6 @@ nav {
     background-color: #244873;
     color: #fff;
     padding: 10px;
-}
-
-.nav-menu {
     display: none;
 }
 
@@ -50,35 +52,29 @@ nav p {
     padding: 10px;
     text-align: center;
 }
-
 nav ul li {
     margin: 0;
     padding: 10px;  
 }
-
 li.urlList {
     padding: 0 10px;
 }
-
+.menu-bars {
+    position: relative;
+    top: -20px;
+    left: -10px;
+}
 button.menu-icon {
     border: none;
     background-image: none;
     background-color: transparent;
 }
-
 .bar {
     background-color: #fff;
     height: 3px;
     width: 35px;
     margin: 5px;
 }
-
-.menu-bars {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
-
 
 /* ----- body ----- */
 
