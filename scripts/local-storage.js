@@ -66,3 +66,10 @@ function removeData() {
 
 //store and retrieve array
 
+//store and retrieve object
+function storeObject() {
+    var firstPerson = {firstName : "Mary", lastName : "Allen", age : "20"};
+    var personString = JSON.stringify(firstPerson);
+    sessionStorage.setItem("newPerson", personString);
+    document.getElementById("storeObj").innerHTML = sessionStorage.getItem("newPerson");
+}

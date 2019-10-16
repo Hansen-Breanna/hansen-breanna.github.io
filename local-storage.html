@@ -38,6 +38,7 @@
                 <li><a href="https://css-tricks.com/localstorage-examples/">Examples of Sites where localStorage should or is being used</a></li>
                 <li><a href="https://www.taniarascia.com/how-to-use-local-storage-with-javascript/">How to Use Local Storage with JavaScript</a></li>
                 <li><a href="https://www.youtube.com/watch?v=Jc_Yycz7MEc">Simple HTML5 localStorage Example</a></li>
+                <li><a href="https://www.w3schools.com/jsref/prop_win_sessionstorage.asp">Window sessionStorage Property</a></li>
             </ul>
         </section>
 
@@ -50,8 +51,8 @@
             <h2>What is Web Storage?</h2>
             <p>Web Storage is where you store data on the a user's browser instead of on the server. The two types of storage are local and session storage. Local storage 
                 saves the data in the user's browser with no expiration date. Session storage saves the data until the current session is ended Data is stored using 
-                <code>key:value</code> pairs. Examples of where you might use it are to to remember a username, a term last searched, remember previous checkbox configurations,
-                load HTML content onto page so it is faster to load if reloaded, 
+                <code>key:value</code> pairs. Data can only be saved as strings. Examples of where you might use it are to to remember a username, a term last searched, 
+                remember previous checkbox configurations, load HTML content onto page so it is faster to load if reloaded, 
             </p>
 
             <section>
@@ -129,16 +130,20 @@
 
             <section>
                 <h3>Objects</h3>
-                <p></p>
+                <p>Objects must be turned into strings in order to be viewed in localStorage in the inspect dashboard.</p>
+                <button type="button" onclick="storeObject()">Store Object</button>
+                <div id="storeObj"></div>
+                <h4>Example Code</h4>
 <!-- Pre Code-->
 <pre><code>var person = {
-    name : "Tyler",
-    age : "18",
-    height: "66 inches"
-};
-localStorage.setItem("storeObj", 
-     JSON.stringify(person));
-console.log(localStorage.getItem("storeObj"));</code></pre>
+    firstName : "Mary", 
+    lastName : "Allen", 
+    age : "20"};
+
+var personString = JSON.stringify(firstPerson);
+sessionStorage.setItem("newPerson", personString);
+document.getElementById("storeObj").innerHTML = 
+    sessionStorage.getItem("newPerson");</code></pre>
             </section>
     
         </section>
