@@ -35,6 +35,8 @@
                 an Array from Local Storage</a></li>
                 <li><a href="https://www.w3schools.com/html/html5_webstorage.asp">w3schools - HTML5 Web Storage</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a></li>
+                <li><a href="https://css-tricks.com/localstorage-examples/">Examples of Sites where localStorage should or is being used</a></li>
+                <li><a href="https://www.taniarascia.com/how-to-use-local-storage-with-javascript/">How to Use Local Storage with JavaScript</a></li>
             </ul>
         </section>
 
@@ -46,7 +48,8 @@
         <section>
             <h2>What is Web Storage?</h2>
             <p>Web Storage is where you store data on the a user's browser instead of on the server. There two types of storage are local 
-                and session storage. Data is stored using <code>key:value</code> pairs.
+                and session storage. Data is stored using <code>key:value</code> pairs. Examples of where you might use it are to to remember a username, a term last
+                searched, remember previous checkbox configurations, load HTML content onto page so it is faster to load if reloaded, 
             </p>
 
             <section>
@@ -95,7 +98,10 @@
             <h2>Storing and Retrieving Different Types of Data</h2>
             <section>
                 <h3>Simple Data</h3>
-                <p id="simpleData"></p>
+                <p>Single inputs can be saved into localStorage using <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>.</p>
+                <input type="text" id="textfield" />
+                <button type="button" onclick="save()">Save</button>
+                <div id="simpleData></div>
             </section>
 
             <section>
@@ -111,6 +117,15 @@
             <section>
                 <h3>Objects</h3>
                 <p></p>
+<!-- Pre Code-->
+<pre><code>var person = {
+    name : "Tyler",
+    age : "18",
+    height: "66 inches"
+};
+localStorage.setItem("storeObj", 
+     JSON.stringify(person));
+console.log(localStorage.getItem("storeObj"));</code></pre>
             </section>
     
         </section>
@@ -120,7 +135,6 @@
 
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
-
 
 </body>
 </html>

@@ -17,7 +17,7 @@ function setItem() {
 
 //getItem
 function getItem() {
-    document.getElementById("getItem").innerHTML = JSON.stringify(localStorage.getItem("lastName", "Hansen")) + "<br><br>";
+    document.getElementById("getItem").innerHTML = JSON.stringify(localStorage.getItem("lastName")) + "<br><br>";
 }
 //key
 function key() {
@@ -45,3 +45,19 @@ function length() {
 function clearStorage() {
     localStorage.clear();
 }
+
+//storing and retrieving objects
+var person = {name : "Tyler", age : "18", height: "66 inches"};
+localStorage.setItem("storeObj", JSON.stringify(person));
+console.log(localStorage.getItem("storeObj"));
+
+//store and retrieve simple data 
+function save() {
+    var inputValue = document.getElementById("textfield").value;
+    localStorage.setItem("text", inputValue);
+    document.getElementById("simpleData").innerHTML = JSON.stringify(localStorage.text) + "<br><br>"; //Why does this come back as null?
+    console.log(localStorage.text);
+}
+
+//store and retrieve array
+
