@@ -65,6 +65,14 @@ function removeData() {
 }
 
 //store and retrieve array
+function storeArray() {
+    var user = ["Tyler", "Braden", "Mary"];
+    var stringifyUsers = JSON.stringify(user);
+    sessionStorage.setItem("users", stringifyUsers);
+    document.getElementById("userArray").innerHTML = sessionStorage.getItem("users");
+    var retrieveUser = JSON.parse(sessionStorage["users"])
+    document.getElementById("retrieveIndex").innerHTML = retrieveUser[0];
+}
 
 //store and retrieve object
 function storeObject() {

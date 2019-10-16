@@ -36,6 +36,11 @@ nav {
     color: #fff;
     padding: 10px;
 }
+
+.nav-menu {
+    display: none;
+}
+
 nav a {
     text-decoration: none;
 }
@@ -54,6 +59,26 @@ nav ul li {
 li.urlList {
     padding: 0 10px;
 }
+
+button.menu-icon {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 35px;
+    margin: 5px;
+}
+
+.menu-bars {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
 
 /* ----- body ----- */
 

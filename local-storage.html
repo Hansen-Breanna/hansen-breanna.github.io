@@ -20,12 +20,19 @@
 </head>
 <body>
     <header>
+        <button class="menu-icon" type="button" onclick="myNav()">
+            <div class="menu-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </button>
         <h1>Local Storage</h1>
         <h2>API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
     </header>
 
-    <nav>
-        <div id="nav-menu"></div>
+    <nav id="ham-menu">
+        <div id="nav-menu" class="hide"></div>
     </nav>
     <main>
         <section>
@@ -39,6 +46,8 @@
                 <li><a href="https://www.taniarascia.com/how-to-use-local-storage-with-javascript/">How to Use Local Storage with JavaScript</a></li>
                 <li><a href="https://www.youtube.com/watch?v=Jc_Yycz7MEc">Simple HTML5 localStorage Example</a></li>
                 <li><a href="https://www.w3schools.com/jsref/prop_win_sessionstorage.asp">Window sessionStorage Property</a></li>
+                <li><a href="https://www.youtube.com/watch?v=AUOzvFzdIk4">Storing objects with Local Storage in JavaScript</a></li>
+                <li><a href="https://www.youtube.com/watch?v=RbfG7NLKDgQ">How To Store A JavaScript Array in Local Storage</a></li>
             </ul>
         </section>
 
@@ -112,15 +121,26 @@
                 <p>Single inputs can be added to or changed and saved into localStorage using <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>.</p>
                 <input type="text" value="Hello" id="textfield" />
                 <button type="button" onclick="save()">Save</button><button type="button" onclick="removeData()">Remove</button>
-                
-                <div>
-                    <p>Stored data is retrieved or removed: <span id="simpleData"></span>
-                </div>
+                <p>Stored data is retrieved or removed: <span id="simpleData"></span>
             </section>
 
             <section>
                 <h3>Arrays</h3>
                 <p></p>
+                <button type="button" onclick="storeArray()">Store Array</button>
+                <p>Store array in local storage: <br><span id="userArray"></span></p>
+                <p>Retrieve index 0 from array: <br><span id="retrieveIndex"></span></p>
+                <h4>Example Code</h4>
+<!-- Pre Code-->
+<pre><code>var user = ["Tyler", "Braden", "Mary"];
+var stringifyUsers = JSON.stringify(user);
+sessionStorage.setItem("users", stringifyUsers);
+document.getElementById("userArray").innerHTML = 
+    sessionStorage.getItem("users");
+var retrieveUser = 
+    JSON.parse(sessionStorage["users"])
+document.getElementById("retrieveIndex").innerHTML 
+    = retrieveUser[0];</code></pre>
             </section>
 
             <section>
@@ -153,6 +173,6 @@ document.getElementById("storeObj").innerHTML =
 
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
-
+    <script src="scripts/toggleham.js"></script>
 </body>
 </html>
