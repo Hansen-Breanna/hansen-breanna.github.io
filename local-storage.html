@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</title>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
-
+    <script src="scripts/local-storage.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
     <script>
@@ -63,14 +63,26 @@
                     <button type="button" onclick="getItem()">Click to getItem</button>
                     <div id="getItem"></div>
                 </div>
-                    
-                    <li><code>localStorage.getItem("key");</code></li>
-                    <li><code>localStorage.removeItem("key");</code></li>
-                    <li><code>localStorage.length("key");</code></li>
-                    <li><code>localStorage.removeItem("key");></code><br>
-                        <button type="button" onclick="removeItem()">Click to Remove Item</button></li>
-                    <li><code>localStorage.clear()</code> empties local storage.</code></li>
-                </ol>
+                <div>
+                    <code>localStorage.key(index);</code><br>
+                    <button type="button" onclick="key()">Click to Get Key</button>
+                    <div id="key"></div>
+                </div>
+                <div>
+                    <code>localStorage.length;</code><br>
+                    <button type="button" onclick="length()">Click to Get Length</button>
+                    <div id="length"></div>
+                </div>
+                <div>
+                    <code>localStorage.removeItem("key");</code><br>
+                    <button type="button" onclick="removeItem()">Click to Get Remove Item</button>
+                    <div id="removeItem"></div>
+                </div>
+                <div>
+                    <code>localStorage.clear();</code><br>
+                    <button type="button" onclick="clear()">Click to Clear LocalStorage</button>
+                    <div id="clear"></div>
+                </div>
             </section>
     
             <section>
@@ -108,7 +120,7 @@
 
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
-    <script src="scripts/local-storage.js"></script>
+
 
 </body>
 </html>
