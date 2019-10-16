@@ -1,8 +1,13 @@
-//clear
 localStorage.clear();
+localStorage.setItem("lastName", "Hansen");
+localStorage.setItem("firstName", "Tyler");
+localStorage.setItem("age", "18");
+localStorage.setItem("height", "66 inches");
+localStorage.removeItem("height");
 
 //setItem
 function setItem() {
+    localStorage.clear();
     localStorage.setItem("lastName", "Hansen");
     localStorage.setItem("firstName", "Tyler");
     localStorage.setItem("age", "18");
@@ -10,20 +15,33 @@ function setItem() {
     document.getElementById("setItem").innerHTML = JSON.stringify(localStorage) + "<br><br>";
 }
 
+//getItem
 function getItem() {
-    localStorage.setItem("lastName", "Hansen");
-    document.getElementById("getItem").innerHTML = JSON.stringify(localStorage.getItem("lastName", "Hansen"));
+    document.getElementById("getItem").innerHTML = JSON.stringify(localStorage.getItem("lastName", "Hansen")) + "<br><br>";
 }
 //key
-console.log(localStorage.key(1));
+function key() {
+    document.getElementById("key").innerHTML = localStorage.key(2) + "<br><br>";
+}
+console.log(localStorage.key(2));
 
 //removeItem
 function removeItem() {
-localStorage.removeItem("height");
-console.log(localStorage);
+    localStorage.clear();
+    localStorage.setItem("lastName", "Hansen");
+    localStorage.setItem("firstName", "Tyler");
+    localStorage.setItem("age", "18");
+    localStorage.setItem("height", "66 inches");
+    localStorage.removeItem("height");
+    document.getElementById("removeItem").innerHTML = JSON.stringify(localStorage) + "<br><br>";
 }
 
-//getItem
-localStorage.getItem("age");
-
 //length
+function length() {
+    document.getElementById("length").innerHTML = JSON.stringify(localStorage.length) + "<br><br>";
+}
+
+//clear
+function clearStorage() {
+    localStorage.clear();
+}
