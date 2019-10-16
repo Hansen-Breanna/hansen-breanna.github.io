@@ -48,9 +48,10 @@
 
         <section>
             <h2>What is Web Storage?</h2>
-            <p>Web Storage is where you store data on the a user's browser instead of on the server. There two types of storage are local 
-                and session storage. Data is stored using <code>key:value</code> pairs. Examples of where you might use it are to to remember a username, a term last
-                searched, remember previous checkbox configurations, load HTML content onto page so it is faster to load if reloaded, 
+            <p>Web Storage is where you store data on the a user's browser instead of on the server. The two types of storage are local and session storage. Local storage 
+                saves the data in the user's browser with no expiration date. Session storage saves the data until the current session is ended Data is stored using 
+                <code>key:value</code> pairs. Examples of where you might use it are to to remember a username, a term last searched, remember previous checkbox configurations,
+                load HTML content onto page so it is faster to load if reloaded, 
             </p>
 
             <section>
@@ -91,7 +92,15 @@
     
             <section>
                 <h3>Session Storage</h3>
-                <p></p>
+                <p>Both session and local storage use the same methods.</p>
+                <ul>
+                    <li><code>sessionStorage.setItem("key", "value");</code></li>
+                    <li><code>sessionStorage.getItem("key", "value");</code></li>
+                    <li><code>sessionStorage.key(index);</code></li>
+                    <li><code>sessionStorage.length;</code></li>
+                    <li><code>sessionStorage.removeItem("key");</code></li>
+                    <li><code>sessionStorage.clear();</code></li>
+                </ul>
             </section>
         </section>
 
