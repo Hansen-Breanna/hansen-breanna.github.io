@@ -37,6 +37,7 @@
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API</a></li>
                 <li><a href="https://css-tricks.com/localstorage-examples/">Examples of Sites where localStorage should or is being used</a></li>
                 <li><a href="https://www.taniarascia.com/how-to-use-local-storage-with-javascript/">How to Use Local Storage with JavaScript</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Jc_Yycz7MEc">Simple HTML5 localStorage Example</a></li>
             </ul>
         </section>
 
@@ -98,10 +99,13 @@
             <h2>Storing and Retrieving Different Types of Data</h2>
             <section>
                 <h3>Simple Data</h3>
-                <p>Single inputs can be saved into localStorage using <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>.</p>
-                <input type="text" id="textfield" />
-                <button type="button" onclick="save()">Save</button>
-                <div id="simpleData></div>
+                <p>Single inputs can be added to or changed and saved into localStorage using <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>.</p>
+                <input type="text" value="Hello" id="textfield" />
+                <button type="button" onclick="save()">Save</button><button type="button" onclick="removeData()">Remove</button>
+                
+                <div>
+                    <p>Stored data is retrieved or removed: <span id="simpleData"></span>
+                </div>
             </section>
 
             <section>

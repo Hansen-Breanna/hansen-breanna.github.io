@@ -55,8 +55,13 @@ console.log(localStorage.getItem("storeObj"));
 function save() {
     var inputValue = document.getElementById("textfield").value;
     localStorage.setItem("text", inputValue);
-    document.getElementById("simpleData").innerHTML = JSON.stringify(localStorage.text) + "<br><br>"; //Why does this come back as null?
-    console.log(localStorage.text);
+    document.getElementById("simpleData").innerHTML = JSON.stringify(localStorage.text) + "<br><br>"; 
+}
+
+//remove saved data
+function removeData() {
+    localStorage.removeItem("text");
+    document.getElementById("simpleData").innerHTML = JSON.stringify(localStorage.removeItem("text"));
 }
 
 //store and retrieve array
