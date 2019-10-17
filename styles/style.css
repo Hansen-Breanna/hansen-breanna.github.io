@@ -26,6 +26,7 @@ header h1 {
     font-size: 3em;
     padding-bottom: 10px;
     text-transform: uppercase;
+
 }
 header h2 {
     font-weight: normal;
@@ -68,6 +69,7 @@ button.menu-icon {
     border: none;
     background-image: none;
     background-color: transparent;
+    height: 30px;
 }
 .bar {
     background-color: #fff;

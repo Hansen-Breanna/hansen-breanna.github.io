@@ -1,5 +1,8 @@
 /* ----- LINKS ----- */
 
+var menuBar = document.getElementById("ham-menu");
+menuBar.style.display = "none";
+
 //Change all links to a certain color
 var links = document.querySelectorAll("a");
 for (var i= 0; i < links.length; i++) {
