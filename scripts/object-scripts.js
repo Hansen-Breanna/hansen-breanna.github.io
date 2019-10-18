@@ -7,7 +7,7 @@ var navMenu = {
     json : "json.html"
 };
 
-    // Display some data from the object:
+// Display some data from the object:
 document.getElementById("objReference").innerHTML = "<pre><code>Uses bracket notation to reference<br>&quot;" 
     + navMenu["javascript"] + "&quot;</pre></code>";
 document.getElementById("objReferenceDot").innerHTML =
@@ -25,30 +25,29 @@ var navMenu2 = {
 document.getElementById("objMethod").innerHTML = navMenu2.createText("&lt;a href&equals;&quot;", 
     "&quot;&gt;", "&lt;&sol;a&gt");
 
-//Object Instantiation
-function Books(title, author, genre) {
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-}
+//Using class to instantiate object
+import { Books } from './classes.js';
+
 var myBook = new Books("Pride and Prejudice", "Jane Austen", "fiction");
 var jacksBook = new Books("Marvel Adventures", "Disney", "movies");
 var janesBook = new Books("Chemistry for Beginner's", "Chris Hollis", "non-fiction");
+console.log(myBook);
+
 var mine = JSON.stringify(myBook);
 var jack = JSON.stringify(jacksBook);
 var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-var mineSlice1 = mine.slice(0, 31);
-var mineSlice2 = mine.slice (31, 54);
-var mineSlice3 = mine.slice (55, 72);
-var jackSlice1 = jack.slice(0, 29);
-var jackSlice2 = jack.slice (30, 47);
-var jackSlice3 = jack.slice (48, 64);
-var janeSlice1 = jane.slice(0, 36);
-var janeSlice2 = jane.slice (37, 60);
-var janeSlice3 = jane.slice (61, 82);
+var mineSlice1 = mine.slice(0, 30);
+var mineSlice2 = mine.slice (30, 53);
+var mineSlice3 = mine.slice (53, 72);
+var jackSlice1 = jack.slice(0, 28);
+var jackSlice2 = jack.slice (28, 46);
+var jackSlice3 = jack.slice (46, 64);
+var janeSlice1 = jane.slice(0, 35);
+var janeSlice2 = jane.slice (35, 59);
+var janeSlice3 = jane.slice (59, 82);
 document.getElementById("objInstances").innerHTML = "<pre><code>Display new instances&colon;<br>" + mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
     + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>" + jackSlice1 + "<br>&nbsp;&nbsp;" + jackSlice2 
     + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 
@@ -65,18 +64,18 @@ var jane = JSON.stringify(janesBook);
 console.log(myBook);
 console.log(jacksBook);
 console.log(janesBook);
-var mineSlice1 = mine.slice(0, 31);
-var mineSlice2 = mine.slice (32, 54);
-var mineSlice3 = mine.slice (55, 72);
-var mineSlice4 = mine.slice (73, 98);
-var jackSlice1 = jack.slice(0, 29);
-var jackSlice2 = jack.slice (30, 47);
-var jackSlice3 = jack.slice (48, 64);
-var jackSlice4 = jack.slice (65, 81);
-var janeSlice1 = jane.slice(0, 36);
-var janeSlice2 = jane.slice (37, 60);
-var janeSlice3 = jane.slice (61, 82);
-var janeSlice4 = jane.slice (83, 112);
+var mineSlice1 = mine.slice(0, 30);
+var mineSlice2 = mine.slice (30, 53);
+var mineSlice3 = mine.slice (53, 71);
+var mineSlice4 = mine.slice (71, 98);
+var jackSlice1 = jack.slice(0, 28);
+var jackSlice2 = jack.slice (28, 46);
+var jackSlice3 = jack.slice (46, 63);
+var jackSlice4 = jack.slice (63, 81);
+var janeSlice1 = jane.slice(0, 35);
+var janeSlice2 = jane.slice (35, 59);
+var janeSlice3 = jane.slice (59, 81);
+var janeSlice4 = jane.slice (81, 112);
 document.getElementById("propInstance").innerHTML = "<pre><code>New properties added&colon;<br>" + mineSlice1 + "<br>&nbsp;&nbsp;" + mineSlice2 
     + "<br>&nbsp;&nbsp;" + mineSlice3 + "<br>&nbsp;&nbsp;" + mineSlice4 + "<br>" + jackSlice1 
     + "<br>&nbsp;&nbsp;" + jackSlice2 + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>&nbsp;&nbsp;" + jackSlice4 

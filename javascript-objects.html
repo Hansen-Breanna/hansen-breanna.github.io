@@ -31,7 +31,7 @@
         <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
     </header>
 
-    <nav>
+    <nav id="ham-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="javascript.html">JavaScript</a></li>
@@ -80,8 +80,7 @@
                the most complex of data types. The data can be referenced by using a reference pointer. All keys/names are strings. Values 
                can be numbers, strings, or methods. If the keys have a space between words, they need to be enclosed in quotation marks.
             </p>
-            <iframe src="https://www.youtube.com/embed/wA5vU_HQfVI" allow="accelerometer; 
-            autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+            <iframe src="https://www.youtube.com/embed/wA5vU_HQfVI" allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
         </section>
         <section>
             <h3>Example of an Object</h3>
@@ -112,7 +111,14 @@ var menu {
                     create an object</a></li>
             </ul>
             <p>Objects are created with an object initializer, which is also referred to as creating objects 
-                with literal notation.
+                with literal notation.</p>
+
+            <h3>Three Ways to Create an Object</h3>
+            <ul>
+                <li>Define and create a single object, using an object literal.</li>
+                <li>Define and create a single object, with the keyword new.</li>
+                <li>Define an object constructor, and then create objects of the constructed type.</li>
+            </ul>
             </p>
         </section>
 
@@ -170,20 +176,20 @@ menu.function("li", "&lt;a href&equals;&quot;&quot;&gt;&lt;&sol;a&gt;")
                     <h3>Object Instantiation</h3>
                     <h4>Example</h4>
 <!-- Pre Code -->
-<pre><code>Initial function:
-function Books(title, author, genre) {
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-}
-
-Create object:
-var myBook = new Books(
+<pre>Initial class to create object:
+<code>export class Books {
+    constructor(name, author, genre) {
+        this.name = name;
+        this.author = author;
+        this.genre = genre;
+    } 
+}</code>
+    
+Create new instances:
+<code>var myBook = new Books(
     'Pride and Prejudice', 
     'Jane Austen', 
     'fiction');
-    
-Create new instances:
 var jacksBook = new Books(
     'Marvel Adventures', 
     'Disney', 
@@ -219,8 +225,9 @@ janesBook.section = "adult non-fiction"
     </main>
 
     <script src="scripts/styles.js"></script>
-    <script src="scripts/object-scripts.js"></script>
+    <script src="scripts/object-scripts.js" type="module"></script>
     <script src="scripts/toggleham.js"></script>
-    
+    <script src="scripts/classes.js"></script>
+
 </body>
 </html>
