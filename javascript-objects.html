@@ -110,16 +110,23 @@ var menu {
                 <li><a href="https://codeburst.io/various-ways-to-create-javascript-object-9563c6887a47">JavaScript - Multiple ways to 
                     create an object</a></li>
             </ul>
-            <p>Objects are created with an object initializer, which is also referred to as creating objects 
-                with literal notation.</p>
+            <p>Objects can be created as a single object using an object literal or the keyword <code>new</code>. The third way to create an object is to use an object 
+            constructor. (See Instantiation below for the constructor method.)</p>
 
-            <h3>Three Ways to Create an Object</h3>
-            <ul>
-                <li>Define and create a single object, using an object literal.</li>
-                <li>Define and create a single object, with the keyword new.</li>
-                <li>Define an object constructor, and then create objects of the constructed type.</li>
-            </ul>
-            </p>
+<!-- Pre Code-->
+<pre><code>Object literal method:
+var person = {firstName:"John", 
+    lastName:"Doe", 
+    age:50, 
+    eyeColor:"blue"};
+
+Keyword new method:
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+</code></pre>
         </section>
 
         <section>
