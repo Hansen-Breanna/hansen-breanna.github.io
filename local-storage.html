@@ -57,6 +57,35 @@
             <iframe src="https://www.youtube.com/embed/k8yJCeuP6I8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
+        
+        <section>
+            <h2>API</h2>
+            <p>An API allows you to pull data from another website to use in your own site or in an application. The following data is pulled from the NYT Books List API.
+                It lists the first ten categories of books in the API.
+            </p>
+
+<!-- Pre Code-->
+<pre><code>let books = new XMLHttpRequest();
+books.open('GET', bestBooks);
+books.send();
+books.onload =  function () {
+    let booksInfo = 
+    JSON.parse(books.responseText);
+    var category = "";
+    for (var i = 0; 
+        i < booksInfo.results.length; 
+        i++) {
+        category += 
+            booksInfo.results[i].display_name 
+            + "&ltbr&gt;";
+    }
+    document.getElementById("bookCategories")
+        .innerHTML = category;
+}</code></pre>
+            <button type="button" onclick="getBookList()">Get NYT Book Category List</button>
+            <div id="bookCategories"></div>
+        </section>
+
         <section>
             <h2>What is Web Storage?</h2>
             <p>Web Storage is where you store data on the a user's browser instead of on the server. The two types of storage are local and session storage. Local storage 
