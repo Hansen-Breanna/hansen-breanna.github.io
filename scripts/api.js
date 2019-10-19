@@ -8,7 +8,7 @@ weatherRequest.onload =  function () {
 } */
 
 //Star Wars API
-let apiURL = 'https://swapi.co/api/people/1/';
+let apiURL = 'https://swapi.co/api/';
 let starWars = new XMLHttpRequest();
 starWars.open('GET', apiURL);
 starWars.send();
@@ -35,3 +35,32 @@ function getBookList() {
         document.getElementById("bookCategories").innerHTML = category;
     }
 }
+
+//Word Associations
+let wordAssoc = "https://api.wordassociations.net/associations/v1.0/json/search?apikey=aededad4-caa8-4a00-b941-c7d2f3f311a6&text=welcome&lang=en&limit=6";
+let words = new XMLHttpRequest();
+words.open('GET', wordAssoc);
+words.send();
+words.onload =  function () {
+    let wordGames = JSON.parse(words.responseText);
+    console.log(wordGames);
+}
+
+//Spoonacular - doesn't work right yet
+let minion = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=5a8cf887754042f4bf171395763c0f70?ingredients=apples,+flour,+sugar&number=2";
+let minionSpeak = new XMLHttpRequest();
+minionSpeak.open('GET', minion);
+minionSpeak.send();
+minionSpeak.onload =  function () {
+    let minionTranslate = JSON.parse(minionSpeak.responseText);
+    console.log(minionTranslate);
+}
+
+//Advice Slip API
+fetch('https://api.adviceslip.com/advice')
+    .then(resp => {
+        resp.json()
+            .then(
+                console.log(resp)
+            );
+    });
