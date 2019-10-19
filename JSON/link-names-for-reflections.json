@@ -1,20 +1,20 @@
 {   
     "urlList":[ 
-        {"name":"Home", "url" : "index.html"},
+        {"name":"Home", "url" : "../index.html"},
         {"name":"Reflections", "url":"../reflections.html"},
-        {"name":"Javascript", "url" :"javascript.html"},
-        {"name":"JSObjects","url" : "javascript-objects.html"},
-        {"name":"JSON" ,"url": "json.html"},
-        {"name":"AJAX" ,"url": "ajax.html"},
-        {"name":"Local Storage" ,"url": "local-storage.html"},
-        {"name":"DOM" ,"url": "DOM.html"},
-        {"name":"CSS Class Properties Using JavaScript" ,"url": "css-class-properties-using-javascript.html"},
-        {"name":"CSS Transition with Animations" ,"url": "css-transition-with-animations.html"},
-        {"name":"JavaScript Events" ,"url": "javascript-events.html"},
-        {"name":"HTML5 Tags" ,"url": "html5-tags.html"},
-        {"name":"CSS3 Transitions" ,"url": "css3-transitions.html"},
-        {"name":"CSS3 Transforms" ,"url": "css3-transforms.html"},
-        {"name":"CSS3 Animations" ,"url": "css3-animations.html"}]
+        {"name":"Javascript", "url" :"../javascript.html"},
+        {"name":"JSObjects","url" : "../javascript-objects.html"},
+        {"name":"JSON" ,"url": "../json.html"},
+        {"name":"AJAX" ,"url": "../ajax.html"},
+        {"name":"Local Storage" ,"url": "../local-storage.html"},
+        {"name":"DOM" ,"url": "../DOM.html"},
+        {"name":"CSS Class Properties Using JavaScript" ,"url": "../css-class-properties-using-javascript.html"},
+        {"name":"CSS Transition with Animations" ,"url": "../css-transition-with-animations.html"},
+        {"name":"JavaScript Events" ,"url": "../javascript-events.html"},
+        {"name":"HTML5 Tags" ,"url": "../html5-tags.html"},
+        {"name":"CSS3 Transitions" ,"url": "../css3-transitions.html"},
+        {"name":"CSS3 Transforms" ,"url": "../css3-transforms.html"},
+        {"name":"CSS3 Animations" ,"url": "../css3-animations.html"}]
 }
 
 
