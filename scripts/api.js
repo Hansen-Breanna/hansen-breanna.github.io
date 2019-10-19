@@ -17,6 +17,18 @@ starWars.onload =  function () {
     console.log(starWarsInfo);
 }
 
+
+//Zillow API
+let apiSearchURL = 'http://www.zillow.com/webservice/GetDeepComps.htm?zws-id=X1-ZWz17l191zu9zf_85kuc&zpid=76911474&count=25';
+let comps = new XMLHttpRequest();
+comps.open('GET', apiURL);
+comps.send();
+comps.onload =  function () {
+    let currentComps = JSON.parse(comps.responseText);
+    console.log(currentComps);
+}
+
+
 //NYT Best Seller Books
 function getBookList() {
     let bestBooks = 'https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=diIY45XysDkQAiOZr6dGSPoNM5ARPGeg';
