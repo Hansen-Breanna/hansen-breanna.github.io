@@ -1,9 +1,14 @@
+html, body {
+    height: 100%;
+}
 body {
     background-color: #d4d4d4;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     padding: 0;
     max-width: 1200px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ----- header ----- */
@@ -12,7 +17,6 @@ header {
     display: flex;
     flex-flow: column nowrap;
 }
-
 header, footer {
     background-color: #244d78;
     background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
@@ -43,7 +47,6 @@ nav {
     padding: 10px;
     display: none;
 }
-
 nav a {
     text-decoration: none;
 }
@@ -85,6 +88,7 @@ button.menu-icon {
 main {
     background-color: #fff;
     padding: 20px;
+    flex: 1 0 auto;
 }
 ul {
     list-style: none;
@@ -111,36 +115,27 @@ th, td {
 main * h2 {
     border-bottom: 1px solid #bababa;
 }
-
 h3 {
     font-size: 1.2em;
+    text-decoration: underline #bababa;
 }
-
 .small-text {
     font-size: 0.75em;
 }
-
 iframe {
     border: none;
     height: 192px;
     width: 325px;
     padding-top: 20px;
 }
-
-h3 {
-    text-decoration: underline #bababa;
-}
-
 .external-image {
     width: 325px;
     height: auto;
     margin: auto;
 }
-
 p, li {
     padding-right: 20px;
 }
-
 button {
     background-color: #759ae9;
     background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
@@ -151,4 +146,10 @@ button {
 input {
     border: 1px solid #d4d4d4;
     padding: 10px;
+}
+
+/* ----- footer ----- */
+
+footer {
+    flex-shrink: 0;
 }
