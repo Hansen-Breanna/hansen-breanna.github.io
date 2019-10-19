@@ -36,16 +36,6 @@ function getBookList() {
     }
 }
 
-//Spoonacular - doesn't work right yet
-let minion = "https://api.spoonacular.com/recipes/findByIngredients?apiKey=5a8cf887754042f4bf171395763c0f70?ingredients=apples,+flour,+sugar&number=2";
-let minionSpeak = new XMLHttpRequest();
-minionSpeak.open('GET', minion);
-minionSpeak.send();
-minionSpeak.onload =  function () {
-    let minionTranslate = JSON.parse(minionSpeak.responseText);
-    console.log(minionTranslate);
-}
-
 //Advice Slip API
 fetch('https://api.adviceslip.com/advice')
     .then(resp => {

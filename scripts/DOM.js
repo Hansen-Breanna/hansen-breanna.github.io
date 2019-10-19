@@ -1,3 +1,7 @@
+// querySelector
+var footerEL = document.querySelector("footer");
+footerEL.innerHTML = "This footer is created using querySelector.<br><br>&copy; 2019 Breanna Hansen<br>CIT 261 Mobile Applications";
+
 // createElement and appendChild - paragraph stating how nav was made
 var statement = document.createElement("p");                 
 var textnode = document.createTextNode("This nav was built using DOM Manipulation.");        
@@ -28,7 +32,7 @@ newNav.onload = function parseNav() {
         links.appendChild(linkNodes);
         console.log(list);
     }
-    document.getElementById("nav-menu").innerHTML = list;
+    document.getElementById("nav-menu").innerHTML = JSON.stringify(list);
 } 
 
 /* // createElement for nav
@@ -44,10 +48,6 @@ newNav.onload = function parseNav() {
     }
     document.getElementById("nav-menu").innerHTML = list;
 }*/
-
-// querySelector
-var footerEL = document.querySelector("footer");
-footerEL.innerHTML = "This footer is created using querySelector.<br><br>&copy; 2019 Breanna Hansen<br>CIT 261 Mobile Applications";
 
 // removeChild
 function removeItem() {
