@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Reflections</title>
+    <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9ZC1DBETDC');
+    </script>
+
 </head>
 <body>
     <header>
-        <h1>WEEKLY REFLECTIONS</h1>
+        <div class="menu-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <button class="menu-icon" type="button" onclick="myNav()"></button>
+        <h1>Weekly Reflections</h1>
     </header>
+
+    <nav id="ham-menu">
+        <div id="nav-menu"></div>
+    </nav>
+    
     <main>
         <section>
                 <h2>Weekly Reflections</h2>
@@ -33,5 +56,10 @@
     </main>
 
     <footer></footer>
+
+    <script src="scripts/json-scripts.js"></script>
+    <script src="scripts/styles.js"></script>
+    <script src="scripts/toggleham.js"></script>
+
 </body>
 </html>
