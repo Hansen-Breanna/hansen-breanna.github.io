@@ -62,14 +62,16 @@ li.urlList {
 }
 .menu-bars {
     position: relative;
-    top: -20px;
-    left: -10px;
+    top: -5px;
 }
 button.menu-icon {
-    border: none;
     background-image: none;
     background-color: transparent;
-    height: 30px;
+    border: none;
+    height: 35px;
+    width: 45px;
+    position: absolute;
+    top: 2px;
 }
 .bar {
     background-color: #fff;

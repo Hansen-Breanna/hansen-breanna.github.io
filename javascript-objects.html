@@ -20,13 +20,12 @@
 </head>
 <body>
     <header>
-        <button class="menu-icon" type="button" onclick="myNav()">
-            <div class="menu-bars">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </button>
+        <div class="menu-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <button class="menu-icon" type="button" onclick="myNav()"></button>
         <h1>Javascript Objects</h1>
         <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
     </header>
@@ -70,6 +69,8 @@
                 </li>
                 <li><a href="https://medium.com/dailyjs/instantiation-patterns-in-javascript-8fdcf69e8f9b">
                     Instantiation Patterns in JavaScript</a></li>
+                <li><a href="https://www.youtube.com/watch?v=_cgBvtYT3fQ">Object Oriented JavaScript Tutorial #8 - Class Inheritence</a></li>
+                <li><a href="https://www.geeksforgeeks.org/object-create-javascript/">Object.create in JavaScript</a></li>
             </ul>
         </section>
 
@@ -129,7 +130,29 @@ person.eyeColor = "blue";
 
         <section>
             <h2>Inheritence</h2>
-            <p></p>
+            <p><code>Object.create()</code> and <code>Object.prototype</code> are used for implementing inheritence. This allows developers to reuse code. Objects can inherit prototypes, properties and methods 
+                from other objects. We then only have to create the new object and then specify the differences.</p>
+                <h3>Example</h3>
+                <p>The function fruits and apple are created. Apple inherits the properties of fruits because it uses the <code>call()</code>. A new instance of apple is created
+                and is specified with the prototype and property of fruits.</p>
+<!-- Pre Code -->
+<pre><code>Input: function fruits() {
+    this.name = 'fruit 1';
+    }
+
+    function apple() {
+    fruits.call(this);
+    }
+
+    apple.prototype = Object.create(fruits.prototype);
+    const app = new apple();
+    console.log(app.name);
+    
+    Output : "fruit 1"
+
+    Adding new property:
+    fruits.prototype.color = "green";
+</code></pre>
         </section>
 
         <section>
