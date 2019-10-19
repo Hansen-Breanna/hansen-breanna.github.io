@@ -81,3 +81,18 @@ document.getElementById("propInstance").innerHTML = "<pre><code>New properties a
     + "<br>&nbsp;&nbsp;" + jackSlice2 + "<br>&nbsp;&nbsp;" + jackSlice3 + "<br>&nbsp;&nbsp;" + jackSlice4 
     + "<br>" + janeSlice1 + "<br>&nbsp;&nbsp;" + janeSlice2 + "<br>&nbsp;&nbsp;" + janeSlice3 
     + "<br>&nbsp;&nbsp;" + janeSlice4 + "</code></pre>";
+
+//Object Inheritence
+function fruits() {
+this.name = "fruit 1";
+}
+fruits.prototype.color = "green";
+
+function apple() {
+fruits.call(this);
+}
+
+apple.prototype = Object.create(fruits.prototype);
+const app = new apple();
+
+document.getElementById("inherit").innerHTML = "<code> " + app.name + " is " + app.color + "</code>";

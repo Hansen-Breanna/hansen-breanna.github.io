@@ -136,23 +136,26 @@ person.eyeColor = "blue";
                 <p>The function fruits and apple are created. Apple inherits the properties of fruits because it uses the <code>call()</code>. A new instance of apple is created
                 and is specified with the prototype and property of fruits.</p>
 <!-- Pre Code -->
-<pre><code>Input: function fruits() {
-    this.name = 'fruit 1';
+<pre><code>Input: 
+function fruits() {
+    this.name = "fruit 1";
     }
-
-    function apple() {
-    fruits.call(this);
-    }
-
-    apple.prototype = Object.create(fruits.prototype);
-    const app = new apple();
-    console.log(app.name);
+fruits.prototype.color = "green";
     
-    Output : "fruit 1"
-
-    Adding new property:
-    fruits.prototype.color = "green";
+function apple() {
+    fruits.call(this);
+}
+    
+apple.prototype = 
+    Object.create(fruits.prototype);
+const app = new apple();
+    
+document.getElementById("inherit").innerHTML 
+    = "<code> " + app.name + " is " 
+    + app.color + "</code>";
 </code></pre>
+            <h3>Working Example</h3>
+            <div id="inherit"></div>
         </section>
 
         <section>
