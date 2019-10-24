@@ -68,6 +68,8 @@
                 </li>
                 <li><a href="https://stackoverflow.com/questions/4365246/how-to-change-href-of-a-tag-on-button-click-through-javascript" target="_blank">
                     How to change href of <a> tag on button click through javascript</a>
+                    <li><a href="https://www.youtube.com/watch?v=e0ihEHxd6vI">appendChild() - Javascript DOM</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=n0lG2ZCq3Y4">Replace child elements with replaceChild() - Javascript DOM tutorial</a></li>
                 </li>
             </ul>
         </section>
@@ -101,7 +103,14 @@
 
             <section>
                 <h3>addEventListener()</h3>
-                <p><code></code></p>
+                <p>Adding an <code>addEventListener()</code> enables you to have code that runs only when the event happens. Multiple functions can be assigned to the same id 
+                    and event action. The event type and function are required parameters.</p>
+
+<!-- Pre Code -->
+<pre><code>document.getElementById("myBtn")
+    .addEventListener("click", firstFunction);
+document.getElementById("myBtn")
+    .addEventListener("click", secondFunction);</code></pre>
             </section>
             
             <section>

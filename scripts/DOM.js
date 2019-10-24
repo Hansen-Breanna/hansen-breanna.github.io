@@ -24,7 +24,7 @@ newNav.onload = function parseNav() {
     for (var i = 0; i < nav.urlList.length; i++) {
         //create <li>
         var list = document.createElement("li");
-        list.style.padding = "0";
+        list.style.padding = "10px";
         //create <a>
         var links = document.createElement("a");
         links.style.color = "#fff";
@@ -47,7 +47,10 @@ function removeItem() {
 // replaceChild()
 function replaceItem() {
     var replaceEL = document.getElementById("replaceEL");
-    replaceEL.replaceChild(replaceEL.childNodes[1], replaceEL.childNodes[3]);
+    var changeEL = replaceEL.children[1];
+    var newListItem = document.createElement("li");
+    newListItem.textContent = "Replaced item";
+    replaceEL.replaceChild(changeEL, newListItem);
 }
 
 // cloneNode() 
