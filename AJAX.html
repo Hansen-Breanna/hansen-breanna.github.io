@@ -54,15 +54,98 @@
             <ul>    
                 <li><a href="https://www.w3schools.com/js/js_ajax_intro.asp" target="_blank">Ajax Introduction</a></li>
                 <li><a href="https://www.youtube.com/watch?v=RDo3hBL1rfA" target="_blank">JavaScript and AJAX tutorial: What is AJAX?</a></li>
+                <li><a href="https://code-maven.com/ajax-request-for-json-data">Ajax request for JSON data with vanilla JavaScript</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders">XMLHttpRequest.getAllResponseHeaders()</a></li>
             </ul>
         </section>
 
         <section>
-            <h2>AJAX XMLHtto</h2>
+            <h2>Intro</h2>
+            <p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. AJAX is what enables us to be able to pull 
+                data and send it to the server after a page is already loaded.</p>
+            <h3>Example</h3>
+            <h4>NYT Book Categories from AJAX Request</h4>
+            <div id="bookCategories"></div>
+        </section>
+        
+        <section>
+            <h2>AJAX XMLHttp</h2>
+            <p>The XMLHttpRequest is an object.</p> To do a request, both the web page and the file it is trying to load must be on the same server.
+
+<!-- Pre Code --><pre><code>Syntax:
+variable = new XMLHttpRequest();</code></pre>
+
+            <section>
+                <h3>XMLHttpRequest Object Methods</h3>
+                <ol>
+                    <li>new XMLHttpRequest() - creates a new request object.</li>
+                    <li>abort() - cancels current request.</li>
+                    <li>getAllResponseHeaders() - returns header information.<br>
+                        Syntax:<br>
+                        <code>var headers = XMLHttpRequest.getAllResponseHeaders();</code><br>
+                        Working Example:<br>
+                        <code><span id="AllResponseHeaders"></span></code>
+                    </li>
+                    <li>getAllResponseHeader() - returns specific header information.<br>
+                        Syntax: <br>
+                        <code>var header = XMLHttpRequest.getResponseHeader();</code><br>
+                        Working Example:<br>
+                        <code><span id="ResponseHeader"></span></code></li>
+                    <li>setRequestHeader() - Adds a label/value pair to the header to be sent.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h3>Object Properties</h3>
+                <ol>
+                    <li>onreadystatechange - defines function to be called when property changes</li>
+                    <li>readystate- status of the XMLHttpRequest<br>
+                        <ul>
+                            <li>0: request not initilized</li>
+                            <li>1: server connection established</li>
+                            <li>2: request received</li>
+                            <li>3: processing request</li>
+                            <li>4: request finished and response is ready</li>
+                        </ul></li>
+                    <li>responseText - returns data as a string</li>
+                    <li>status - number of the request (404, etc.)</li>
+                    <li>statusText - returns "OK" or "Not Found"</li>
+                </ol>
+            </section>
         </section>
 
         <section>
             <h2>AJAX Request</h2>
+            <p>Both the <code>open()</code> and <code>send()</code> methods are used to send data to the server. Always use post when sending large amounts of information or
+            sensitive information.</p>
+            <ol>
+                <li>open(<i>method, url, async, user, psw</i>)<br>
+                    method - GET or POST<br>
+                    async - true or false<br>
+                    user - optional username<br>
+                    psw - optional password</li>
+                <li>send() - Sends the request to the server for GET.</li>
+                <li>send(string) - Send the request to the server for POST.</li>
+            </ol>
+
+            <section>
+                <h3>GET</h3>
+                <p>The first example shows how to do a GET request. The second shows how to send information with the GET method.</p>
+<!-- Pre Code -->
+<pre><code>variable.open('GET', url, true);
+variable.send();
+
+Add information:
+variable.open('GET', 'myurl.com?name=Jim', true);
+variable.send();
+</code></pre>
+            </section>
+
+            <section>
+                <h3>POST</h3>
+                <!-- Pre Code -->
+                <pre><code></code></pre>
+            </section>
         </section>
 
         <section>
@@ -91,9 +174,11 @@
 
     </main>
 
+    <footer></footer>
+
     <script src="scripts/styles.js"></script>
-    <script src="scripts/object-scripts.js"></script>
     <script src="scripts/toggleham.js"></script>
+    <script src="scripts/ajax.js"></script>
 
 </body>
 </html>

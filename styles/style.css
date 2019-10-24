@@ -153,3 +153,11 @@ input {
 footer {
     flex-shrink: 0;
 }
+
+ol {
+    padding: 20px;
+}
+
+li {
+    line-height: 1.275em;
+}
