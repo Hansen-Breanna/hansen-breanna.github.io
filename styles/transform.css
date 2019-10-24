@@ -7,16 +7,36 @@
     width: 100px;
     background-image: repeating-linear-gradient(to right,#2a5381, #bababa, #2a5381);
     margin: 30px;
-}
-.rotateBox {
-    transform: rotate(45deg);
-}
-div.box {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
     color: #fff;
     line-height: 100px;
+}
+
+/* Rotate */
+.rotateBoxX {
+    transform: rotateX(180deg);
+}
+.rotateBoxY {
+    transform: rotateY(180deg);
+}
+.rotateBoxZ {
+    transform: rotateZ(180deg);
+}
+.rotateBoxXYZ {
+    transform: rotate3d(80,90,30,90deg);
+}
+.second-box {
+    height: 100px;
+    width: 100px;
+    background-image: repeating-linear-gradient(to right,#2a5381, #bababa, #2a5381);
+    margin: 30px;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px; 
 }
 /* Skew */
 .skewBoxY {
@@ -30,18 +50,37 @@ div.box {
 }
 
 /* Scale */
-.scaleBoxLarge {
+.scaleX {
     transform: scaleX(1.5);
     margin-left: 40px;
 }
-.scaleBoxSmall {
+.scaleY {
     transform: scaleY(.5);
     margin-left: 40px;
 }
 .scaleBoxXandY {
     transform: scale(2.5, 1.5);
 }
+.scaleZ {
+    transform: perspective(100px) scaleZ(1) rotateX(45deg);
+    margin-left: 40px;
+}
+/* translate */
 
+.translateXY {
+    transform: translate(50px,-30px);
+}
+.translateY {
+    transform: translateY(-40px);
+}
+
+.translateX {
+    transform: translateX(40deg);
+}
+
+.translateZ {
+    transform: translateZ(90);
+}
 /* figure */
 figcaption {
     text-align: center;

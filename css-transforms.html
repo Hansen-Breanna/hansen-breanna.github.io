@@ -47,7 +47,7 @@
             <ul>
                 <li><a href="https://3dtransforms.desandro.com/cube">Cube</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></li>
-
+                <li><a href="https://www.quackit.com/css/functions/css_scalez_function.cfm">CSS scaleZ() Function</a></li>
             </ul>
         </section>
 
@@ -62,33 +62,59 @@
                         <figcaption>Box not rotated</figcaption>
                     </figure>
                     <figure>
-                        <div class="rotateBox box">BOX</div>
-                        <figcaption>transform: rotate(45deg);</figcaption>
+                        <div class="rotateBoxX second-box">Note the difference.</div>
+                        <figcaption>transform: rotateX(Xdeg);<br>
+                            X is flipped down/up
+                        </figcaption>
                     </figure>
+                    <figure>
+                        <div class="rotateBoxY box">BOX</div>
+                        <figcaption>transform: rotateY(Ydeg);<br>
+                            Y is flipped left/right</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="rotateBoxZ second-box">Note the difference.</div>
+                        <figcaption>transform: rotateZ(Zdeg);<br>
+                            Z spins clockwise
+                        </figcaption>
+                    </figure>
+                    <figure>
+                            <div class="rotateBoxXYZ box">Box</div>
+                            <figcaption>transform: rotateZ(Zdeg);<br>
+                                Z spins clockwise
+                            </figcaption>
+                        </figure>
                 </div>
             </div>
             <div>
-                    <h2>transform: scale()</h2>
-                    <div class="columns">
-                        <figure>
-                            <div class="box"></div>
-                            <figcaption>box not skewed</figcaption>
-                        </figure>
-                        <figure>
-                            <div class="scaleBoxSmall box">BOX</div>
-                            <figcaption>transform: scaleX(.5);</figcaption>
-                        </figure>                    
-                        <figure>
-                            <div class="scaleBoxLarge box">BOX</div>
-                            <figcaption>transform: scaleX(1.5);</figcaption>
-                        </figure>
-                        <figure>
-                            <div class="scaleBoxXandY box">BOX</div>
-                            <figcaption>transform: scaleX(1.5);</figcaption>
-                        </figure>
-                    </div>
+                <h2>transform: scale()</h2>
+                <div class="columns">
+                    <figure>
+                        <div class="box"></div>
+                        <figcaption>box not scaled</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleX box">BOX</div>
+                        <figcaption>transform: scaleX(.5);</figcaption>
+                    </figure>                    
+                    <figure>
+                        <div class="scaleY box">BOX</div>
+                        <figcaption>transform: scaleY(1.5);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleBoxXandY box">BOX</div>
+                        <figcaption>transform: scale(2.5,1.5);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleZ box">BOX</div>
+                        <figcaption>transform: scaleZ(1.5);<br>
+                                transform: perspective(100px)<br>
+                                scaleZ(1) rotateX(45deg);
+                        </figcaption>
+                    </figure>
                 </div>
-            </section>
+            </div>
+        </section>
             <div>
                 <h2>transform: skew()</h2>
                 <div class="columns">
@@ -115,22 +141,22 @@
                 <div class="columns">
                     <figure>
                         <div class="box">BOX</div>
-                        <figcaption>box not skewed</figcaption>
+                        <figcaption>box not translated</figcaption>
                     </figure>
                     <figure>
-                        <div class="TranslateXY box">BOX</div>
+                        <div class="translateXY box">BOX</div>
                         <figcaption>transform: translate(x,y);</figcaption>
                     </figure>                    
                     <figure>
-                        <div class="TranslateX box">BOX</div>
+                        <div class="translateX box">BOX</div>
                         <figcaption>transform: translateX(x);</figcaption>
                     </figure>
                     <figure>
-                        <div class="TranslateY box">BOX</div>
+                        <div class="translateY box">BOX</div>
                         <figcaption>transform: translateY(y);</figcaption>
                     </figure>
                     <figure>
-                        <div class="TranslateZ box">BOX</div>
+                        <div class="translateZ box">BOX</div>
                         <figcaption>transform: translateZ(z);</figcaption>
                     </figure>
                 </div>
