@@ -7,6 +7,15 @@ starWars.onload =  function () {
     let starWarsInfo = JSON.parse(starWars.responseText);
     //getAllResponseHeaders()
     document.getElementById("AllResponseHeaders").innerHTML = starWars.getAllResponseHeaders();
+    //Get property names
+    let categoryItems = Object.getOwnPropertyNames(starWarsInfo);
+    var categoryList = "";
+    for (var i = 0; i < categoryItems.length; i++) {
+        var item = categoryItems[i];
+        categoryList += item + "<br>";
+        document.getElementById("starWarsInfo").innerHTML = categoryList;
+    }
+    console.log(categoryList);
     console.log(starWarsInfo);
 }
 
@@ -24,8 +33,6 @@ books.onload =  function () {
     for (var i = 0; i < 10; i++) {
         category += booksInfo.results[i].display_name + "<br>"; 
     }
-    console.log(booksInfo);
-    document.getElementById("bookCategories").innerHTML = category;
     //getResponseHeader
     document.getElementById("ResponseHeader").innerHTML = books.getResponseHeader;
 }

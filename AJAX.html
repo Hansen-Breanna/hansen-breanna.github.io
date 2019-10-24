@@ -30,22 +30,7 @@
     </header>
 
     <nav id="ham-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="javascript.html">JavaScript</a></li>
-            <li><a href="javascript-objects.html">Objects</a></li>
-            <li><a href="json.html">JSON</a></li>
-            <li>AJAX</li>
-            <li>Local Storage</li>
-            <li><a href="DOM.html">DOM</a></li>
-            <li>CSS Class Properties Using JavaScript</li>
-            <li>CSS Transition with Animations</li>
-            <li>JavaScript Events</li>
-            <li>HTML5 Tags</li>
-            <li>CSS3 Transitions</li>
-            <li>CSS3 Transforms</li>
-            <li>CSS3 Animations</li>
-        </ul>
+        <div id="nav-menu"></div>
     </nav>
     
     <main>
@@ -56,6 +41,7 @@
                 <li><a href="https://www.youtube.com/watch?v=RDo3hBL1rfA" target="_blank">JavaScript and AJAX tutorial: What is AJAX?</a></li>
                 <li><a href="https://code-maven.com/ajax-request-for-json-data">Ajax request for JSON data with vanilla JavaScript</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders">XMLHttpRequest.getAllResponseHeaders()</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers">Response.headers</a></li>
             </ul>
         </section>
 
@@ -63,9 +49,24 @@
             <h2>Intro</h2>
             <p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>A</strong>nd <strong>X</strong>ML. AJAX is what enables us to be able to pull 
                 data and send it to the server after a page is already loaded.</p>
+        </section>
+
+        <section>
+            <h2>Full AJAX Request Code</h2>
+
+<!-- Pre Code -->
+<pre><code>let apiURL = 'https://swapi.co/api/';
+    let starWars = new XMLHttpRequest;
+    starWars.open('GET', apiURL, true);
+    starWars.send();
+    starWars.onload =  function () {
+        let starWarsInfo = 
+            JSON.parse(starWars.responseText);
+    }</code></pre>
             <h3>Example</h3>
-            <h4>NYT Book Categories from AJAX Request</h4>
-            <div id="bookCategories"></div>
+            <p>An AJAX request was used to access the Star Wars API. The category names were then referenced from the JSON file.</p>
+            <h4>Star Wars Categories</h4>
+            <div id="starWarsInfo"></div>
         </section>
         
         <section>
@@ -136,7 +137,7 @@ variable = new XMLHttpRequest();</code></pre>
 variable.send();
 
 Add information:
-variable.open('GET', 'myurl.com?name=Jim', true);
+variable.open('GET', 'url.com?name=Jim', true);
 variable.send();
 </code></pre>
             </section>
@@ -152,26 +153,6 @@ variable.send();
             <h2>AJAX Response</h2>
         </section>
 
-        <section>
-            <h2>AJAX XML File</h2>
-        </section>
-
-        <section>
-            <h2>AJAX PHP</h2>
-        </section>
-
-        <section>
-            <h2>AJAX ASP</h2>
-        </section>
-
-        <section>
-            <h2>AJAX Database</h2>
-        </section>
-
-        <section>
-            <h2>AJAX Applications</h2>
-        </section>
-
     </main>
 
     <footer></footer>
@@ -179,6 +160,7 @@ variable.send();
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
     <script src="scripts/ajax.js"></script>
+    <script src="scripts/json-scripts.js"></script>
 
 </body>
 </html>
