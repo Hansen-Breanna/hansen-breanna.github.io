@@ -20,34 +20,23 @@ newNav.send();
 // createElement for nav
 newNav.onload = function parseNav() {
     var nav = JSON.parse(newNav.responseText);
-    var list = document.createElement("li");
-    var links = list.appendChild(document.createElement("a"));
-    var string = "";
-    for (var i = 0; i < nav.urlList.length; i++){
-        var navItem = nav.urlList[i];
+    var myList = document.getElementById("navigation-menu");
+    for (var i = 0; i < nav.urlList.length; i++) {
+        //create <li>
         var list = document.createElement("li");
-        var links = list.appendChild(document.createElement("a"));
-        links.href = navItem.url;
-        var linkNodes = document.createTextNode(navItem.name);
-        links.appendChild(linkNodes);
+        list.style.padding = "0";
+        //create <a>
+        var links = document.createElement("a");
+        links.style.color = "#fff";
+        links.href = nav.urlList[i].url;
+        links.textContent = nav.urlList[i].name;
+        //Add <a> to <li>
+        list.appendChild(links);
         console.log(list);
+        //Add <li> to #navigation-menu
+        myList.appendChild(list);
     }
-    document.getElementById("nav-menu").innerHTML = JSON.stringify(list);
-} 
-
-/* // createElement for nav
-newNav.onload = function parseNav() {
-    var nav = JSON.parse(newNav.responseText);
-    var list = document.createElement("li");
-    var string = "";
-    for (var i = 0; i < nav.urlList.length; i++){
-        var navItem = nav.urlList[i];
-        list.appendChild(document.createElement("a"));
-        string += "<a style='color:#fff;' href='" + navItem.url + "'>" + navItem.name + "</a><br>";
-        console.log(string);
-    }
-    document.getElementById("nav-menu").innerHTML = list;
-}*/
+}
 
 // removeChild
 function removeItem() {
