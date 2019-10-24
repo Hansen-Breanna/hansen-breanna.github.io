@@ -68,6 +68,28 @@
                 </div>
             </div>
             <div>
+                    <h2>transform: scale()</h2>
+                    <div class="columns">
+                        <figure>
+                            <div class="box"></div>
+                            <figcaption>box not skewed</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="scaleBoxSmall box">BOX</div>
+                            <figcaption>transform: scaleX(.5);</figcaption>
+                        </figure>                    
+                        <figure>
+                            <div class="scaleBoxLarge box">BOX</div>
+                            <figcaption>transform: scaleX(1.5);</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="scaleBoxXandY box">BOX</div>
+                            <figcaption>transform: scaleX(1.5);</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <div>
                 <h2>transform: skew()</h2>
                 <div class="columns">
                     <figure>
@@ -76,48 +98,44 @@
                     </figure>
                     <figure>
                         <div class="skewBoxX box">BOX</div>
-                        <figcaption>transform: skewX(30deg);</figcaption>
+                        <figcaption>transform: skewX(x-angle);</figcaption>
                     </figure>                    
                     <figure>
                         <div class="skewBoxY box">BOX</div>
-                        <figcaption>transform: skewY(30deg);</figcaption>
+                        <figcaption>transform: skewY(y-angle);</figcaption>
                     </figure>
                     <figure>
                         <div class="skewBoxXandY box">BOX</div>
-                        <figcaption>transform: skew(-50deg,30deg);</figcaption>
+                        <figcaption>transform: skew(x-angle,y-angle);</figcaption>
                     </figure>
                 </div>
             </div>
             <div>
-                <h2>transform: scale()</h2>
+                <h2>transform: translate()</h2>
                 <div class="columns">
                     <figure>
-                        <div class="box"></div>
+                        <div class="box">BOX</div>
                         <figcaption>box not skewed</figcaption>
                     </figure>
                     <figure>
-                        <div class="scaleBoxSmall box">BOX</div>
-                        <figcaption>transform: scaleX(.5);</figcaption>
+                        <div class="TranslateXY box">BOX</div>
+                        <figcaption>transform: translate(x,y);</figcaption>
                     </figure>                    
                     <figure>
-                        <div class="scaleBoxLarge box">BOX</div>
-                        <figcaption>transform: scaleX(1.5);</figcaption>
+                        <div class="TranslateX box">BOX</div>
+                        <figcaption>transform: translateX(x);</figcaption>
                     </figure>
                     <figure>
-                        <div class="scaleBoxXandY box">BOX</div>
-                        <figcaption>transform: scaleX(1.5);</figcaption>
+                        <div class="TranslateY box">BOX</div>
+                        <figcaption>transform: translateY(y);</figcaption>
                     </figure>
                     <figure>
-                        <div class="scaleBox3dXYZ box">BOX</div>
-                        <figcaption>transform: scaleX(1.5);</figcaption>
-                    </figure>
-                    <figure>
-                        <div class="scaleBoxZ box">BOX</div>
-                        <figcaption>transform: scaleZ(100px);</figcaption>
+                        <div class="TranslateZ box">BOX</div>
+                        <figcaption>transform: translateZ(z);</figcaption>
                     </figure>
                 </div>
             </div>
-        </section>
+            
 
         <section>
             <h2>Making a Cube with Transforms</h2>
