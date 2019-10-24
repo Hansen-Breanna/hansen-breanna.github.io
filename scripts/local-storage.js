@@ -87,6 +87,6 @@ function assocArray() {
 array = {'make':'Honda','model':'Fit','color':'blue'};
 var newCar = JSON.stringify(array);
 sessionStorage.setItem("newCar", newCar);
-document.getElementById("assocArray").innerHTML = "<code>Array: " + sessionStorage.getItem("newCar") + "<br>" + "Referenced: <br>" + sessionStorage.getitem("newCar['make']") 
-    + "</code>";
+var retrieveKey = JSON.parse(sessionStorage["newCar"]);
+document.getElementById("assocArray").innerHTML = "<code>Array: " + sessionStorage.getItem("newCar") + "<br>" + "Referenced: <br>" + retrieveKey['make'] + "</code>";
 }
