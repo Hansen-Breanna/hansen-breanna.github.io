@@ -15,6 +15,14 @@ starWars.send();
 starWars.onload =  function () {
     let starWarsInfo = JSON.parse(starWars.responseText);
     console.log(starWarsInfo);
+    //Get property names
+    let categoryItems = Object.getOwnPropertyNames(starWarsInfo);
+    var categoryList = "";
+    for (var i = 0; i < categoryItems.length; i++) {
+        var item = categoryItems[i];
+        categoryList += item + "<br>";
+        document.getElementById("starWarsInfo").innerHTML = categoryList;
+    }
 }
 
 //NYT Best Seller Books

@@ -77,7 +77,8 @@
                         JavaScript Data Structures - the Associative Array</a>
                     </li>
                     <li><a href="https://stackoverflow.com/questions/10179815/get-loop-counter-index-using-for-of-syntax-in-javascript" target="_blank">
-                        Get loop counter/index using for...of syntax in JavaScript</a></li>
+                        Get loop counter/index using for...of syntax in JavaScript</a>
+                    </li>
                 </ul>
      
             </aside>
@@ -513,9 +514,12 @@ var colors = ["Blue",
             </aside>
             <p>Associative Arrays are also called a hash, map structure, or dictionaries. It is a set of <code>key:value</code> pairs.
                 The value is stored with the key, which is used to access the value. These types of arrays look like objects when 
-                written out. JavaScript doesn't support associative arrays and they must be referenced like an object.</p>
-                <!-- Pre Code-->
-                <pre><code>array = {key1: "value1", key2: "value2"};</code></pre>
+                written out. JavaScript doesn't support associative arrays and they must be referenced like an object using the name of the property instead of an index. They
+                return the value.</p>
+<!-- Pre Code-->
+<pre><code>array = {key1: "value1", key2: "value2"};
+var myVariable = array['key2'];
+</code></pre>
         </section>
 
     </main>

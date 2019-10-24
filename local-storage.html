@@ -33,8 +33,14 @@
     <nav id="ham-menu">
         <div id="nav-menu" class="hide"></div>
     </nav>
-    
+
     <main>
+
+        <section>
+            <h4>Zoom</h4>
+            <a href="">Zoom recording - starts at </a>              
+        </section>
+
         <section>
             <h2>Link List</h2>
             <ul>
@@ -86,8 +92,8 @@ books.onload =  function () {
     document.getElementById("bookCategories")
         .innerHTML = category;
 }</code></pre>
-            <button type="button" onclick="getBookList()">Get NYT Book Category List</button>
-            <div id="bookCategories"></div>
+            <h4>Star Wars Categories from API</h4>
+            <div id="starWarsInfo"></div>
         </section>
 
         <section>
@@ -179,7 +185,7 @@ document.getElementById("retrieveIndex").innerHTML
 
             <section>
                 <h3>Associative Arrays</h3>
-                <p></p>
+                <p>Since associative arrays are referenced like Objects, you </p>
             </section>
 
             <section>
@@ -209,8 +215,7 @@ document.getElementById("storeObj").innerHTML =
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
-    <script src="scripts/api.js"></script>
-    
+    <script src="scripts/api.js"></script>  
 
 </body>
 </html>
