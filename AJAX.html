@@ -42,6 +42,10 @@
                 <li><a href="https://code-maven.com/ajax-request-for-json-data">Ajax request for JSON data with vanilla JavaScript</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders">XMLHttpRequest.getAllResponseHeaders()</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/headers">Response.headers</a></li>
+                <li><a href="https://www.youtube.com/watch?v=PIKrh5ofQF0">Sending POST data with AJAX in JavaScript</a></li>
+                <li><a href="https://www.railsmine.net/2018/08/native-javascript-ajax-post-request-with-data-or-parameters.html">Native Javascript AJAX POST 
+                    Request with Data or Parameters</a>
+                </li>
             </ul>
         </section>
 
@@ -81,36 +85,7 @@ variable = new XMLHttpRequest();</code></pre>
                 <ol>
                     <li>new XMLHttpRequest() - creates a new request object.</li>
                     <li>abort() - cancels current request.</li>
-                    <li>getAllResponseHeaders() - returns header information.<br>
-                        Syntax:<br>
-                        <code>var headers = XMLHttpRequest.getAllResponseHeaders();</code><br>
-                        Working Example:<br>
-                        <code><span id="AllResponseHeaders"></span></code>
-                    </li>
-                    <li>getAllResponseHeader() - returns specific header information.<br>
-                        Syntax: <br>
-                        <code>var header = XMLHttpRequest.getResponseHeader();</code><br>
-                        Working Example:<br>
-                        <code><span id="ResponseHeader"></span></code></li>
                     <li>setRequestHeader() - Adds a label/value pair to the header to be sent.</li>
-                </ol>
-            </section>
-
-            <section>
-                <h3>Object Properties</h3>
-                <ol>
-                    <li>onreadystatechange - defines function to be called when property changes</li>
-                    <li>readystate- status of the XMLHttpRequest<br>
-                        <ul>
-                            <li>0: request not initilized</li>
-                            <li>1: server connection established</li>
-                            <li>2: request received</li>
-                            <li>3: processing request</li>
-                            <li>4: request finished and response is ready</li>
-                        </ul></li>
-                    <li>responseText - returns data as a string</li>
-                    <li>status - number of the request (404, etc.)</li>
-                    <li>statusText - returns "OK" or "Not Found"</li>
                 </ol>
             </section>
         </section>
@@ -144,13 +119,78 @@ variable.send();
 
             <section>
                 <h3>POST</h3>
-                <!-- Pre Code -->
-                <pre><code></code></pre>
+                <p>If we have our own files that we are wanting to put a POST to, we would use the following code. For example, you could send a <code>.setRequestHeader()</code>
+                    with the content type of the file.</p>
+<!-- Pre Code -->
+<pre><code>xhttp.open("POST", "demo_post.asp", true);
+        xhttp.send();
+
+//optional .setRequestHeader()
+xhttp.setRequestHeader('Content-Type', 
+    'application/x-www-form-urlencoded');
+xhttp.send(data-sending);</code></pre>
             </section>
         </section>
 
         <section>
             <h2>AJAX Response</h2>
+            <div>
+            <p>When the readystate is 4 and status is 200, then the response is ready.</p>
+                <ol>
+                    <li>onreadystatechange - defines function to be called when property changes</li>
+                    <li>readystate - status of the XMLHttpRequest<br>
+                        <ul>
+                            <li>0: request not initilized</li>
+                            <li>1: server connection established</li>
+                            <li>2: request received</li>
+                            <li>3: processing request</li>
+                            <li>4: request finished and response is ready</li>
+                        </ul></li>
+                    <li>responseText - returns data as a string</li>
+                    <li>status - number of the request (200, 404, etc.)</li>
+                    <li>statusText - returns "OK" or "Not Found"</li>
+                </ol>
+
+                <p>For the first code example, we could add in a ready state option.</p>
+<!-- Pre Code -->
+<pre><code>let apiURL = 'https://swapi.co/api/';
+    let starWars = new XMLHttpRequest;
+    starWars.onreadystatechange = function () {
+        if (this.readyState == 4 
+            && this.status == 200) {
+            let starWarsInfo = 
+                JSON.parse(this.responseText);
+        };
+    starWars.open('GET', apiURL, true);
+    starWars.send();
+    starWars.onload =  function () {
+        //statements;
+    }</code></pre>
+            </div>
+            
+            <section>
+                <h3>Server Response Methods</h3>
+
+                <div>
+                    <p><strong>getAllResponseHeaders()</strong> - returns header information.<br></p>
+                    
+                    <p>Syntax: <code>var headers = XMLHttpRequest.getAllResponseHeaders();</code><br>
+                    </p>
+
+                    <p>Working Example:<br>
+                        <code><span id="AllResponseHeaders"></span></code>
+                    </p>
+                </div>
+                
+                <div>
+                    <p><strong>getAllResponseHeader()</strong> - returns specific header information.<br></p>
+                    <p>Syntax: <code>var header = XMLHttpRequest.getResponseHeader();</code><br></p>
+                    <p>Working Example:<br>
+                        <code><span id="ResponseHeader"></span></code>
+                    </p>
+                </div>
+            </section>
+
         </section>
 
     </main>
