@@ -81,3 +81,12 @@ function storeObject() {
     sessionStorage.setItem("newPerson", personString);
     document.getElementById("storeObj").innerHTML = sessionStorage.getItem("newPerson");
 }
+
+//associative arrays
+function assocArray() {
+array = {'make':'Honda','model':'Fit','color':'blue'};
+var newCar = JSON.stringify(array);
+sessionStorage.setItem("newCar", newCar);
+document.getElementById("assocArray").innerHTML = "<code>Array: " + sessionStorage.getItem("newCar") + "<br>" + "Referenced: <br>" + sessionStorage.getitem("newCar['make']") 
+    + "</code>";
+}
