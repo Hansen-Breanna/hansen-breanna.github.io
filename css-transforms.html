@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries</title>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "styles/transform.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -39,6 +40,58 @@
         <section>
             <h4>Zoom</h4>
             <a href="">Zoom recording - starts at </a>              
+        </section>
+
+        <section>
+            <p>Items can be rotated, skewed, scaled using CSS.</p>
+
+            <div>
+                <h2>transform: rotate()</h2>
+                <div class="columns">
+                    <figure>
+                        <div class="box"></div>
+                        <figcaption>Box not rotated</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="rotateBox"></div>
+                        <figcaption>transform: rotate(45deg);</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div>
+                <h2>transform: skewY()</h2>
+                <div class="columns">
+                    <figure>
+                        <div class="skewBoxX"></div>
+                        <figcaption>transform: skewX(30deg);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="box"></div>
+                        <figcaption>box not skewed</figcaption>
+                    </figure>                    
+                    <figure>
+                        <div class="skewBoxY"></div>
+                        <figcaption>transform: skewY(30deg);</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div>
+                <h2>transform: scaleY()</h2>
+                <div class="columns">
+                    <figure>
+                        <div class="scaleBoxSmall"></div>
+                        <figcaption>transform: scaleX(.5);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="box"></div>
+                        <figcaption>box not skewed</figcaption>
+                    </figure>                    
+                    <figure>
+                        <div class="scaleBoxLarge"></div>
+                        <figcaption>transform: scaleX(1.5);</figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>
