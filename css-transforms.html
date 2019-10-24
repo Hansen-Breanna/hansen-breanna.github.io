@@ -43,53 +43,92 @@
         </section>
 
         <section>
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://3dtransforms.desandro.com/cube">Cube</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d">scale3d()</a></li>
+
+            </ul>
+        </section>
+
+        <section>
             <p>Items can be rotated, skewed, scaled using CSS.</p>
 
             <div>
                 <h2>transform: rotate()</h2>
                 <div class="columns">
                     <figure>
-                        <div class="box"></div>
+                        <div class="box">BOX</div>
                         <figcaption>Box not rotated</figcaption>
                     </figure>
                     <figure>
-                        <div class="rotateBox"></div>
+                        <div class="rotateBox box">BOX</div>
                         <figcaption>transform: rotate(45deg);</figcaption>
                     </figure>
                 </div>
             </div>
             <div>
-                <h2>transform: skewY()</h2>
+                <h2>transform: skew()</h2>
                 <div class="columns">
                     <figure>
-                        <div class="skewBoxX"></div>
-                        <figcaption>transform: skewX(30deg);</figcaption>
+                        <div class="box">BOX</div>
+                        <figcaption>box not skewed</figcaption>
                     </figure>
                     <figure>
-                        <div class="box"></div>
-                        <figcaption>box not skewed</figcaption>
+                        <div class="skewBoxX box">BOX</div>
+                        <figcaption>transform: skewX(30deg);</figcaption>
                     </figure>                    
                     <figure>
-                        <div class="skewBoxY"></div>
+                        <div class="skewBoxY box">BOX</div>
                         <figcaption>transform: skewY(30deg);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="skewBoxXandY box">BOX</div>
+                        <figcaption>transform: skew(-50deg,30deg);</figcaption>
                     </figure>
                 </div>
             </div>
             <div>
-                <h2>transform: scaleY()</h2>
+                <h2>transform: scale()</h2>
                 <div class="columns">
-                    <figure>
-                        <div class="scaleBoxSmall"></div>
-                        <figcaption>transform: scaleX(.5);</figcaption>
-                    </figure>
                     <figure>
                         <div class="box"></div>
                         <figcaption>box not skewed</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleBoxSmall box">BOX</div>
+                        <figcaption>transform: scaleX(.5);</figcaption>
                     </figure>                    
                     <figure>
-                        <div class="scaleBoxLarge"></div>
+                        <div class="scaleBoxLarge box">BOX</div>
                         <figcaption>transform: scaleX(1.5);</figcaption>
                     </figure>
+                    <figure>
+                        <div class="scaleBoxXandY box">BOX</div>
+                        <figcaption>transform: scaleX(1.5);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleBox3dXYZ box">BOX</div>
+                        <figcaption>transform: scaleX(1.5);</figcaption>
+                    </figure>
+                    <figure>
+                        <div class="scaleBoxZ box">BOX</div>
+                        <figcaption>transform: scaleZ(100px);</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Making a Cube with Transforms</h2>
+            <div class="scene">
+                <div class="cube">
+                    <div class="cube__face cube__face--front">front</div>
+                    <div class="cube__face cube__face--back">back</div>
+                    <div class="cube__face cube__face--right">right</div>
+                    <div class="cube__face cube__face--left">left</div>
+                    <div class="cube__face cube__face--top">top</div>
+                    <div class="cube__face cube__face--bottom">bottom</div>
                 </div>
             </div>
         </section>

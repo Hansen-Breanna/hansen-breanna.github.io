@@ -50,7 +50,7 @@ function replaceItem() {
     var changeEL = replaceEL.children[1];
     var newListItem = document.createElement("li");
     newListItem.textContent = "Replaced item";
-    replaceEL.replaceChild(changeEL, newListItem);
+    replaceEL.replaceChild(newListItem, changeEL);
 }
 
 // cloneNode() 
