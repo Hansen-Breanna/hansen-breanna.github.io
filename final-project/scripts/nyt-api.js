@@ -11,8 +11,10 @@ books.onload =  function () {
     console.log(booksInfo.results[0].display_name);   
     var category = "";
     for (var i = 0; i < booksInfo.results.length; i++) {
-      category += "<div class='categoryItem'>" + booksInfo.results[i].display_name + "</div>"; 
-      
+      category += "<div class='categoryContent'>" 
+      + "<button type='button' class='categoryItem' ontouchstart='poppingClick()' onclick='toggleDetails()'>" + booksInfo.results[i].display_name + "</button>"
+      + "<div class='listDetails'></div></div>";
+      //listInCategory(booksInfo.results[i].list_name_encoded) 
       document.getElementById("bookCategories").innerHTML = category;
     }
 }

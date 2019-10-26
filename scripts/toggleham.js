@@ -1,5 +1,3 @@
-onload
-
 function myNav() {
     var menu = document.getElementById("ham-menu");
     console.log(menu.style.display);

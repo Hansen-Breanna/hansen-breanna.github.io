@@ -47,8 +47,8 @@ header h2 {
     margin: auto;
     width: 90%;
 }
-.small-text {
-    margin-bottom: 10px;
+header p {
+    margin-bottom: 0;
 }
 
 /* ----- nav ----- */
@@ -68,9 +68,26 @@ nav p {
     padding: 10px;
     text-align: center;
 }
-li.urlList {
-    padding: 0 10px;
+nav ul {
+    padding: 0;
+    margin: 0;
+    height: 160px;
 }
+nav#ham-menu {
+    padding: 0;
+}
+li.urlList {
+    list-style-type: none;
+    border-bottom: 1px solid #84a6c2;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 15px 15px;
+}
+li.urlList:first-of-type {
+    border-top: 1px solid #84a6c2;
+    padding-top: 15px;
+}
+
 .menu-bars {
     position: relative;
     left: -5px;
@@ -139,6 +156,13 @@ button.listData, .categoryItem {
 .button-trio button:not(:first-of-type) {
     position: relative;
     top: -8px;
+}
+
+/* ----- list details ----- */
+
+.list-details {
+    display: none;
+    height: 40px;
 }
 
 /* ----- footer ----- */
