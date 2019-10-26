@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CIT 261 Final Project</title>
+    <link rel = "stylesheet" type = "text/css" href = "../styles/style.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9ZC1DBETDC');
+    </script>
+
+</head>
+<body>
+    <header>
+        <div id="header-icons">
+            <div>
+                <div class="menu-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <button class="menu-icon" type="button" onclick="myNav()"></button>
+            </div>
+            <div>
+                <button class="your-list" type="button">Your List</button>
+            </div>
+        </div>
+        <div>
+            <h1>Best Reads</h1>
+            <h2>Hardcover Fiction</h2>
+            <p class="small-text">Click title for book details</p>
+        </div>
+    </header>
+
+    <nav id="ham-menu">
+        <div id="nav-menu"></div>
+    </nav>
+
+    <main class="main-background">
+
+        <div id="hardcover-fiction"></div>
+
+    </main>
+    <footer></footer>
+
+    <script src="../scripts/nyt-api.js"></script>
+    <script src="../scripts/styles.js"></script>
+    <script src="../scripts/toggleham.js"></script>
+    <script src="../scripts/class-styles.js"></script>
+    <script src="../scripts/accordian.js"></script>
+
+</body>
+</html>

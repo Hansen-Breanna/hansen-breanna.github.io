@@ -1,0 +1,142 @@
+/* ----- Google fonts ----- */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* ----- body ----- */
+
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- header ----- */
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+}
+header, footer {
+    background-color: #062148;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+#header-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.your-list {
+    background-color: #fff;
+    color: #2a5381;
+    font-weight: bold;
+    padding: 8px
+}
+header h1 {
+    margin: auto;
+    font-size: 3em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+
+}
+header h2 {
+    font-weight: normal;
+    font-size: 2em;
+    margin: auto;
+    width: 90%;
+}
+.small-text {
+    margin-bottom: 10px;
+}
+
+/* ----- nav ----- */
+
+nav {
+    background-color: #062148;
+    color: #fff;
+    padding: 10px;
+    display: none;
+}
+nav a {
+    text-decoration: none;
+}
+nav p {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+li.urlList {
+    padding: 0 10px;
+}
+.menu-bars {
+    position: relative;
+    left: -5px;
+}
+button.menu-icon {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 45px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.bar {
+    background-color: #fff;
+    height: 4px;
+    width: 40px;
+    margin: 7px;
+}
+
+/* ----- main ----- */
+
+main {
+    min-height: 400px;
+}
+
+/* ----- list data ----- */
+
+button.listData, .categoryItem {
+    background-image: radial-gradient(#84a6c2, #2a5381);
+    border: none;
+    border-bottom: 5px outset #2a5381;
+    color: #fff;
+    padding: 15px 15px;  
+    width: 100%;
+    margin: 0; 
+}
+.accordian {
+    transition: .5s;
+}
+.accordian.active {
+    background-image: none;
+    background-color: #2a5381;
+}
+.book-details {
+    padding: 20px;
+}
+.book-details img {
+    padding-bottom: 20px;
+}
+
+.button-trio {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.button-trio button {
+    margin: 0 10px;
+    width: 100px;
+    height: 60px;
+    font-weight: bold;
+    background-color: #f9bf91;
+    border: 2px outset #f9bf91;
+
+}
+.button-trio button:not(:first-of-type) {
+    position: relative;
+    top: -8px;
+}
