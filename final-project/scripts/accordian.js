@@ -5,11 +5,11 @@
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var book-details = this.nextElementSibling;
-        if (book-details.style.display === "block") {
-          book-details.style.display = "none";
+        var bookDetails = this.nextElementSibling;
+        if (bookDetails.style.display === "block") {
+          bookDetails.style.display = "none";
         } else {
-          book-details.style.display = "block";
+          bookDetails.style.display = "block";
         }
       });
     }

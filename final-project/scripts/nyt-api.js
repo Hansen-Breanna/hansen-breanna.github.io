@@ -18,24 +18,26 @@ books.onload =  function () {
 }
 
 //Lists data
-let currentLists = 'https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=diIY45XysDkQAiOZr6dGSPoNM5ARPGeg';
-let lists = new XMLHttpRequest();
-lists.open('GET', currentLists);
-lists.send();
-lists.onload =  function () {
-    let listData = JSON.parse(lists.responseText);
-    console.log(listData); 
-    console.log(listData.results.books[0].title);   
-    var hardcoverFictionCategory = "";
-    for (var i = 0; i < listData.results.books.length; i++) {
-      hardcoverFictionCategory += "<button type='button' class='listData accordian'>" + listData.results.books[i].title + "<br>by: " 
-        + listData.results.books[i].author + "</button>" 
-        + "<div class='book-details'><img src='" + listData.results.books[i].book_image + "' /><br>" 
-        + listData.results.books[i].description 
-        + "<div class='button-trio'><button type='button' onclick='addToList()'>Add to list</button>" 
-        + "<button type='button' onclick='removeFromList()'>Remove from list</button>"
-        + "<button type='button' onclick='buyBook()'>Buy from Amazon</button></div></div>";
+function listInCategory(categoryName) {
+  let currentLists = 'https://api.nytimes.com/svc/books/v3/lists/current/' + categoryName + '?api-key=diIY45XysDkQAiOZr6dGSPoNM5ARPGeg';
+  let lists = new XMLHttpRequest();
+  lists.open('GET', currentLists);
+  lists.send();
+  lists.onload =  function () {
+      let listData = JSON.parse(lists.responseText);
+      console.log(listData); 
+      console.log(listData.results.books[0].title);   
+      var hardcoverFictionCategory = "";
+      for (var i = 0; i < listData.results.books.length; i++) {
+        hardcoverFictionCategory += "<button type='button' class='listData accordian'>" + listData.results.books[i].title + "<br>by: " 
+          + listData.results.books[i].author + "</button>" 
+          + "<div class='book-details'><img src='" + listData.results.books[i].book_image + "' /><br>" 
+          + listData.results.books[i].description 
+          + "<div class='button-trio'><button type='button' onclick='addToList()'>Add to list</button>" 
+          + "<button type='button' onclick='removeFromList()'>Remove from list</button>"
+          + "<button type='button' onclick='buyBook()'>Buy from Amazon</button></div></div>";
 
-        document.getElementById("hardcover-fiction").innerHTML = hardcoverFictionCategory;
-    }
+          document.getElementById("hardcover-fiction").innerHTML = hardcoverFictionCategory;
+      }
+  }
 }
