@@ -27,6 +27,9 @@ header, footer {
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-bottom: 10px;
+    background-color: #062148;
+    height: auto;
+    width: 100%;
 }
 .your-list {
     background-color: #fff;
@@ -117,14 +120,19 @@ main {
 
 /* ----- list data ----- */
 
-button.listData, .categoryItem {
+.buttonAndCategoryName {
     background-image: radial-gradient(#84a6c2, #2a5381);
     border: none;
     border-bottom: 5px outset #2a5381;
     color: #fff;
-    padding: 15px 15px;  
-    width: 100%;
+    padding-right: 15px;  
     margin: 0; 
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.categoryContent:last-of-type {
+    margin-bottom: 30px;
 }
 .accordian {
     transition: .5s;
@@ -149,20 +157,46 @@ button.listData, .categoryItem {
     width: 100px;
     height: 60px;
     font-weight: bold;
-    background-color: #f9bf91;
-    border: 2px outset #f9bf91;
-
 }
 .button-trio button:not(:first-of-type) {
     position: relative;
     top: -8px;
 }
+.small-button-trio button, .button-trio button {
+    background-color: #f9bf91;
+    border: 2px outset #f9bf91;
+}
+.small-button-trio button {
+    padding: 5px;
+    margin: 0 10px;
+    width: 70px;
+}
+.small-button-trio {
+    width: 100%;
+}
 
 /* ----- list details ----- */
-
-.list-details {
-    display: none;
+.listDetails {
     height: 40px;
+}
+button.categoryItem {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+}
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #fff transparent transparent transparent;
+    margin-right: 10px;
+    line-height: 40px;
+    align-items: center;
 }
 
 /* ----- footer ----- */
@@ -170,6 +204,12 @@ button.listData, .categoryItem {
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    max-height: 75px;
+    width: 100vw;
+    max-height:75px;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.test {
+    height: 100px;
 }

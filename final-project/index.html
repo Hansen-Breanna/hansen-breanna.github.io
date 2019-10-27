@@ -49,10 +49,16 @@
         <div id="bookCategories"></div>
 
     </main>
-    <footer></footer>
+    <footer>
+        <div class='small-button-trio'>
+            <button type='button' onclick='addToList()'>Add</button> 
+            <button type='button' ontouchstart='removeFromListSound()'>Remove</button>
+            <button type='button' onclick='buyBook()'>Buy</button>
+            <button type='button' onclick='viewList()'>List</button>
+        </div>
+    </footer>
 
     <script src="scripts/nyt-api.js"></script>
-    <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
     <script src="scripts/class-styles.js"></script>
     <script src="scripts/accordian.js"></script>
