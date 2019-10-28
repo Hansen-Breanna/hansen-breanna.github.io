@@ -51,6 +51,9 @@
                 <li><a href="https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click">Javascript Audio Play on Click</a>
                 <li><a href="https://www.w3schools.com/jsref/met_audio_play.asp">Audio  play() Method</a></li>
                 <li><a href="https://www.w3schools.com/html/html5_canvas.asp">HTML5 Canvas</a></li>
+                <li><a href="https://gist.github.com/chriskoch/366054">drawString.js</a></li>
+                <li><a href="https://www.w3schools.com/tags/canvas_arc.asp">HTML canvas arc() Method</a></li>
+                <li><a href="https://www.w3schools.com/graphics/canvas_text.asp">HTML Canvas Text</a></li>
             </ul>
         </section>
 
@@ -131,42 +134,70 @@
 <pre><Code>&lt;canvas id="myCanvas" width="200" height="100" 
     style="border:1px solid #000000;"&gt;
 &lt;/canvas&gt;
-    </Code></pre>
+    </Code></pre>   
     <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
                 </canvas>
         
             <section>
-                <h3></h3>
+                <h3>Line</h3>
                 <canvas id="canvasLine" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
             
             <section>
-                <h3></h3>
+                <h3>Circle</h3>
+                <table class="bottom20mg">
+                    <tr>
+                        <td>x</td>
+                        <td>The x-coordinate of the center of the circle</td>
+                    </tr>
+                    <tr>
+                        <td>y</td>
+                        <td>The y-coordinate of the center of the circle</td>
+                    </tr>
+                    <tr>
+                        <td>r</td>
+                        <td>The radius of the circle</td>
+                    </tr>
+                    <tr>
+                        <td>sAngle</td>
+                        <td>The starting angle, in radians (0 is at the 3 o'clock position of the arc's circle)</td>
+                    </tr>
+                    <tr>
+                        <td>eAngle</td>
+                        <td>The ending angle, in radians</td>
+                    </tr>
+                    <tr>
+                        <td>counterclockwise</td>
+                        <td>Optional. Specifies whether the drawing should be counterclockwise or clockwise. False is default, and indicates clockwise, while true indicates 
+                            counter-clockwise</td>
+                    </tr>
+                </table>
                 <canvas id="canvasCircle" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Text</h3>
                 <canvas id="canvasText" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
-                <h3></h3>
-                <canvas id="canvsStrokeText" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <h3>Stroke Text</h3>
+                <canvas id="canvasStrokeText" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Linear Gradient</h3>
                 <canvas id="canvasLinearGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Circular Gradient</h3>
                 <canvas id="canvasCircularGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
-                <h3></h3>
+                <h3>Image</h3>
+                <img id="imageForCanvas" src="images/blue-crystals.jpg" alt="Blue Crystals" />
                 <canvas id="canvasImage" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
         </section>

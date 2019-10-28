@@ -31,3 +31,7 @@ button.categoryItem {
     line-height: 40px;
     align-items: center;
 }
+
+.bottom20mg {
+    margin-bottom: 20px;
+}
