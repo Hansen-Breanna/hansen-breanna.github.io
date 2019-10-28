@@ -54,6 +54,10 @@
                 <li><a href="https://gist.github.com/chriskoch/366054">drawString.js</a></li>
                 <li><a href="https://www.w3schools.com/tags/canvas_arc.asp">HTML canvas arc() Method</a></li>
                 <li><a href="https://www.w3schools.com/graphics/canvas_text.asp">HTML Canvas Text</a></li>
+                <li><a href="https://www.w3schools.com/tags/canvas_createlineargradient.asp">HTML canvas createLinearGradient() Method</a></li>
+                <li><a href="https://www.w3schools.com/tags/canvas_createradialgradient.asp">HTML canvas createRadialGradient() Method</a></li>
+                <li><a href="https://www.w3schools.com/tags/canvas_strokestyle.asp">HTML canvas strokeStyle Property</a></li>
+                <li><a href="https://www.w3schools.com/tags/canvas_font.asp">HTML canvas font Property</a></li>
             </ul>
         </section>
 
@@ -140,6 +144,15 @@
         
             <section>
                 <h3>Line</h3>
+                <p>Strokes can be altered with <code>ctx.strokeStyle</code> and <code>ctx.lineWidth</code></p>
+<!-- Pre Code -->
+<pre><code>ctx.moveTo(60,40);
+ctx.lineTo(100,10);
+ctx.lineTo(140,40);
+ctx.lineTo(140,90);
+ctx.lineTo(60,90);
+ctx.lineTo(60,40);
+ctx.stroke();</code></pre>
                 <canvas id="canvasLine" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
             
@@ -172,33 +185,127 @@
                             counter-clockwise</td>
                     </tr>
                 </table>
+
+<!-- Pre Code -->
+<pre><code>ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();</code></pre>
                 <canvas id="canvasCircle" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
                 <h3>Text</h3>
+
+<!-- Pre Code -->
+<pre><code>ctx.font = "28px Arial";
+ctx.fillStyle = "#2a5381";
+ctx.fillText("This is blue", 30, 40);
+ctx.font = "55px Arial";
+ctx.fillStyle = "#2a5381";
+ctx.fillText("TEXT", 30, 90);</code></pre>
                 <canvas id="canvasText" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
                 <h3>Stroke Text</h3>
+
+<!-- Pre Code -->
+<pre><code>ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 30);</code></pre>
                 <canvas id="canvasStrokeText" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
                 <h3>Linear Gradient</h3>
+                <p>All <code>grd.addColorStop</code> values be between 0 and 1.</p>
+                <table>
+                    <tr>
+                        <td>x0</td>
+                        <td>The x-coordinate of the start point of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>y0</td>
+                        <td>The y-coordinate of the start point of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>x1</td>
+                        <td>The x-coordinate of the end point of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>y1</td>	
+                        <td>The y-coordinate of the end point of the gradient</td>
+                    </tr>
+                </table>
+
+<!--Pre Code-->
+<pre><code>var grd = ctx.createLinearGradient(0, 50, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(0.2, "orange");
+grd.addColorStop(0.4, "yellow");
+grd.addColorStop(0.6, "green");
+grd.addColorStop(0.8, "blue");
+grd.addColorStop(1, "purple");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 180, 80);</code></pre>
                 <canvas id="canvasLinearGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
                 <h3>Circular Gradient</h3>
+                <table>
+                    <tr>
+                        <td>x0</td>
+                        <td>The x-coordinate of the starting circle of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>y0</td>	
+                        <td>The y-coordinate of the starting circle of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>r0</td>
+                        <td>The radius of the starting circle</td>
+                    </tr>
+                    <tr>
+                        <td>x1</td>
+                        <td>The x-coordinate of the ending circle of the gradient</td>
+                    </tr>	
+                    <tr>
+                        <td>y1</td>
+                        <td>The y-coordinate of the ending circle of the gradient</td>
+                    </tr>
+                    <tr>
+                        <td>r1</td>
+                        <td>The radius of the ending circle</td>
+                    </tr>
+                </table>
+<!--Pre Code-->
+<pre><code>//Create gradient
+var grd = ctx.createRadialGradient(80, 50, 5, 90, 60, 150);
+grd.addColorStop(0, "#cc0000");
+grd.addColorStop(0.5, "#660000");
+grd.addColorStop(1, "#654321");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 180, 80);</code></pre>
                 <canvas id="canvasCircularGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
 
             <section>
                 <h3>Image</h3>
+<!--Pre Code-->
+<pre><code>var img = document.getElementById("imageForCanvas");
+ctx.drawImage(img, 5, 5)</code></pre>
                 <img id="imageForCanvas" src="images/blue-crystals.jpg" alt="Blue Crystals" />
-                <canvas id="canvasImage" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <canvas id="canvasImage" width="205" height="270" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3>Mixed Examples</h3>
+                <canvas id="gradientWithText" width="200" height="100" style="border:1px solid #000000;"></canvas>
+                <canvas id="houseOnRainbow" width="200" height="100" style="border:1px solid #000000;"></canvas>
             </section>
         </section>
 

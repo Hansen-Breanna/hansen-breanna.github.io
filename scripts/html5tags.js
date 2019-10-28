@@ -47,38 +47,83 @@ ctx.strokeText("Hello World", 10, 30);
 var c = document.getElementById("canvasLinearGradient");
 var ctx = c.getContext("2d");
     // Create gradient
-    var grd = ctx.createLinearGradient(0, 0, 200, 0);
+    var grd = ctx.createLinearGradient(0, 50, 200, 0);
     grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
+    grd.addColorStop(0.2, "orange");
+    grd.addColorStop(0.4, "yellow");
+    grd.addColorStop(0.6, "green");
+    grd.addColorStop(0.8, "blue");
+    grd.addColorStop(1, "purple");
 
     // Fill with gradient
     ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
+    ctx.fillRect(10, 10, 180, 80);
 
 //Canvas Circular Gradient
 var c = document.getElementById("canvasCircularGradient");
 var ctx = c.getContext("2d");
     //Create gradient
-    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
-    grd.addColorStop(0, "red");
-    grd.addColorStop(1, "white");
+    var grd = ctx.createRadialGradient(80, 50, 5, 90, 60, 150);
+    grd.addColorStop(0, "#cc0000");
+    grd.addColorStop(0.5, "#660000");
+    grd.addColorStop(1, "#654321");
 
     // Fill with gradient
     ctx.fillStyle = grd;
-    ctx.fillRect(10, 10, 150, 80);
+    ctx.fillRect(10, 10, 180, 80);
 
 //Canvas Image
 var c = document.getElementById("canvasImage");
 var ctx = c.getContext("2d");
 var img = document.getElementById("imageForCanvas");
-ctx.drawImage(img, 10, 10)
+ctx.drawImage(img, 5, 5)
 
-//Canvas Items
+//Canvas Mashups
+//House with rainbow
+var c = document.getElementById("houseOnRainbow");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0, 50, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(0.2, "orange");
+grd.addColorStop(0.4, "yellow");
+grd.addColorStop(0.6, "green");
+grd.addColorStop(0.8, "blue");
+grd.addColorStop(1, "purple");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(3, 3, 195, 95);
+
+//House
 ctx.moveTo(60,40);
 ctx.lineTo(100,10);
 ctx.lineTo(140,40);
 ctx.lineTo(140,90);
 ctx.lineTo(60,90);
 ctx.lineTo(60,40);
+ctx.strokeStyle = "#fff";
+ctx.lineWidth = 5;
 ctx.arc(70, 22, 15, 2, 2 * Math.PI);
 ctx.stroke();
+
+//Peak games
+var c = document.getElementById("gradientWithText");
+var ctx = c.getContext("2d");
+    //Create gradient
+    var grd = ctx.createRadialGradient(80, 50, 5, 90, 60, 150);
+    grd.addColorStop(0, "#cc0000");
+    grd.addColorStop(0.5, "#660000");
+    grd.addColorStop(1, "#654321");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 180, 80);
+
+    // Add text
+    ctx.font = "700 oblique 35px Arial";
+    ctx.fillStyle = "#fff";
+    ctx.fillText("peak", 60, 45);
+    ctx.font = "27px Arial";
+    ctx.fillStyle = "#fff";
+    ctx.fillText("games", 60, 75);
