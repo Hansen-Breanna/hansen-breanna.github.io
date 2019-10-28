@@ -15,7 +15,7 @@ header {
     display: flex;
     flex-flow: column nowrap;
 }
-header, footer {
+header {
     background-color: #062148;
     color: #fff;
     margin: 0;
@@ -32,10 +32,11 @@ header, footer {
     width: 100%;
 }
 .your-list {
-    background-color: #fff;
-    color: #2a5381;
+    background-color: #f9bf91;
+    color: #000;
     font-weight: bold;
-    padding: 8px
+    padding: 8px;
+    border: 2px outset #f9bf91;
 }
 header h1 {
     margin: auto;
@@ -131,8 +132,8 @@ main {
     flex-flow: row nowrap;
     align-items: center;
 }
-.categoryContent:last-of-type {
-    margin-bottom: 30px;
+.listDetails:last-of-type {
+    margin-bottom: 50px;
 }
 .accordian {
     transition: .5s;
@@ -147,7 +148,6 @@ main {
 .book-details img {
     padding-bottom: 20px;
 }
-
 .button-trio {
     text-align: center;
     padding-bottom: 20px;
@@ -162,20 +162,9 @@ main {
     position: relative;
     top: -8px;
 }
-.small-button-trio button, .button-trio button {
-    background-color: #f9bf91;
-    border: 2px outset #f9bf91;
-}
-.small-button-trio button {
-    padding: 5px;
-    margin: 0 10px;
-    width: 70px;
-}
-.small-button-trio {
-    width: 100%;
-}
 
 /* ----- list details ----- */
+
 .listDetails {
     height: 40px;
 }
@@ -200,16 +189,11 @@ button.categoryItem {
 }
 
 /* ----- footer ----- */
-
+ 
 footer {
+    background-color: #062148;
+    height: 50px;
     position: fixed;
     bottom: 0;
-    width: 100vw;
-    max-height:75px;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.test {
-    height: 100px;
+    width: 100%;
 }

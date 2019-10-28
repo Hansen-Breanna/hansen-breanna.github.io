@@ -7,6 +7,7 @@
     <title>HTML5 Tags - Video, Audio, and Canvas</title>
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/html5tags.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -43,10 +44,131 @@
         </section>
 
         <section>
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/html5_video.asp">HTML5 Video</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_audio.asp">HTML5 Audio</a></li>
+                <li><a href="https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click">Javascript Audio Play on Click</a>
+                <li><a href="https://www.w3schools.com/jsref/met_audio_play.asp">Audio  play() Method</a></li>
+                <li><a href="https://www.w3schools.com/html/html5_canvas.asp">HTML5 Canvas</a></li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Audio</h2>
             <audio controls>
                     <source src="sounds/sms-alert-5-daniel_simon.mp3" type="audio/mp3">
             </audio>
+            <div>
+                <div class="buttonAndCategoryName">" 
+                    <button type="button" class="categoryItem" ontouchstart="poppingClick()">
+                        <span class="down-arrow"></span>
+                    </button>
+                    <p>Category Number 1</p>
+                </div>
+
+                <section>
+                    <h3>HTML</h3>
+<!-- Pre Code -->
+<pre><code>&lt;button type="button" 
+    class="categoryItem"
+    ontouchstart="poppingClick()"&gt;
+    &lt;span class="down-arrow"&gt;&lt/span&gt;
+&lt;/button&gt;</code></pre>
+                </section>
+
+                <section>
+                <h3>JavaScript</h3>
+<!-- Pre Code -->
+<pre><code>function poppingClick() {
+   var snd = new Audio('sounds/tiny-button.mp3');
+   snd.play();
+}</code></pre>
+                </section>
+            </div>
+        </section>
+
+        <section>
+            <h2>Video</h2>
+            <p>
+                Video courtesy of 
+                <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+            </p>
+            <section>
+                <h3>With Controls</h3>
+                <video width="300" controls>
+                    <source src="video/big_buck_bunny.mp4.crdownload" type="video/mp4"> 
+                </video>
+<!-- Pre Code -->
+<pre><code>&lt;video width&equals;"300" controls&gt;
+    &lt;source src=
+    "video/big_buck_bunny.mp4.crdownload" 
+    type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+            </section>
+
+            <section>
+                <h3>Autoplay</h3>
+                <video width="300" autoplay>
+                        <source src="video/big_buck_bunny.mp4.crdownload" type="video/mp4"> 
+                    </video>
+<!-- Pre Code -->
+<pre><code>&lt;video width&equals;"300" autoplay&gt;
+    &lt;source src=
+    "video/big_buck_bunny.mp4.crdownload" 
+    type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Canvas</h2>
+            <p>The <code>&lt;canvas&gt;</code> tag is a container for graphics. By default, it has no border or content. Always specify an <code>id</code>, height, and width.</p>
+
+            
+                <h3>Example</h3>
+<!-- Pre Code -->
+<pre><Code>&lt;canvas id="myCanvas" width="200" height="100" 
+    style="border:1px solid #000000;"&gt;
+&lt;/canvas&gt;
+    </Code></pre>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                </canvas>
+        
+            <section>
+                <h3></h3>
+                <canvas id="canvasLine" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+            
+            <section>
+                <h3></h3>
+                <canvas id="canvasCircle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3></h3>
+                <canvas id="canvasText" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3></h3>
+                <canvas id="canvsStrokeText" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3></h3>
+                <canvas id="canvasLinearGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3></h3>
+                <canvas id="canvasCircularGradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
+
+            <section>
+                <h3></h3>
+                <canvas id="canvasImage" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            </section>
         </section>
 
     </main>
@@ -55,6 +177,7 @@
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
+    <script src="scripts/html5tags.js"></script>
 
 </body>
 </html>
