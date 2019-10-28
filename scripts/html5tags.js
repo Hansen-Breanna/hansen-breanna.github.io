@@ -76,7 +76,7 @@ var ctx = c.getContext("2d");
 var c = document.getElementById("canvasImage");
 var ctx = c.getContext("2d");
 var img = document.getElementById("imageForCanvas");
-ctx.drawImage(img, 5, 5)
+ctx.drawImage(img, 5, 5);
 
 //Canvas Mashups
 //House with rainbow
