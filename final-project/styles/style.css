@@ -132,9 +132,6 @@ main {
     flex-flow: row nowrap;
     align-items: center;
 }
-.listDetails:last-of-type {
-    margin-bottom: 50px;
-}
 .accordian {
     transition: .5s;
 }
@@ -165,9 +162,6 @@ main {
 
 /* ----- list details ----- */
 
-.listDetails {
-    height: 40px;
-}
 button.categoryItem {
     height: 40px;
     width: 40px;

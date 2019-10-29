@@ -1,0 +1,11 @@
+.listDetails {
+    width: 45%;
+    display: none;
+}
+.listDetails:last-of-type {
+    margin-bottom: 50px;
+}
+img.bookImage {
+    width: 35vw;
+    height: auto;
+}
