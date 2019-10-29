@@ -15,16 +15,16 @@
 }
 
 /* Rotate */
-.rotateBoxX {
+.rotateBoxX:hover {
     transform: rotateX(180deg);
 }
-.rotateBoxY {
+.rotateBoxY:hover {
     transform: rotateY(180deg);
 }
-.rotateBoxZ {
+.rotateBoxZ:hover {
     transform: rotateZ(180deg);
 }
-.rotateBoxXYZ {
+.rotateBoxXYZ:hover {
     transform: rotate3d(80,90,30,90deg);
 }
 .second-box {
@@ -39,44 +39,44 @@
     line-height: 30px; 
 }
 /* Skew */
-.skewBoxY {
+.skewBoxY:hover {
     transform: skewY(30deg);
 }
-.skewBoxX {
+.skewBoxX:hover {
     transform: skewX(30deg);
 }
-.skewBoxXandY {
+.skewBoxXandY:hover {
     transform: skew(-50deg,30deg);
 }
 
 /* Scale */
-.scaleX {
+.scaleX:hover {
     transform: scaleX(1.5);
     margin-left: 40px;
 }
-.scaleY {
+.scaleY:hover {
     transform: scaleY(.5);
     margin-left: 40px;
 }
-.scaleBoxXandY {
+.scaleBoxXandY:hover {
     transform: scale(2.5, 1.5);
 }
-.scaleZ {
+.scaleZ:hover {
     transform: perspective(100px) scaleZ(1) rotateX(45deg);
     margin-left: 40px;
 }
 
 /* translate */
-.translateXY {
+.translateXY:hover {
     transform: translate(50px,-30px);
 }
-.translateY {
+.translateY:hover {
     transform: translateY(-40px);
 }
-.translateX {
+.translateX:hover {
     transform: translateX(80px);
 }
-.translateZ {
+.translateZ:hover {
     transform: perspective(300px) translateZ(100px);
 }
 

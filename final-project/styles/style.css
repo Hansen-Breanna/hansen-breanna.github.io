@@ -32,11 +32,11 @@ header {
     width: 100%;
 }
 button {
-    background-color: #f9bf91;
+    background-color: #76c349;
     color: #000;
     font-weight: bold;
     padding: 8px;
-    border: 2px outset #f9bf91;
+    border: none;
 }
 header h1 {
     margin: auto;
@@ -117,13 +117,13 @@ button.menu-icon {
 
 main {
     min-height: 400px;
-    background-color: #cecece;
+    background-color: #e1e1e1;
 }
 
 /* ----- list data ----- */
 
 .buttonAndCategoryName {
-    background-image: radial-gradient(#84a6c2, #2a5381);
+    background-color: #009FE0;
     border: none;
     border-bottom: 5px outset #2a5381;
     color: #fff;

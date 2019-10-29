@@ -14,26 +14,22 @@ function listInCategory(listID, categoryUrl) {
             + listData.results.books[i].description 
             + "<br><div id='buttons'><button class='button-trio' type='button' onclick='addItem()'>Add</button>"
             + "<button class='button-trio' type='button' onclick='removeItem()'>Remove</button>"
-            + "<button class='button-trio' type='button' onclick='buyItem()'>Buy</button></div></div>";
+            + "<a href='" + listData.results.books[i].amazon_product_url + "/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0399590501&linkCode=as2&tag=budgetmealrecipesfb-20&linkId=1cecfc480f866b384c941a1069a078f7"
+            + "'><button class='button-trio' type='button' onclick='buyItem()'>Buy</button></a></div></div>";
         }
         var details = document.getElementById("catDetails" + listID);
         var booksContainer = document.createElement('div');
         booksContainer.className = "booksContainer";
         details.appendChild(booksContainer);
-        console.log(booksContainer);
-        sessionStorage.setItem(listID, "listID is " + listID);
         booksContainer.innerHTML = topBooks;
     }
   }
 
   function toggleDetails(listID, categoryUrl) {
-    console.log(listID);
     var details = document.getElementById("catDetails" + listID);
     if (details.style.display == 'none') {
         details.style.display = 'block';
-        if (!sessionStorage.getItem(listID)) {
-            listInCategory(listID, categoryUrl);
-        }
+        listInCategory(listID, categoryUrl);
     } 
     else {
         details.style.display = 'none';

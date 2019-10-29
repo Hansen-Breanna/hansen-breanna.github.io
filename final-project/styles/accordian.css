@@ -22,7 +22,7 @@
     color: #062148;
 }
 img.bookImage {
-    width: 35vw;
+    width: 40vw;
     height: auto;
     padding: 15px 0;
 }
@@ -30,7 +30,16 @@ img.bookImage {
 
 .button-trio {
     margin: 5px;
-    width: 80px;
+    width: 80px; 
+}
+.button-trio:active {
+    animation: buttonClick 1s;
+}
+@keyframes buttonClick {
+    0% {background-color: #f9bf91; border: 2px inset #f9bf91; transform: scale(1.1);} 
+    15% {background-color: #f59548; border: 2px inset #f59548; transform: scale(1.1);}
+    90% {background-color: #f59548; border: 2px inset #f59548; transform: scale(1.1);}
+    100% {background-color: #f9bf91; border: 2px outset #f9bf91; transform: scale(1.1);}
 }
 #buttons {
     display: flex;
