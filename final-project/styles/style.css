@@ -31,7 +31,7 @@ header {
     height: auto;
     width: 100%;
 }
-.your-list {
+button {
     background-color: #f9bf91;
     color: #000;
     font-weight: bold;
@@ -117,6 +117,7 @@ button.menu-icon {
 
 main {
     min-height: 400px;
+    background-color: #cecece;
 }
 
 /* ----- list data ----- */
@@ -131,33 +132,6 @@ main {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-}
-.accordian {
-    transition: .5s;
-}
-.accordian.active {
-    background-image: none;
-    background-color: #2a5381;
-}
-.book-details {
-    padding: 20px;
-}
-.book-details img {
-    padding-bottom: 20px;
-}
-.button-trio {
-    text-align: center;
-    padding-bottom: 20px;
-}
-.button-trio button {
-    margin: 0 10px;
-    width: 100px;
-    height: 60px;
-    font-weight: bold;
-}
-.button-trio button:not(:first-of-type) {
-    position: relative;
-    top: -8px;
 }
 
 /* ----- list details ----- */

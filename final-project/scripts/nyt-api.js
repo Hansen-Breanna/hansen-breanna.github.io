@@ -68,8 +68,7 @@ books.onload =  function () {
     //console.log(booksInfo); 
     var category = "";
     for (var i = 0; i < booksInfo.results.length; i++) {
-      var bookCategories = document.getElementById('text');
-
+      var bookCategories = document.getElementById('bookCategories');
       //Create first div and assign class
       var containerDiv = document.createElement('div');
       containerDiv.className = "categoryContent";

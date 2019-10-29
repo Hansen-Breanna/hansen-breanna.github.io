@@ -1,11 +1,42 @@
 .listDetails {
-    width: 45%;
     display: none;
 }
-.listDetails:last-of-type {
-    margin-bottom: 50px;
+.booksContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.booksContainer div {
+    background-color: #fff;
+    margin: 10px 10px 0 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40vw;
+}
+.booksContainer {
+    margin-bottom: 10px;
+}
+.bookTitle {
+    margin: 0;
+    padding: 0;
+    color: #062148;
 }
 img.bookImage {
     width: 35vw;
     height: auto;
+    padding: 15px 0;
+}
+/* ----- buttons ----- */
+
+.button-trio {
+    margin: 5px;
+    width: 80px;
+}
+#buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
