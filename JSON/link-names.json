@@ -5,7 +5,7 @@
         {"name" : "Javascript", "url" : "javascript.html"},
         {"name" : "JSObjects", "url" : "javascript-objects.html"},
         {"name" : "JSON", "url" : "json.html"},
-        {"name" : "AJAX", "url" : "ajax.html"},
+        {"name" : "AJAX", "url" : "AJAX.html"},
         {"name" : "Local Storage", "url" : "local-storage.html"},
         {"name" : "DOM", "url" : "DOM.html"},
         {"name" : "CSS Class Properties Using JavaScript", "url" : "css-class-properties-using-javascript.html"},
