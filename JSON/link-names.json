@@ -12,9 +12,9 @@
         {"name":"CSS Transition with Animations" ,"url": "css-transition-with-animations.html"},
         {"name":"JavaScript Events" ,"url": "javascript-events.html"},
         {"name":"HTML5 Tags" ,"url": "html5-tags.html"},
-        {"name":"CSS3 Transitions" ,"url": "css3-transitions.html"},
-        {"name":"CSS3 Transforms" ,"url": "css3-transforms.html"},
-        {"name":"CSS3 Animations" ,"url": "css3-animations.html"}]
+        {"name":"CSS3 Transitions" ,"url": "css-transitions.html"},
+        {"name":"CSS3 Transforms" ,"url": "css-transforms.html"},
+        {"name":"CSS3 Animations" ,"url": "css-animations.html"}]
 }
 
 
