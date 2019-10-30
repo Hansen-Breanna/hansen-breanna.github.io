@@ -87,17 +87,23 @@ figcaption {
 
 /* letter changes */
 
-.uppercase:hover {
+.textbox {
+    background-color: #bababa;
+    padding: 10px;
+    margin: 10px;
+}
+.textbox:hover {
+    background-color: #3c76a6;
+    color: #fff;
+}
+#uppercase:hover {
     text-transform: uppercase;
 }
-.lowercase:hover {
+#lowercase:hover {
     text-transform: lowercase;
 }
-.capitalize:hover {
+#capitalize:hover {
     text-transform: capitalize;
-}
-.initial:hover {
-    text-transform: initial;
 }
 
 /* Cube */
