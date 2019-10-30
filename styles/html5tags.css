@@ -35,3 +35,41 @@ button.categoryItem {
 .bottom20mg {
     margin-bottom: 20px;
 }
+
+/* Canvas Buttons for Final Project ----- */
+
+#addButton, #removeButton, #buyButton {
+    border: none;
+    height: 40px;
+    width: 40px;
+    background-color: #f9bf91;
+    border: 1px outset #f9bf91;
+}
+
+#addButton:hover, #removeButton:hover, #buyButton:hover {
+    background-color: #f59548;
+}
+
+#addButton:active, #removeButton:active, #buyButton:active {
+    transform: scale(1.1);
+}
+
+#canvasPopUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    height: 200px;
+    width: 250px;
+    background-color: #f9bf91;
+    border: 2px outset #f9bf91;
+    opacity: 0;
+    animation: popUp 4s 1s ease; 
+    z-index: 100;
+}
+
+@keyframes popUp {
+    0% {opacity: 1;}
+    80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
+    100% {transform: translate(-52%, -50%) scale(0); opacity: 1;}
+  }

@@ -82,30 +82,30 @@ ctx.drawImage(img, 5, 5);
 //House with rainbow
 var c = document.getElementById("houseOnRainbow");
 var ctx = c.getContext("2d");
-// Create gradient
-var grd = ctx.createLinearGradient(0, 50, 200, 0);
-grd.addColorStop(0, "red");
-grd.addColorStop(0.2, "orange");
-grd.addColorStop(0.4, "yellow");
-grd.addColorStop(0.6, "green");
-grd.addColorStop(0.8, "blue");
-grd.addColorStop(1, "purple");
+    // Create gradient
+    var grd = ctx.createLinearGradient(0, 50, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(0.2, "orange");
+    grd.addColorStop(0.4, "yellow");
+    grd.addColorStop(0.6, "green");
+    grd.addColorStop(0.8, "blue");
+    grd.addColorStop(1, "purple");
 
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(3, 3, 195, 95);
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(3, 3, 195, 95);
 
-//House
-ctx.moveTo(60,40);
-ctx.lineTo(100,10);
-ctx.lineTo(140,40);
-ctx.lineTo(140,90);
-ctx.lineTo(60,90);
-ctx.lineTo(60,40);
-ctx.strokeStyle = "#fff";
-ctx.lineWidth = 5;
-ctx.arc(70, 22, 15, 2, 2 * Math.PI);
-ctx.stroke();
+    //House
+    ctx.moveTo(60,40);
+    ctx.lineTo(100,10);
+    ctx.lineTo(140,40);
+    ctx.lineTo(140,90);
+    ctx.lineTo(60,90);
+    ctx.lineTo(60,40);
+    ctx.strokeStyle = "#fff";
+    ctx.lineWidth = 5;
+    ctx.arc(70, 22, 15, 2, 2 * Math.PI);
+    ctx.stroke();
 
 //Peak games
 var c = document.getElementById("gradientWithText");
@@ -127,3 +127,42 @@ var ctx = c.getContext("2d");
     ctx.font = "27px Arial";
     ctx.fillStyle = "#fff";
     ctx.fillText("games", 60, 75);
+
+//Add Button
+var add = document.getElementById("addButton");
+var ctx = add.getContext("2d");
+ctx.moveTo(60,75);
+ctx.lineTo(230,75);
+ctx.lineWidth = 8;
+ctx.stroke();
+ctx.moveTo(145,30);
+ctx.lineTo(145,125);
+ctx.lineWidth = 8;
+ctx.stroke();
+
+//Remove Button
+var c = document.getElementById("removeButton");
+var ctx = c.getContext("2d");
+ctx.moveTo(60,75);
+ctx.lineTo(230,75);
+ctx.lineWidth = 8;
+ctx.stroke();
+
+//Buy Button
+var c = document.getElementById("buyButton");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(150, 55, 25, 1.5, 1.8 * Math.PI);
+ctx.lineWidth = 8;
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(150, 100, 25, 4.5, 2.75 * Math.PI);
+ctx.lineWidth = 8;
+ctx.stroke();
+ctx.moveTo(160,20);
+ctx.lineTo(160,135);
+ctx.stroke();
+ctx.moveTo(145,20);
+ctx.lineTo(145,135);
+ctx.stroke();
+

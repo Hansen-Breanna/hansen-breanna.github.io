@@ -32,11 +32,12 @@ header {
     width: 100%;
 }
 button {
-    background-color: #76c349;
+    
+    background-image: repeating-linear-gradient(to right,#f59548, #f9bf91, #f59548);
     color: #000;
     font-weight: bold;
     padding: 8px;
-    border: none;
+    border: 2px outset #f9bf91;
 }
 header h1 {
     margin: auto;
@@ -123,9 +124,9 @@ main {
 /* ----- list data ----- */
 
 .buttonAndCategoryName {
-    background-color: #009FE0;
+    background-image: repeating-linear-gradient(to right,#062148, #3c76a6, #062148);
     border: none;
-    border-bottom: 5px outset #2a5381;
+    border-bottom: 3px outset #2a5381;
     color: #fff;
     padding-right: 15px;  
     margin: 0; 

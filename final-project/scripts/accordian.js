@@ -8,7 +8,8 @@ function listInCategory(listID, categoryUrl) {
         let listData = JSON.parse(lists.responseText);
         var topBooks = "";
         for (var i = 0; i < 14; i++) {
-            topBooks += "<div><h2 class='bookTitle'>" + listData.results.books[i].title + "</h2><br>by: " 
+            var number = i + 1;
+            topBooks += "<div><h2 class='bookTitle'>" + number + ". " + listData.results.books[i].title + "</h2><br>by: " 
             + listData.results.books[i].author + "<br>"
             + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />" 
             + listData.results.books[i].description 
