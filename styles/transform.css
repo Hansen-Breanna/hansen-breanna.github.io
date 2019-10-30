@@ -85,6 +85,21 @@ figcaption {
     text-align: center;
 }
 
+/* letter changes */
+
+.uppercase:hover {
+    text-transform: uppercase;
+}
+.lowercase:hover {
+    text-transform: lowercase;
+}
+.capitalize:hover {
+    text-transform: capitalize;
+}
+.initial:hover {
+    text-transform: initial;
+}
+
 /* Cube */
 .scene {
     width: 200px;
