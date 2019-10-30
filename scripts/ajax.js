@@ -15,8 +15,6 @@ starWars.onload =  function () {
         categoryList += item + "<br>";
         document.getElementById("starWarsInfo").innerHTML = categoryList;
     }
-    console.log(categoryList);
-    console.log(starWarsInfo);
 }
 
 //NYT Best Seller Books
@@ -26,9 +24,7 @@ let books = new XMLHttpRequest();
 books.open('GET', bestBooks);
 books.send();
 books.onload =  function () {
-    let booksInfo = JSON.parse(books.responseText);
-    console.log(booksInfo); 
-    console.log(booksInfo.results[0].display_name);   
+    let booksInfo = JSON.parse(books.responseText);  
     var category = "";
     for (var i = 0; i < 10; i++) {
         category += booksInfo.results[i].display_name + "<br>"; 
