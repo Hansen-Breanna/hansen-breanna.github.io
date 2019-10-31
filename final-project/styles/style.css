@@ -166,3 +166,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* ----- ads ----- */
+
+.amazon-ads {
+    position: absolute;
+    right: 0;
+    border: 10px solid #062148;
+    width: 88px;
+    height: 31px;
+}

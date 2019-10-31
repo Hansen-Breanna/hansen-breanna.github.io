@@ -5,3 +5,23 @@
     margin: 0 auto; 
     text-align: center;
   }
+
+  .verticalAd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    height: 500px;
+    width: 160px;
+    background-color: #f9bf91;
+    border: 2px outset #f9bf91;
+    opacity: 0;
+    animation: popUp 5s 1s ease; 
+    z-index: 100;
+}
+
+@keyframes popUp {
+    0% {opacity: 1;}
+    80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
+    100% {transform: translate(-52%, -50%) scale(0); opacity: 1;}
+  }
