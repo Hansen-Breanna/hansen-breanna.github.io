@@ -4,6 +4,7 @@
 .booksContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+    justify-items: center;
 }
 .booksContainer div {
     background-color: #fff;
@@ -21,10 +22,11 @@
     padding: 0;
     color: #062148;
 }
-img.bookImage {
+.bookImage {
     width: 40vw;
     height: auto;
-    padding: 15px 0;
+    padding-top: 15px;
+    margin: auto;
 }
 /* ----- buttons ----- */
 
@@ -48,4 +50,37 @@ img.bookImage {
     align-items: center;
     padding: 0;
     margin: 10px 0 0 0;
+}
+
+/* text styling */
+
+.noBottomMg {
+    margin-bottom: 0;
+}
+.noTopMg {
+    margin-top: 0;
+}
+
+/* ----- media queries ----- */
+
+@media only screen and (min-width: 550px) {
+
+    .booksContainer {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .booksContainer div {
+        width: 30vw;
+    }
+    .bookImage {
+        margin: auto;
+        width: 28vw;
+        height: auto;
+        padding-top: 15px;
+    }
+    #buttons {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0;
+        margin: 5px auto 15px auto;
+    }
 }
