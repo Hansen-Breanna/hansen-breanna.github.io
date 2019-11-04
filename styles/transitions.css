@@ -1,0 +1,33 @@
+#rolling-box {
+    width: 200px;
+    height: 200px;
+    background-color: maroon;
+    transition: width 3s, height 3s, background-color 3s, border-radius 2s, transform 3s;
+    transform: rotate(0deg);
+}
+
+#rolling-box:active {
+    width: 50px;
+    height: 50px;
+    background-color: #3c76a6;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+
+#hidden-content {
+    height: 30px;
+    width: 300px;
+    background-color: #bababa;
+    color: #fff;
+    transition: height 0.5s;
+    overflow: hidden;
+}
+#hidden-content h5 {
+    margin: 5px 0;
+}
+#hidden-content:hover {
+    height: 180px;
+}
+#hidden-content * {
+    padding: 5px 5px 0 5px;
+}

@@ -88,6 +88,9 @@ ul {
     list-style: none;
     padding: 0;
 }
+.strong-list {
+    font-weight: bold;
+}
 
 /* -- table -- */
 table {

@@ -32,12 +32,11 @@ header {
     width: 100%;
 }
 button {
-    
-    background-image: repeating-linear-gradient(to right,#f59548, #f9bf91, #f59548);
+    background-color: #ffa724;
     color: #000;
     font-weight: bold;
     padding: 8px;
-    border: 2px outset #f9bf91;
+    border: none;
 }
 header h1 {
     margin: auto;
@@ -124,9 +123,9 @@ main {
 /* ----- list data ----- */
 
 .buttonAndCategoryName {
-    background-image: repeating-linear-gradient(to right,#062148, #3c76a6, #062148);
+    background-image: radial-gradient(#84a6c2, #2a5381);
     border: none;
-    border-bottom: 3px outset #2a5381;
+    border-bottom: 5px outset #2a5381;
     color: #fff;
     padding-right: 15px;  
     margin: 0; 
@@ -166,6 +165,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.large-ad {
+    display: none;
+}
 
 /* ----- ads ----- */
 
@@ -175,4 +177,21 @@ footer {
     border: 10px solid #062148;
     width: 88px;
     height: 31px;
+}
+@media only screen and (min-width: 550px) {
+
+    footer {
+        height: 70px;
+    }
+    .large-ad {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        border: none;
+        width: 320px;
+        margin: 10px;
+    }
+    .amazon-ads {
+        display: none;
+    }
 }
