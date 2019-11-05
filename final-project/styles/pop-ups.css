@@ -1,65 +1,24 @@
 #pop-up{
-    position: relative; 
-    top: 200px; 
-    width: 500px; 
-    margin: 0 auto; 
-    text-align: center;
-  }
+  position: relative; 
+  top: 200px; 
+  width: 500px; 
+  margin: 0 auto; 
+  text-align: center;
+}
 
-  .verticalAd {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-52%, -50%);
-    height: 500px;
-    width: 160px;
-    opacity: 0;
-    animation: popUp 5s 1s ease forwards; 
-    z-index: 100;
+.verticalAd {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -50%);
+  height: 500px;
+  width: 160px;
+  opacity: 0;
+  animation: popUp 5s 1s ease forwards; 
 }
 
 @keyframes popUp {
   0% {opacity: 1;}
   80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
   100% {transform: translate(-52%, -50%) scale(0); opacity: 1;}
-}
-
-@media only screen and (min-width: 550px) {
-  
-  .verticalAd {
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-52%, -50%);
-    height: 300px;
-    width: 350px;
-    opacity: 0;
-    animation: popUp 5s 1s ease forwards; 
-    z-index: 100;
-}
-
-  @keyframes popUp {
-    0% {opacity: 1;}
-    80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
-    100% {transform: translate(-52%, -50%) scale(0); opacity: 1;}
-  }
-
-  .verticalAd2 {
-    position: fixed;
-    top: 60%;
-    left: 50%;
-    transform: translate(-52%, -50%);
-    height: 300px;
-    width: 350px;
-    opacity: 0;
-    animation: popUp2 5s 1s ease forwards; 
-    z-index: 100;
-}
-
-  @keyframes popUp2 {
-    0% {opacity: 1;}
-    80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
-    100% {transform: translate(-52%, -50%) scale(0); opacity: 1;}
-  }
-
 }
