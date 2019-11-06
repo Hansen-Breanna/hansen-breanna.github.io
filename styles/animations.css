@@ -1,0 +1,33 @@
+.ball-container {
+    background-color: #90073f;
+    height: 142px;
+    margin: 40px auto;
+    width: 300px;
+  }
+  
+.rolling-ball {
+animation: orbit 5s linear infinite alternate;
+background: radial-gradient(circle at 50px 50px, #5cabff, #000);
+border: 2px solid #323437;
+border-radius: 50%;
+height: 25px;
+padding: 20px;
+width: 25px;
+}
+
+@keyframes orbit {
+    0% { transform: translate(0px,75px); }
+    20% { transform: translate(40px,0px); } 
+    40% { transform: translate(90px,75px); } 
+    60% { transform: translate(140px,0px); } 
+    80% { transform: translate(190px,75px); }
+    100% { transform: translate(232px,0px); }
+}
+
+li{
+    margin-left: 1em;
+}
+
+.italic {
+    font-style: italic;
+}

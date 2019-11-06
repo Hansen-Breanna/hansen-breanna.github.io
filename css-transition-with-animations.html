@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
     <link rel= "stylesheet" type = "text/css" href = "styles/pop-ups.css" />
+    <link rel="stylesheet" type="text/css" href="styles/trigger-javascript.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -48,31 +49,36 @@
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=B0_M1y4aFAQ">CSS Animation Tutorial #11 - Animating a Pop-up</a></li>
                 <li><a href="https://www.w3schools.com/css/css3_animations.asp">CSS Animations</a></li>
+                <li><a href="https://www.youtube.com/watch?v=TKPAh3_CtBY">CSS - Trigger transitions with Javascript</a></li>
             </ul>
         </section>
 
         <section>
-            <h2>Animation Properties</h2>
-            <p>Animations let an element change from one style to another at points the creator sets. You can change as many properties as wanted and as often as wanted. Animations must have keyframes specified.</p>
-            <ul>
-                <li>@keyframes</li>
-                <li>animation-name</li>
-                <li>animation-duration</li>
-                <li>animation-delay</li>
-                <li>animation-iteration-count</li>
-                <li>animation-direction</li>
-                <li>animatino-timing-function</li>
-                <li>animation-fill-mode</li>
-                <li>animation</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Animated Pop-up</h2>
-            <div id="pop-up" onclick="popUp()">
-                <div class="container">
-                    <h1>This is a pop-up</h1>
-                </div>
-            </div>
+            <h2>Triggering a Transition with JavaScript</h2>
+            <p>Transitions can be triggered with JavaScript by calling a function that changes a style.</p>
+            <div id="square"></div>
+            <button type="button" onclick="fadeOut()">Fade Out</button>
+            <button type="button" onclick="fadeIn()">Fade In</button>
+<!-- Pre Code -->
+<pre><code>HTML:
+&lt;div id="square"&gt;</div>
+&lt;button type="button" 
+    onclick="fadeOut()"&gt;Fade Out&lt;/button&gt;
+
+CSS:
+#square {
+    width: 200px;
+    height: 200px;
+    background-color: #3c76a6;
+    transition: opacity 2s;
+}
+
+Javascript:
+function fadeOut() {
+    var square = 
+        document.getElementById("square");
+    square.style.opacity = 0;
+}</code></pre>
         </section>
         
     </main>
@@ -81,6 +87,7 @@
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
+    <script src="scripts/trigger-javascript.js"></script>
 
 </body>
 </html>

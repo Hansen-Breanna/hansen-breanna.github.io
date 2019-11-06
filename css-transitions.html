@@ -49,24 +49,30 @@
                 <li><a href="https://www.w3schools.com/jsref/obj_touchevent.asp">CSS Transitions</a></li>
                 <li><a href="https://www.w3schools.com/cssref/func_cubic-bezier.asp">CSS cubic-bezier() function</a></li>
                 <li><a href="http://breannaghansen.com/wdd-331/">WDD 331 Zen Garden</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">transition</a>
+                <li><a href="https://css-tricks.com/almanac/properties/t/transition/">transition</a></li>
             </ul>
         </section>
 
         <section>
             <h2>Properties</h2>
-            <code>
-                <ul>
-                    <li><span class="strong-list">transition</span></li>
-                    <li><span class="strong-list">transition-delay:</span> time to wait to start</li>
-                    <li><span class="strong-list">transition-duration:</span> time to run</li>
-                    <li><span class="strong-list">transition-property:</span> properties to change</li>
-                    <li><span class="strong-list">transition-timing-function:</span> which timing function</li>
-                </ul>
-            </code>
+            <ul>
+                <li><span class="strong-list">transition</span></li>
+                <li><span class="strong-list">transition-delay:</span> time to wait to start</li>
+                <li><span class="strong-list">transition-duration:</span> time to run</li>
+                <li><span class="strong-list">transition-property:</span> properties to change</li>
+                <li><span class="strong-list">transition-timing-function:</span> which timing function</li>
+            </ul>
+    
             <p>Must specify element to be transitioned and duration. You can specify multiple elements and duration times. A comma must be inserted between multiple elements. Elements only change from beginning state to ending
                 state with no in-between.
             </p>
             <p><code>transition: width 2s, height 4s;</code></p>
+
+            <section>
+                <h3>Shorthand</h3>
+                <code><p>transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];</p></code>
+            </section>
         </section>
 
         <section>

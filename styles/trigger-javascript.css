@@ -1,0 +1,6 @@
+#square {
+    width: 200px;
+    height: 200px;
+    background-color: #3c76a6;
+    transition: opacity 2s;
+}
