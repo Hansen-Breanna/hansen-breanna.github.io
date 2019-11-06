@@ -6,7 +6,7 @@
   }
   
 .rolling-ball {
-animation: orbit 5s linear infinite alternate;
+animation: orbit 3s linear infinite alternate;
 background: radial-gradient(circle at 50px 50px, #5cabff, #000);
 border: 2px solid #323437;
 border-radius: 50%;

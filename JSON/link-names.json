@@ -9,7 +9,7 @@
         {"name" : "Local Storage", "url" : "local-storage.html"},
         {"name" : "DOM", "url" : "DOM.html"},
         {"name" : "CSS Class Properties Using JavaScript", "url" : "css-class-properties-using-javascript.html"},
-        {"name" : "CSS Transition with Animations", "url" : "css-transition-with-animations.html"},
+        {"name" : "CSS3 Transitions, Animations, and Transforms", "url" : "css-transition-with-animations.html"},
         {"name" : "JavaScript Events", "url" : "javascript-events.html"},
         {"name" : "HTML5 Tags", "url" : "html5-tags.html"},
         {"name" : "CSS3 Transitions", "url" : "css-transitions.html"},

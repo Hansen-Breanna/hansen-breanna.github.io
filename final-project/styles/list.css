@@ -1,19 +1,12 @@
-#square {
-    width: 200px;
-    height: 200px;
-    background-color: #3c76a6;
-    transition: opacity 2s;
-}
-
 #list {
-    background-color: #f9bf91;
+    background-color: #fff;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
     height: 80vh;
-    border: 1px outset #f9bf91;
+    max-width: 500px;
     margin: auto;
     display: none;
 }
@@ -33,5 +26,18 @@ hr {
 .close-button {
     position: absolute;
     bottom: 0;
-    margin-left: 10px;
+    margin: 0 0 10px 10px;
+    border: 2px outset #f9bf91;
+}
+
+.your-list {
+    margin: 8px;
+    border: 2px outset #f9bf91;
+}
+
+@media only screen and (min-width: 550px) {
+    
+    .your-list {
+        margin: 20px 0 0 15px;
+    }
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</title>
+    <title>Creating CSS3 Transitions, Animations, and Transformations in CSS and triggering them with JavaScript</title>
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
     <link rel= "stylesheet" type = "text/css" href = "styles/pop-ups.css" />
     <link rel="stylesheet" type="text/css" href="styles/trigger-javascript.css" />
+    <link rel="stylesheet" type="text/css" href="styles/transitions.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -29,8 +30,8 @@
             <div class="bar"></div>
         </div>
         <button class="menu-icon" type="button" onclick="myNav()"></button>
-        <h1>CSS3 Transitions with Animation</h1>
-        <h2>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h2>
+        <h1>CSS3 Transitions, Animations, and Transforms</h1>
+        <h2>Triggering with JavaScript</h2>
     </header>
 
     <nav id="ham-menu">
@@ -56,9 +57,13 @@
         <section>
             <h2>Triggering a Transition with JavaScript</h2>
             <p>Transitions can be triggered with JavaScript by calling a function that changes a style.</p>
-            <div id="square"></div>
-            <button type="button" onclick="fadeOut()">Fade Out</button>
-            <button type="button" onclick="fadeIn()">Fade In</button>
+
+            <section>
+                <h3>Single Elements</h3>
+                <div>
+                    <div id="square"></div>
+                    <button type="button" onclick="fadeOut()">Fade Out</button>
+                    <button type="button" onclick="fadeIn()">Fade In</button>
 <!-- Pre Code -->
 <pre><code>HTML:
 &lt;div id="square"&gt;</div>
@@ -79,8 +84,66 @@ function fadeOut() {
         document.getElementById("square");
     square.style.opacity = 0;
 }</code></pre>
+                </div>
+
+                <section>
+                    <h3>Show List PopUp</h3>
+                    <div id="list">
+                        <h2>My List<hr></h2>
+                        <button type="button" class="close-button" onclick="hideList()">Close List</button>
+                    </div>
+<button type="button" onclick="showList()">Show List</button>
+<!-- Pre Code -->
+<pre><code>HTML: 
+&lt;div id="list"&gt;
+&lt;h2&gt;My List&lt;hr&gt;&lt;/h2&gt;
+&lt;button type="button" class="close-button" 
+onclick="hideList()"&gt;Close List&lt;/button&gt;
+&lt;/div&gt;
+&lt;button type="button" onclick="showList()"&gt;
+Show List
+&lt;/button&gt;
+
+CSS:
+#list {
+background-color: #f9bf91;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80vw;
+height: 80vh;
+border: 1px outset #f9bf91;
+margin: auto;
+display: none;
+}                
+
+JavaScript:
+function showList() {
+var showPopUp = 
+document.getElementById('list');
+showPopUp.style.display = "block";
+}
+
+function hideList() {
+var hidePopUp = 
+document.getElementById('list');
+hidePopUp.style.display = "none";
+}
+</code></pre>
+                </section>
+            </section>
+
+            <section>
+                <h3>Multiple Elements</h3>
+                <div id="rolling-box"></div>
+                <button type="button" onclick="rollingBox()">Click to Transition</button>
+            </secction>
+
         </section>
         
+        <section>
+      
     </main>
     <footer></footer>
 
