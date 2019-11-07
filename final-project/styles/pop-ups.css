@@ -15,7 +15,6 @@
   width: 160px;
   opacity: 0;
   animation: popUp 5s ease forwards; 
-  display: none;
 }
 
 @keyframes popUp {

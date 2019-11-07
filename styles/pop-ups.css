@@ -6,7 +6,7 @@
   height: 600px;
   width: 160px;
   opacity: 0;
-  animation: popUp 5s ease forwards; 
+  animation: popUp 7s ease forwards; 
 }
 
 @keyframes popUp {

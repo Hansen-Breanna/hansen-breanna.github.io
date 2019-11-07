@@ -1,4 +1,3 @@
-//Hide nav
-var menuBar = document.getElementById("ham-menu");
-menuBar.style.display = "none";
-
+//Hide list
+var yourList = document.getElementById("list");
+yourList.style.display = "none";

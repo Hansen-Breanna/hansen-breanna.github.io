@@ -33,14 +33,6 @@ function rollingBoxBack() {
     changeBox.id = "rolling-box";
 }
 
-//Amazon Ad Animation
-function amazonAd() {
-    var ad = document.getElementById('verticalAmazonAd');
-    ad.id = "verticalAd";
-    var closeButton = document.getElementById('adButton');
-    closeButton.style.display = "none";
-}
-
 //Transform Box
 function scaleBox() {
     var scaleBox = document.getElementById('transform-box');

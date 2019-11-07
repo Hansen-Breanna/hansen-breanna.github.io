@@ -1,9 +1,8 @@
 function showList() {
-    var showPopUp = document.getElementById('list');
-    showPopUp.style.display = "block";
-}
-
-function hideList() {
-    var hidePopUp = document.getElementById('list');
-    hidePopUp.style.display = "none";
-}
+    var list = document.getElementById("list");
+    if (list.style.display == "none") {
+      list.style.display = "block";
+    } else {
+      list.style.display = "none";
+    }
+  }
