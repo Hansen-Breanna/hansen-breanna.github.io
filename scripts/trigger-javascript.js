@@ -23,7 +23,7 @@ function hideList() {
 //Rolling Box
 function rollingBox() {
     var shrinkBox = document.getElementById('rolling-box');
-    shrinkBox.style.transition = "all 2s";
+    shrinkBox.style.transition = "width 3s, height 3s, background-color 3s, border-radius 2s, transform 3s";
     shrinkBox.id = "rollingBox";
 }
 

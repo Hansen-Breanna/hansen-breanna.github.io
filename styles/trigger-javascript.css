@@ -89,4 +89,22 @@ hr {
       font-weight: bold;
       text-align: center;
       line-height: 200px;
+      margin: 0;
   }
+
+  /* ----- Rolling Box ----- */
+
+  #rolling-box {
+    width: 200px;
+    height: 200px;
+    background-color: maroon;
+    transform: rotate(0deg);
+}
+
+#rolling-box:active, #rollingBox {
+    width: 50px;
+    height: 50px;
+    background-color: #3c76a6;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}

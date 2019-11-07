@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/trigger-javascript.css" />
-    <link rel="stylesheet" type="text/css" href="styles/transitions.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -130,13 +129,10 @@ hidePopUp.style.display = "none";
     width: 200px;
     height: 200px;
     background-color: maroon;
-    transition: width 3s, height 3s, 
-        background-color 3s, border-radius 2s, 
-        transform 3s;
     transform: rotate(0deg);
 }   
 
-#rolling-box:active, #rollingBox {
+#rollingBox {
     width: 50px;
     height: 50px;
     background-color: #3c76a6;
@@ -148,9 +144,15 @@ JavaScript:
 function rollingBox() {
     var changeBox = 
         document.getElementById('rolling-box');
-    changeBox.style.transition = "all 2s";
-    changeBox.id = "rollingBox";
-}
+    changeBox.style.transition = "#rolling-box {
+        width: 200px;
+        height: 200px;
+        background-color: maroon;
+        transition: "width 3s, height 3s, 
+            background-color 3s, border-radius 2s, 
+            transform 3s";
+        transform: rotate(0deg);
+    }
 
 function rollingBoxBack() {
     var changeBox = 
@@ -166,17 +168,35 @@ function rollingBoxBack() {
             <h2>Triggering Animations</h2>
 
             <!-- Amazon Add Pop-up -->
-            <!-- <iframe id="verticalAmazonAd" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=books&banner=16X9SFY2FASNBNMV0Y82&f=ifr&linkID=5957aaa8e8382680a3fa0faa010eded4&t=budgetmealrecipesfb-20&tracking_id=budgetmealrecipesfb-20" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-            <button type="button" id="adButton" onclick="amazonAd()">X</button> -->
+            <iframe id="verticalAmazonAd" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=books&banner=16X9SFY2FASNBNMV0Y82&f=ifr&linkID=5957aaa8e8382680a3fa0faa010eded4&t=budgetmealrecipesfb-20&tracking_id=budgetmealrecipesfb-20" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            <button type="button" id="adButton" onclick="amazonAd()">X</button>
         </section>
         
         <section>
             <h2>Triggering Transforms</h2>
+            <p>Transforms can be triggered by adding or changing the transform property using an onclick attribute.</p>
             <div id="transform-box">
                 <p>Box</p>
             </div>
             <button type="button" onclick="scaleBox()">Click to Transform</button>
             <button type="button" onclick="returnBox()">Click to Return Original</button>
+
+<!-- Pre Code -->
+<pre><code>CSS:
+#transform-box {
+    height: 200px;
+    width: 200px;
+    background-color: maroon;
+}
+
+JavaScript:
+function scaleBox() {
+    var scaleBox = 
+        document.getElementById('transform-box');
+    scaleBox.style.transform = 
+        "scale(.5) skewY(45deg)";
+}
+</code></pre>
         </section>
         <section>
       
