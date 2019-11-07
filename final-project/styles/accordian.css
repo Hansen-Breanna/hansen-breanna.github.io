@@ -35,7 +35,7 @@
     width: 80px; 
 }
 .button-trio:active {
-    animation: buttonClick 1s;
+    animation: buttonClick 2s;
 }
 @keyframes buttonClick {
     0% {background-color: #f9bf91; border: 2px inset #f9bf91; transform: scale(1.1);} 

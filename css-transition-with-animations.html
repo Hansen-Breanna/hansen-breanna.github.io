@@ -7,7 +7,6 @@
     <title>Creating CSS3 Transitions, Animations, and Transformations in CSS and triggering them with JavaScript</title>
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
-    <link rel= "stylesheet" type = "text/css" href = "styles/pop-ups.css" />
     <link rel="stylesheet" type="text/css" href="styles/trigger-javascript.css" />
     <link rel="stylesheet" type="text/css" href="styles/transitions.css" />
 
@@ -65,17 +64,12 @@
                     <button type="button" onclick="fadeOut()">Fade Out</button>
                     <button type="button" onclick="fadeIn()">Fade In</button>
 <!-- Pre Code -->
-<pre><code>HTML:
-&lt;div id="square"&gt;</div>
-&lt;button type="button" 
-    onclick="fadeOut()"&gt;Fade Out&lt;/button&gt;
-
-CSS:
+<pre><code>CSS:
 #square {
     width: 200px;
     height: 200px;
     background-color: #3c76a6;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 Javascript:
@@ -94,17 +88,7 @@ function fadeOut() {
                     </div>
 <button type="button" onclick="showList()">Show List</button>
 <!-- Pre Code -->
-<pre><code>HTML: 
-&lt;div id="list"&gt;
-&lt;h2&gt;My List&lt;hr&gt;&lt;/h2&gt;
-&lt;button type="button" class="close-button" 
-onclick="hideList()"&gt;Close List&lt;/button&gt;
-&lt;/div&gt;
-&lt;button type="button" onclick="showList()"&gt;
-Show List
-&lt;/button&gt;
-
-CSS:
+<pre><code>CSS:
 #list {
 background-color: #f9bf91;
 position: fixed;
@@ -138,10 +122,62 @@ hidePopUp.style.display = "none";
                 <h3>Multiple Elements</h3>
                 <div id="rolling-box"></div>
                 <button type="button" onclick="rollingBox()">Click to Transition</button>
+                <button type="button" onclick="rollingBoxBack()">Click to Change Back</button>
+
+<!-- Pre Code -->
+<pre><code>CSS:
+#rolling-box {
+    width: 200px;
+    height: 200px;
+    background-color: maroon;
+    transition: width 3s, height 3s, 
+        background-color 3s, border-radius 2s, 
+        transform 3s;
+    transform: rotate(0deg);
+}   
+
+#rolling-box:active, #rollingBox {
+    width: 50px;
+    height: 50px;
+    background-color: #3c76a6;
+    border-radius: 50%;
+    transform: rotate(45deg);
+} 
+
+JavaScript:
+function rollingBox() {
+    var changeBox = 
+        document.getElementById('rolling-box');
+    changeBox.style.transition = "all 2s";
+    changeBox.id = "rollingBox";
+}
+
+function rollingBoxBack() {
+    var changeBox = 
+        document.getElementById('rollingBox');
+    changeBox.style.transition = "all 2s";
+    changeBox.id = "rolling-box";
+}</code></pre>
             </secction>
 
         </section>
+
+        <section>
+            <h2>Triggering Animations</h2>
+
+            <!-- Amazon Add Pop-up -->
+            <!-- <iframe id="verticalAmazonAd" src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=14&l=ur1&category=books&banner=16X9SFY2FASNBNMV0Y82&f=ifr&linkID=5957aaa8e8382680a3fa0faa010eded4&t=budgetmealrecipesfb-20&tracking_id=budgetmealrecipesfb-20" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+            <button type="button" id="adButton" onclick="amazonAd()">X</button> -->
+        </section>
         
+        <section>
+            <h2>Triggering Transforms</h2>
+            <div id="transform-box">
+                <p>Box</p>
+            </div>
+            <button type="button" onclick="scaleBox()">Click to Transform</button>
+            <button type="button" onclick="returnBox()">Click to Return Original</button>
+        </section>
         <section>
       
     </main>

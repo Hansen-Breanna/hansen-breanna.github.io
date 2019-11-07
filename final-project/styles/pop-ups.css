@@ -14,7 +14,7 @@
   height: 500px;
   width: 160px;
   opacity: 0;
-  animation: popUp 5s 1s ease forwards; 
+  animation: popUp 5s ease forwards; 
   display: none;
 }
 

@@ -2,7 +2,7 @@
     width: 200px;
     height: 200px;
     background-color: #3c76a6;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 #list {
@@ -35,3 +35,58 @@ hr {
     bottom: 0;
     margin-left: 10px;
 }
+
+/* ----- Vertical Ad ----- */
+
+#verticalAmazonAd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    height: 575px;
+    width: 160px; 
+}
+
+#verticalAd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -50%);
+    height: 600px;
+    width: 160px;
+    opacity: 0;
+    animation: popUp 1s ease forwards; 
+  }
+  
+  @keyframes popUp {
+    0% {opacity: 1;}
+    80% {transform: translate(-52%, -50%) scale(1); opacity: 1;}
+    100% {transform: translate(-52%, -50%) scale(0); opacity: 1; display: none;}
+  }
+
+  #adButton {
+      background: #fff;
+      border: 1px solid #c7c7c7;
+      border-bottom: none;
+      color: #bababa;
+      position: fixed;
+      top: 8%;
+      right: 32%;
+      width: 158px;
+      text-align: right;
+  }
+
+  /* ----- Transform Box ----- */
+
+  #transform-box {
+      height: 200px;
+      width: 200px;
+      background-color: maroon;
+  }
+  #transform-box p {
+      color: #fff;
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+      line-height: 200px;
+  }
