@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/trigger-javascript.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animations.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -166,17 +167,32 @@ function rollingBoxBack() {
 
         <section>
             <h2>Triggering Animations</h2>
-
+            <div id="container">
+                <div class="pokeball"></div>
+                <div class="pokeball"></div>
+            </div>
+            <button type="button" onclick="wiggle()">Click to Animate</button>
         </section>
         
         <section>
-            <h2>Triggering Transforms</h2>
-            <p>Transforms can be triggered by adding or changing the transform property using an onclick attribute.</p>
-            <div id="transform-box">
-                <p>Box</p>
-            </div>
-            <button type="button" onclick="scaleBox()">Click to Transform</button>
-            <button type="button" onclick="returnBox()">Click to Return Original</button>
+            <section>
+                <h2>Triggering Transforms</h2>
+                <p>Transforms can be triggered by adding or changing the transform property using an onclick attribute.</p>
+                <div id="transform-box">
+                    <p>Box</p>
+                </div>
+                <button type="button" onclick="scaleBox()">Click to Transform</button>
+                <button type="button" onclick="returnBox()">Click to Return Original</button>
+            </section>
+
+            <section>
+                <h2>Perspective Transformation</h2>
+                <div class="flip3D" id="flip3D">
+                    <div class="back">Back</div>
+                    <div class="front">Front</div>
+                </div>
+                <button type="button" onclick="flip()">Flip Card</button>
+            </section>
 
 <!-- Pre Code -->
 <pre><code>CSS:

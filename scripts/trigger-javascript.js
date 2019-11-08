@@ -43,3 +43,15 @@ function returnBox() {
     var scaleBox = document.getElementById('transform-box');
     scaleBox.style.transform = "none";
 }
+
+//Flip Card
+function flip() {
+    var flipBox = document.getElementById('flip3D');
+    flipBox.classList = "flipOver";
+}
+
+//Wiggle Balls
+function wiggle() {
+    var wiggle = document.getElementById("container");
+    wiggle.classList = "wiggle";
+}
