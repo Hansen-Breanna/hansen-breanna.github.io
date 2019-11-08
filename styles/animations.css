@@ -62,7 +62,7 @@ li{
 	backface-visibility: hidden;
 	transition: transform .5s linear 0s;
 }
-.flipOver {
+.flipOver, .flipBack {
     width:200px; 
     height:200px;
     color: #fff;
@@ -76,4 +76,10 @@ li{
 }
 .flipOver > .back {
     transform: perspective( 600px ) rotateY( 0deg );
+}
+.flipBack > .front {
+    transform: perspective( 600px ) rotateY( 0deg );
+}
+.flipBack > .back {
+    transform: perspective( 600px ) rotateY( 180deg );
 }

@@ -50,6 +50,12 @@ function flip() {
     flipBox.classList = "flipOver";
 }
 
+//Flip Card Back
+function flipBack() {
+    var flipBoxBack = document.getElementById('flip3D');
+    flipBoxBack.classList = "flipBack";
+}
+
 //Wiggle Balls
 function wiggle() {
     var wiggle = document.getElementById("container");
