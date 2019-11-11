@@ -25,7 +25,7 @@ function listInCategory(listID, categoryUrl) {
             + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />"
             + "<p>" + listData.results.books[i].description + "</p>"
             + "<div id='buttons'>"
-            + "<button class='button-trio' type='button' onclick='addItem(" + bookTitle + ", " + bookURL + ")'>Add</button>"
+            + "<button class='button-trio' type='button' onclick='addItem(&quot;" + bookTitle + "&quot;, &quot;" + bookURL + "&quot;)'>Add</button>"
             + "<button class='button-trio' type='button' onclick='removeItem()'>Remove</button>"
             + "<a href='" + bookURL
             + "'><button class='button-trio' type='button' onclick='buyItem()'>Buy</button></a></div></div>";
@@ -48,3 +48,4 @@ function listInCategory(listID, categoryUrl) {
         details.style.display = 'none';
     }
 }
+

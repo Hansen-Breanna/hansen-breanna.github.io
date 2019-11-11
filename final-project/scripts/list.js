@@ -7,18 +7,6 @@ function showList() {
     }
   }
 
-function addItem(bookTitle, bookURL) {
-  localStorage.setItem("title", bookTitle);  
-  localStorage.setItem("url", bookURL);   
-  var addItem = document.getElementById('addToList');
-  var listItem = document.createElement('li');
-  addItem.appendChild(listItem);
-  listItem.textContent = bookTitle;
-  var buyButton = document.createElement('button');
-  buyButton.textContent = "<a href='" + bookURL + "'>Buy</a>";
-  console.log(listItem);
-}
-
 //Remove Button
 var c = document.getElementById("removeButtonBox");
 var ctx = c.getContext("2d");
@@ -35,3 +23,16 @@ ctx.fillText("$", 120, 120);
 ctx.moveTo(120,120);
 ctx.lineTo(120,220);
 ctx.stroke;
+
+function addItem(bookTitle, bookURL) {
+
+  /*
+  localStorage.setItem("title", bookTitle);  
+  localStorage.setItem("url", bookURL);   
+  var addItem = document.getElementById("addToList");
+  var listItem = document.createElement("li");
+  listItem.textContent = localStorage.getItem("title");
+  addItem.appendChild(listItem);
+  console.log(listItem.textContent);
+  */
+} 
