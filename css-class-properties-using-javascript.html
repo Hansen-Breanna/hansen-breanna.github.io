@@ -7,6 +7,7 @@
     <title>Manipulating CSS Class Properties Using JavaScript</title>
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/classes.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -46,8 +47,73 @@
             <ul>
                 <li><a href="https://stackoverflow.com/questions/265984/how-to-redefine-css-classes-with-javascript">How to redefine CSS classes with Javascript</a></li>
                 <li><a href="https://css-tricks.com/almanac/selectors/c/class/">Class</a></li>
-                
+                <li><a href="https://www.w3schools.com/howto/howto_js_add_class.asp">How TO - Add a class</a></li>
+                <li><a href="http://www.openjs.com/scripts/dom/class_manipulation.php">Class Manipulation using Javascript</a></li>
+                <li><a href="https://stackoverflow.com/questions/195951/how-to-change-an-elements-class-with-javascript">How to change an element's class with JavaScript?</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList</a></li>
+                <li><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">HTML DOM classList Property</a></li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Adding a Class</h2>
+            <p>There are two ways to add a new class to an element. The first is <code>classList.add("newClass")</code> and the second is <code>classList += "newClass"</code>.</p>
+            <div>
+                <div id="addClassOne">Class Not Added</div>
+                <button type="button" onclick="classOneAdd()">Click to add .classOne</button>
+<!-- Pre Code -->
+<pre><code>var createFirstClass = 
+    document.getElementById("addClassOne");
+createFirstClass.classList.add("classOne");
+createFirstClass.textContent = 
+    ".classOne added using .add()";</code></pre>
+            </div>
+            <div>
+                <div id="addClassTwo">Class Not Added</div>
+                <button type="button" onclick="classTwoAdd()">Click to add .classTwo</button>
+<!-- Pre Code -->
+<pre><code>var createSecondClass = 
+    document.getElementById("addClassTwo");
+createSecondClass.classList += "classTwo";
+createSecondClass.textContent = 
+    ".classTwo added using +=";</code></pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Removing Class Names</h2>
+            <p>There are two ways to remove a class from an element. The first is <code>classList.remove("newClass")</code> and the second is <code>classList -= "newClass"</code>.</p>
+            <div>
+                <div id="classThree" class="classThree">written with .classThree</div>
+                <button type="button" onclick="classThreeRemove()">Click to remove .classThree</button>
+<!-- Pre Code -->
+<pre><code>var thirdClass = 
+    document.getElementById("classThree");
+thirdClass.classList.remove("classThree");
+thirdClass.textContent = 
+    ".classThree removed using .remove()";</code></pre>
+            </div>
+            <div>
+                <div id="classFour" class="classFour">written with .classFour</div>
+                <button type="button" onclick="classFourRemove()">Click to remove .classFour</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>classList.contains</h2>
+        </section>
+
+        <section>
+            <h2>classList.toggle</h2>
+            <div id="toggleClass" class="classOne">Toggle .classOne & .classFour</div>
+            <button type="button" onclick="toggleClass()">Click to Toggle Classes</button>
+<!-- Pre Code -->
+<pre><code>var classFive = document.getElementById("toggleClass");
+classFive.classList.toggle("classFive");</code></pre>
+        </section>
+
+        <section>
+            <h2>className</h2>
         </section>
 
     </main>
@@ -56,6 +122,8 @@
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
-
+    <script src="scripts/css-classes.js"></script>
+  
+  
 </body>
 </html>

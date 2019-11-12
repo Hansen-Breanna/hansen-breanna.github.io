@@ -25,10 +25,16 @@ ctx.lineTo(120,220);
 ctx.stroke;
 
 function addItem(bookTitle, bookURL) {
-
-  /*
   localStorage.setItem("title", bookTitle);  
-  localStorage.setItem("url", bookURL);   
+  localStorage.setItem("url", bookURL);
+  var yourBooks = new Array();
+  yourBooks.push = bookTitle;
+  console.log(yourBooks);
+  var listItem = document.createElement("LI");
+  var addItem = document.getElementById("addToList");
+  listItem.innerHTML = "<span>" + bookTitle + "</span><canvas id='removeButtonBox'></canvas><canvas id='buyButtonBox'></canvas>";
+  console.log(listItem);
+  /*   
   var addItem = document.getElementById("addToList");
   var listItem = document.createElement("li");
   listItem.textContent = localStorage.getItem("title");
