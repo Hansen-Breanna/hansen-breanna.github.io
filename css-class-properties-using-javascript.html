@@ -52,12 +52,14 @@
                 <li><a href="https://stackoverflow.com/questions/195951/how-to-change-an-elements-class-with-javascript">How to change an element's class with JavaScript?</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">Element.classList</a></li>
                 <li><a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">HTML DOM classList Property</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace">DOMTokenList.replace()</a></li>
             </ul>
         </section>
 
         <section>
             <h2>Adding a Class</h2>
-            <p>There are two ways to add a new class to an element. The first is <code>classList.add("newClass")</code> and the second is <code>classList += "newClass"</code>.</p>
+            <p>There are two ways to add a new class to an element. The first is <code>classList.add("newClass")</code> and the second is <code>classList += "newClass"</code>. Multiple classes can be added by 
+            placing a , and an empty space between class names.</p>
             <div>
                 <div id="addClassOne">Class Not Added</div>
                 <button type="button" onclick="classOneAdd()">Click to add .classOne</button>
@@ -81,8 +83,9 @@ createSecondClass.textContent =
         </section>
 
         <section>
-            <h2>Removing Class Names</h2>
-            <p>There are two ways to remove a class from an element. The first is <code>classList.remove("newClass")</code> and the second is <code>classList -= "newClass"</code>.</p>
+            <h2>Removing a Class</h2>
+            <p>There are two ways to remove a class from an element. The first is <code>classList.remove("newClass")</code> and the second is <code>classList -= "newClass"</code>.  Multiple classes can be removed 
+                by placing a , and an empty space between class names.</p>
             <div>
                 <div id="classThree" class="classThree">written with .classThree</div>
                 <button type="button" onclick="classThreeRemove()">Click to remove .classThree</button>
@@ -101,6 +104,9 @@ thirdClass.textContent =
 
         <section>
             <h2>classList.contains</h2>
+            <p>The <code>.contains</code> manipulation returns a boolean value. You can check to see if an element contains a particular class. For example, does <code>#classContains</code> have an attribute of <code>/classTwo</code>?</p>
+            <div id="classContains"></div>
+            <button tpe="button" onclick="classContains()">Click to check class</button>
         </section>
 
         <section>
@@ -125,6 +131,17 @@ classFive.classList.toggle("classFive");</code></pre>
 classSix.className = "classFour";
 classSix.textContent = 
     "overwritten by .classFour";</code></pre>
+        </section>
+
+        <section>
+            <h2>.replace</h2>
+            <p>This returns the numbers of classes in the list.</p>
+            <div id="classReplace" class="classTwo">.classFour replaces .classTwo</div>
+            <button type="button" onclick="classReplace()">Click to replace class</button>
+<!-- Pre Code -->
+<pre><code>var classReplace = 
+    document.getElementById("classReplace");
+classReplace.classList.replace("classTwo", "classOne");</code></pre>
         </section>
 
     </main>

@@ -38,3 +38,16 @@ function classNameChange() {
     classSix.className = "classFour";
     classSix.textContent = "overwritten by .classFour";
 }
+//Replace
+function classReplace() {
+    var classReplace = document.getElementById("classReplace");
+    classReplace.classList.replace("classTwo", "classOne");
+}
+
+//Contains
+function classContains() {
+    var contains = document.getElementById("classContains");
+    contains.innerHTML = contains.classList.contains("classTwo");
+    console.log(contains);
+
+}
