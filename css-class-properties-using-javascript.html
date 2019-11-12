@@ -105,15 +105,26 @@ thirdClass.textContent =
 
         <section>
             <h2>classList.toggle</h2>
+            <p>You can toggle between two classes or adding one by using <code>classList.toggle("classToToggle")</code>. The example below has "classOne" assigned to it and toggles "classFour".</p>
             <div id="toggleClass" class="classOne">Toggle .classOne & .classFour</div>
             <button type="button" onclick="toggleClass()">Click to Toggle Classes</button>
 <!-- Pre Code -->
-<pre><code>var classFive = document.getElementById("toggleClass");
+<pre><code>var classFive = 
+    document.getElementById("toggleClass");
 classFive.classList.toggle("classFive");</code></pre>
         </section>
 
         <section>
             <h2>className</h2>
+            <p>Using <code>className</code> will overwrite any existing classes and create a new one if it doesn't exist. It is better to use other add options to create class names, though.</p>
+            <div id="classSix" class="classTwo classSix">.classTwo and .classSix</div>
+            <button type="button" onclick="classNameChange()">Click to overwrite class</button>
+<!-- Pre Code -->
+<pre><code>var classSix = 
+    document.getElementById("classSix");
+classSix.className = "classFour";
+classSix.textContent = 
+    "overwritten by .classFour";</code></pre>
         </section>
 
     </main>

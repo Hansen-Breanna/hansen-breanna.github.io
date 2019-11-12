@@ -29,5 +29,12 @@ function classFourRemove() {
 //Toggle class
 function toggleClass() {
     var classFive = document.getElementById("toggleClass");
-    classFive.classList.toggle("classFive");
+    classFive.classList.toggle("classFour");
+}
+
+//ClassName
+function classNameChange() {
+    var classSix = document.getElementById("classSix");
+    classSix.className = "classFour";
+    classSix.textContent = "overwritten by .classFour";
 }
