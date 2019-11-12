@@ -49,6 +49,7 @@
             <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse</a></li>
             <li><a href="https://www.w3schools.com/jsref/obj_touchevent.asp">HTML DOM TouchEvent</a></li>
             <li><a href="https://www.youtube.com/watch?v=ga_SLzsUdTY">JS Touch Events on Mobile Devices</a></li>
+            <li><a href="https://www.youtube.com/watch?v=QedZL8kXX6Y">Event listeners in</a></li>
         </section>
 
         <section>
@@ -69,11 +70,10 @@
   
         <section>
             <h2>touchstart</h2>
-            <div id="touchstart" touchstart="touchAnimate()">
-                <p class="grayBg">This is a paragraph waiting to be touched. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not accomplish 
+            <div id="touchstart" touchstart="touchstart()">
+                <p id="grayBg">This is a paragraph waiting to be touched. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not accomplish 
                     anything.</p>
             </div>
-            <button type="button" onclick="touchstart()">Click to start</button>
         </section>
 
         <section>
@@ -88,6 +88,23 @@
             <h2>touchend</h2>
         </section>
 
+        <section>
+            <h2>Click</h2>
+            <div id="clickList"></div>
+            <button id="clickListener" type="button" onclick="clickListener()">Click to start</button>
+<!-- Pre Code -->
+<pre><code>function clickListener() {
+    document.getElementById('clickListener')
+        .addEventListener('click', clickList(event));
+    console.log(event);
+}
+
+function clickList(event) {
+    event.target.previousSibling.textContent = 
+    "Found it. Check the console!"
+})</code>."
+}</code></pre>
+        </section>
     </main>
     <footer></footer>
 
