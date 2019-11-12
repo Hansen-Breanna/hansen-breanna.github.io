@@ -8,3 +8,8 @@ function touchstart(ev) {
 function touchStartPractice() {
 
 }
+
+function touchAnimate() {
+    document.getElementById('touchstart').classList.add('touchstart');
+
+}
