@@ -7,6 +7,7 @@
     <title>Standard JavaScript Events Including those for Mobile Devices and Animation and Transition Events</title>
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/events.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -42,13 +43,58 @@
             <a href="">Zoom recording - starts at </a>              
         </section>
 
+        <section>
+            <h2>Links</h2>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Touch_events/Using_Touch_Events">Using Touch Events</a></li>
+            <li><a href="https://www.html5rocks.com/en/mobile/touchandmouse/">Touch and Mouse</a></li>
+            <li><a href="https://www.w3schools.com/jsref/obj_touchevent.asp">HTML DOM TouchEvent</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ga_SLzsUdTY">JS Touch Events on Mobile Devices</a></li>
+        </section>
+
+        <section>
+            <h2>Single Click Order of Events</h2>
+            <p>Use the following list in order of precedence for single click events. Do not do touchstart, mousedown, and/or click together. HTML5Rocks suggests using <code>preventDefault()</code> inside touch
+            events so mouse-emulation handling doesn't occur. This does also pevent scrolling, though.</p>
+            <ol>
+                <li>touchstart</li>
+                <li>touchmove</li>
+                <li>touchend</li>
+                <li>mouseover</li>
+                <li>mousemove</li>
+                <li>mousedown</li>
+                <li>mouseup</li>
+                <li>click</li>
+            </ol>
+        </section>
+  
+        <section>
+            <h2>touchstart</h2>
+            <div id="touchstart">
+                <p class="grayBg">This is a paragraph waiting to be touched. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not accomplish 
+                    anything.</p>
+            </div>
+            <button type="button" onclick="touchstart()">Click to start</button>
+        </section>
+
+        <section>
+            <h2>touchmove</h2>
+        </section>
+
+        <section>
+            <h2>touchcancel</h2>
+        </section>
+
+        <section>
+            <h2>touchend</h2>
+        </section>
+
     </main>
     <footer></footer>
 
     <script src="scripts/json-scripts.js"></script>
     <script src="scripts/styles.js"></script>
     <script src="scripts/toggleham.js"></script>
-    
+    <script src="scripts/events.js"></script>    
 
 </body>
 </html>

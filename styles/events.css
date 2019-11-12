@@ -1,0 +1,19 @@
+#touchstart {
+    position: relative;
+    background-image: url("../images/city-background.jpg");
+    height: 375px;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+    from {background-position: 0 0;}
+    to {background-position: 100% 0;}
+}
+
+.grayBg {
+    background-color: #bababa;
+    padding: 20px;
+}
