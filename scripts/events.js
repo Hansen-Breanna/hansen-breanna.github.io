@@ -11,10 +11,20 @@ function clickList(event) {
 //Touchstart
 function touchstart() {
     var paraChange = document.getElementById('touchstart');
-    paraChange.addEventListener('touch', touchChange(event));
+    paraChange.addEventListener('touchstart', touchChange(event));
     console.log(event);
 }
 
 function touchChange(event) {
-    event.target.children.id = "touchStartChange";
+    event.target.id = "touchStartChange";
+}
+
+//Touchend
+function touchend() {
+    var endChange = document.getElementById('touchend');
+    endChange.addEventListener('touchend', touchEndChange(event));
+}
+
+function touchEndChange(event) {
+    event.target.id = "touchEndChange";
 }

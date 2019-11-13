@@ -72,8 +72,9 @@
         <section>
             <h2>ontouchstart</h2>
             <div id="touchstart" ontouchstart="touchstart()">
-                <p class="grayBg">This is a paragraph waiting to be touched. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not accomplish 
-                    anything.</p>
+                <p class="grayBg">This is a paragraph waiting to be touched to be changed. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not 
+                    accomplish anything.</p>
+            </div>
 <!-- Pre Code -->
 <pre><code>function touchstart() {
     var paraChange = 
@@ -81,11 +82,10 @@
     paraChange.addEventListener
         ('touch', touchChange(event));
 }
-
+    
 function touchChange(event) {
     event.target.id = "touchStartChange";
 }</code></pre>
-            </div>
         </section>
 
         <section>
@@ -98,6 +98,21 @@ function touchChange(event) {
 
         <section>
             <h2>touchend</h2>
+            <div id="touchend" ontouchend="touchend()">
+                <p class="grayBg">This is paragraph waiting to be changed when a touch is removed. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will 
+                    not accomplish anything.</p>
+            </div>
+<!-- Pre Code -->
+<pre><code>function touchend() {
+    var endChange = 
+        document.getElementById('touchend');
+    endChange.addEventListener
+        ('touchend', touchEndChange(event));
+}
+    
+function touchEndChange(event) {
+    event.target.id = "touchEndChange";
+}</code></pre>
         </section>
 
         <section>
@@ -107,7 +122,8 @@ function touchChange(event) {
 <!-- Pre Code -->
 <pre><code>function clickListener() {
 document.getElementById('clickListener')
-    .addEventListener('click', clickList(event));
+    .addEventListener
+        ('click', clickList(event));
 console.log(event);
 }
 
