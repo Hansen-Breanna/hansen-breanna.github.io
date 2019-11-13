@@ -16,5 +16,5 @@ function touchstart() {
 }
 
 function touchChange(event) {
-    event.target.id = "touchStartChange";
+    event.target.children.id = "touchStartChange";
 }
