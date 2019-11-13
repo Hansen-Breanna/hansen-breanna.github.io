@@ -1,9 +1,11 @@
 #grayBg {
     background-color: #bababa;
+    color: #000;
     padding: 20px;
 }
 
-.touchstart {
-    background-color: black;
+#touchStartChange {
+    background-color: #000;
     color: #bababa;
+    padding: 20px;
 }

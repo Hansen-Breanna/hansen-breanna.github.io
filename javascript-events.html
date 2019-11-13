@@ -50,6 +50,7 @@
             <li><a href="https://www.w3schools.com/jsref/obj_touchevent.asp">HTML DOM TouchEvent</a></li>
             <li><a href="https://www.youtube.com/watch?v=ga_SLzsUdTY">JS Touch Events on Mobile Devices</a></li>
             <li><a href="https://www.youtube.com/watch?v=QedZL8kXX6Y">Event listeners in</a></li>
+            <li><a href="https://www.w3schools.com/jsref/event_touchstart.asp">touchstart Event</a></li>
         </section>
 
         <section>
@@ -69,10 +70,21 @@
         </section>
   
         <section>
-            <h2>touchstart</h2>
+            <h2>ontouchstart</h2>
             <div id="touchstart" ontouchstart="touchstart()">
                 <p id="grayBg">This is a paragraph waiting to be touched. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will not accomplish 
                     anything.</p>
+<!-- Pre Code -->
+<pre><code>function touchstart() {
+    var paraChange = 
+        document.getElementById('touchstart');
+    paraChange.addEventListener
+        ('touch', touchChange(event));
+}
+
+function touchChange(event) {
+    event.target.id = "touchStartChange";
+}</code></pre>
             </div>
         </section>
 
@@ -89,7 +101,7 @@
         </section>
 
         <section>
-            <h2>Click</h2>
+            <h2>click</h2>
             <div id="clickList"></div>
             <button id="clickListener" type="button" onclick="clickListener()">Click to start</button>
 <!-- Pre Code -->
