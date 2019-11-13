@@ -8,11 +8,13 @@ function clickList(event) {
     event.target.previousSibling.textContent = "Found using addEventListener('click', function(event)). Also, check the console!"
 }
 
+//Touchstart
 function touchstart() {
     var paraChange = document.getElementById('touchstart');
-    paraChange.addEventListener('touch', touchChange());
+    paraChange.addEventListener('touch', touchChange(event));
 }
 
-function touchChange(paraChange) {
-    paraChange.target.className = "touchstart";
+function touchChange(event) {
+    event.target.className = "touchstart";
+    console.log("hello");
 }
