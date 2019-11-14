@@ -44,19 +44,32 @@
 }
 
 #touchmove {
+    position: absolute;
     width: 125px;
     height: auto;
 }
+#butterfly {
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
 
-.transitionEvent {
+#transitionBox {
     width: 150px;
     height: 150px;
     background: maroon;
     transition: width 2s;
 }
 
-.transitionEvent:active {
+#transitionBox:hover {
     width: 300px;
+}
+#transitionEnd {
+    background: #3c76a6;
+    color: #fff;
+    height: 110px;
+    width: 300px;
+    padding: 20px;
 }
 
 .transitionColor {

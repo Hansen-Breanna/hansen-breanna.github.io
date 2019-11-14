@@ -96,7 +96,9 @@ function touchChange(event) {
 
         <section>
             <h2>touchmove</h2>
-            <img id="touchmove" ontouchmove="touchmove()" src="images/blue-butterfly.png" />
+            <div id="butterfly">
+                <img id="touchmove" ontouchmove="touchmove()" src="images/blue-butterfly.png" />
+            </div>
         </section>
 
         <section>
@@ -175,7 +177,38 @@ function start(ballContainer) {
 
         <section>
             <h2>Transition</h2>
-            <div id="transitionBox" class="transitionEvent" onclick="transition()"></div>
+            <div id="transitionBox" onclick="transition()"></div>
+
+<!-- Pre Code -->
+<pre><code>CSS:
+#transitionBox {
+    width: 150px;
+    height: 150px;
+    background: maroon;
+    transition: width 2s;
+}
+
+#transitionBox:hover {
+    width: 300px;
+}
+#transitionEnd {
+    background: #3c76a6;
+    color: #fff;
+    height: 110px;
+    width: 300px;
+    padding: 20px;
+}
+
+JavaScript:
+document.getElementById("transitionBox")
+    .addEventListener("transitionend", myFunction);
+
+function myFunction() {
+  this.innerHTML = "Transitionend event occured. 
+    The transition has completed";
+  this.id = 'transitionEnd';
+}
+            </code></pre>
         </section>
 
     </main>

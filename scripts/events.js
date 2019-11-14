@@ -58,11 +58,6 @@ function touchmove() {
         butterfly.style.left = touchLocation.pageX + 'px';
         butterfly.style.top = touchLocation.pageY + 'px';
     })
-    butterfly.addEventListener('touchend', function (ev) {
-        //current position when dropped
-        var x = parseInt(butterfly.style.left);
-        var y = parseInt(butterfly.style.top);
-    })
 }
 
 //Toggle
@@ -72,11 +67,9 @@ function toggleBox() {
 }
 
 //Transition
-function transition() {
-    var transitionEnd = document.getElementById('transitionBox');   
-    transitionEnd.addEventListener('transitionend', colorChange(transitionEnd));
-}
+document.getElementById("transitionBox").addEventListener("transitionend", myFunction);
 
-function colorChange(transitionEnd) {
-    transitionEnd.className = 'transitionColor';
+function myFunction() {
+  this.innerHTML = "Transitionend event occured - The transition has completed";
+  this.id = 'transitionEnd';
 }
