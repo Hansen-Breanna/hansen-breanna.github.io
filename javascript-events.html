@@ -98,10 +98,6 @@ function touchChange(event) {
         </section>
 
         <section>
-            <h2>touchcancel</h2>
-        </section>
-
-        <section>
             <h2>touchend</h2>
             <div id="touchend" ontouchend="touchend()">
                 <p class="grayBg">This is paragraph waiting to be changed when a touch is removed. It can only be touched on a touch capable device like a mobile phone or tablet. Clicking it with a mouse will 
@@ -150,6 +146,11 @@ function clickList(event) {
 function animateBall() {
     var ballContainer = 
         document.getElementById('ball-container');
+    ballContainer.addEventListener
+        ('animationstart', start(ballContainer));
+}
+
+function start(ballContainer) {
     ballContainer.classList += 
         'ball-container';
     var ball = document.createElement('div');
@@ -159,18 +160,17 @@ function animateBall() {
         </section>
 
         <section>
-            <h2>Transition</h2>
-            <div toggle="toggleBox()">Click here.</div>
+            <h2>Toggle</h2>
+            <div id="toggleBox"></div>
+            <button type="button" onclick="toggleBox()">Click here to toggle.</button>
+<!-- Pre Code -->
+<pre><code>function toggleBox() {
+    var toggleBox = 
+        document.getElementById('toggleBox');
+    toggleBox.classList.toggle('toggleBoxChange');
+}</code></pre>
         </section>
 
-        <section>
-            <h2>Example</h2>
-            <canvas id="canvas" width="600" height="600" style="border:solid black 1px;">
-                Your browser does not support canvas element.
-              </canvas>
-              <br>
-              Log: <pre id="log" style="border: 1px solid #ccc;"></pre>
-        </section>
     </main>
     <footer></footer>
 

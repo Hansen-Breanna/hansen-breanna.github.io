@@ -16,10 +16,15 @@
     padding: 20px;
 }
 
-.toggleBox {
-    width: 200px;
-    height: 200px;
+#toggleBox {
+    width: 150px;
+    height: 150px;
     background-color: maroon;
+}
+
+.toggleBoxChange {
+    transform: scale(.75);
+;   background-image: repeating-linear-gradient(to right,#2a5381, #3c76a6, #2a5381);
 }
 
 #rolling-box {
