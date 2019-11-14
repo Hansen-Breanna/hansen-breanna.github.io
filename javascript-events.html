@@ -8,6 +8,8 @@
     <link rel="icon" type="image/png" href="images/favicon-16x16.png"/>
     <link rel = "stylesheet" type = "text/css" href = "styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/events.css" />
+    <link rel="stylesheet" type="text/css" href="styles/animations.css" />
+    <link rel="stylesheet" t
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZC1DBETDC"></script>
@@ -51,6 +53,9 @@
             <li><a href="https://www.youtube.com/watch?v=ga_SLzsUdTY">JS Touch Events on Mobile Devices</a></li>
             <li><a href="https://www.youtube.com/watch?v=QedZL8kXX6Y">Event listeners in</a></li>
             <li><a href="https://www.w3schools.com/jsref/event_touchstart.asp">touchstart Event</a></li>
+            <li><a href="https://www.w3schools.com/jsref/event_touchend.asp">touchend Event</a></li>
+            <li><a href="https://www.youtube.com/watch?v=OhF1m6Pgj4A">Easy Mobile Touch Drag and Drop using Vanilla JavaScript and HTML</a></li>
+            
         </section>
 
         <section>
@@ -90,6 +95,7 @@ function touchChange(event) {
 
         <section>
             <h2>touchmove</h2>
+            <img id="touchmove" src="images/blue-butterfly.png" />
         </section>
 
         <section>
@@ -132,6 +138,30 @@ function clickList(event) {
     "Found it. Check the console!"
 })</code>."
 }</code></pre>
+        </section>
+
+        <section>
+            <h2>Animation with .onload</h2>
+            <p>The rolling ball animation is created using a function called with <code>window.load</code>.</p>
+            <h3>Rolling Ball Animation</h3>
+            <div id="ball-container"></div>
+
+<!-- Pre Code -->
+<pre><code>window.onload = animateBall();
+function animateBall() {
+    var ballContainer = 
+        document.getElementById('ball-container');
+    ballContainer.classList += 
+        'ball-container';
+    var ball = document.createElement('div');
+    ball.classList += 'rolling-ball';
+    ballContainer.appendChild(ball);
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Transition</h2>
+            <div toggle="toggleBox()">Click here.</div>
         </section>
     </main>
     <footer></footer>
