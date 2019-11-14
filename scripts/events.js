@@ -70,3 +70,13 @@ function toggleBox() {
     var toggleBox = document.getElementById('toggleBox');
     toggleBox.classList.toggle('toggleBoxChange');
 }
+
+//Transition
+function transition() {
+    var transitionEnd = document.getElementById('transitionBox');   
+    transitionEnd.addEventListener('transitionend', colorChange(transitionEnd));
+}
+
+function colorChange(transitionEnd) {
+    transitionEnd.className = 'transitionColor';
+}
