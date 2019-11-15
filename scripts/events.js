@@ -48,13 +48,12 @@ function start(ballContainer) {
 function touchmove() {
     //select the thing we wanna drag
     var butterfly = document.getElementById('touchmove');
-    console.log(butterfly);
     //listen to the touchmove event, every time it fires, grab the location of the touch
     //then assign it to mustachio
     butterfly.addEventListener('touchmove', function (ev) {
         //grab the location of the touch
         var touchLocation = ev.targetTouches[0];
-        //assign mustachio new coordinates based on the touch
+        //assign butterfly new coordinates based on the touch
         butterfly.style.left = touchLocation.pageX + 'px';
         butterfly.style.top = touchLocation.pageY + 'px';
     })

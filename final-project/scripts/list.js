@@ -24,16 +24,20 @@ ctx.moveTo(120,120);
 ctx.lineTo(120,220);
 ctx.stroke;
 
+var yourBooks = new Array();
+console.log(yourBooks);
+
 function addItem(bookTitle, bookURL) {
   localStorage.setItem("title", bookTitle);  
   localStorage.setItem("url", bookURL);
-  var yourBooks = new Array();
   yourBooks.push = bookTitle;
   console.log(yourBooks);
   var listItem = document.createElement("LI");
   var addItem = document.getElementById("addToList");
   listItem.innerHTML = "<span>" + bookTitle + "</span><canvas id='removeButtonBox'></canvas><canvas id='buyButtonBox'></canvas>";
   console.log(listItem);
+  console.log(event);
+  console.log(event.target.childNodes);
   /*   
   var addItem = document.getElementById("addToList");
   var listItem = document.createElement("li");

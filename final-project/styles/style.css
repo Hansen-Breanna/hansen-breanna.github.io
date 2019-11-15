@@ -160,7 +160,7 @@ button.categoryItem {
  
 footer {
     background-color: #062148;
-    height: 50px;
+    height: 60px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -171,16 +171,13 @@ footer {
 
 /* ----- ads ----- */
 
-.amazon-ads {
-    position: absolute;
-    right: 0;
-    border: 10px solid #062148;
-    width: 88px;
-    height: 31px;
-}
-
 .verticalAd2 {
     display: none;
+}
+
+.amazonAd {
+    position: absolute;
+    right: 0;
 }
 
 @media only screen and (min-width: 550px) {
@@ -199,7 +196,7 @@ footer {
         width: 320px;
         margin: 10px;
     }
-    .amazon-ads {
+    .amazonAd {
         display: none;
     }
 

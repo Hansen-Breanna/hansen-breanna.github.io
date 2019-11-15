@@ -9,11 +9,14 @@ function listInCategory(listID, categoryUrl) {
         console.log(listData);
 
         var topBooks = "";
-        for (var i = 0; i < 14; i++) {
+        for (var i = 0; i < listData.results.books.length; i++) {
             var number = i + 1;
 
             //Get book title and set to local storage
             var bookTitle = listData.results.books[i].title;
+            
+            //Get isbn
+            var isbn = listData.results.books[i].isbns[0].isbn10;
 
             //Get URL and set to local storage
             var bookURL = listData.results.books[i].amazon_product_url + 
@@ -21,7 +24,8 @@ function listInCategory(listID, categoryUrl) {
 
             //Loop through and create all book info
             topBooks += "<div><h2 class='bookTitle'>" + number + ". " + bookTitle + "</h2><p class='noBottomMg'><strong>by:</strong> " 
-            + listData.results.books[i].author + "</p>"
+            + listData.results.books[i].author + "</p><p class='noTopMg'><strong>ISBN: </strong>"
+            + isbn + "</p>"
             + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />"
             + "<p>" + listData.results.books[i].description + "</p>"
             + "<div id='buttons'>"
