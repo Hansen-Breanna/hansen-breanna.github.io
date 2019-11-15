@@ -4,8 +4,8 @@
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
+    width: 100vw;
+    height: 90vh;
     max-width: 500px;
     margin: auto;
     display: none;
@@ -44,14 +44,34 @@ hr {
 
 /* Buttons */
 
-#addButton, #removeButtonBox, #buyButtonBox {
+.addButton, .removeButtonBox, .buyButtonBox {
     border: none;
     height: 30px;
     width: 30px;
     background-color: #f9bf91;
     border: 1px outset #f9bf91;
+    position: absolute;
 }
 
+.buyButtonBox {
+    right: 15px;
+}
+
+.removeButtonBox {
+    right: 55px;
+}
+
+#addedToList li {
+    height: 30px;
+    border-bottom: 1px solid #cecece;
+    padding: 10px 0 10px 0;
+}
+
+.capitalizeText {
+    text-transform: lowercase;
+    position: relative;
+    top: 10px;
+}
 @media only screen and (min-width: 550px) {
     
     .your-list {
