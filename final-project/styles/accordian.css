@@ -35,7 +35,7 @@
     margin: 5px;
     width: 80px; 
 }
-.button-trio:active {
+.button-trio:active, .removeButtonBox:active, .buyButtonBox:active {
     animation: buttonClick 2s;
 }
 @keyframes buttonClick {
