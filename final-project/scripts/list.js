@@ -7,8 +7,8 @@ function showList() {
     }
   }
 
+//Arrays for books and urls
 var yourBooks = new Array();
-
 var urlList = new Array();
 
 function addItem(bookTitle, bookURL) {
@@ -40,6 +40,7 @@ function addItem(bookTitle, bookURL) {
   addItem.appendChild(listItem);
 } 
 
+/*
 //Remove Button
 var c = document.getElementsByClassName("removeButtonBox");
 var ctx = c.getContext("2d");
@@ -56,3 +57,4 @@ ctx.fillText("$", 120, 120);
 ctx.moveTo(120,120);
 ctx.lineTo(120,220);
 ctx.stroke;
+*/
