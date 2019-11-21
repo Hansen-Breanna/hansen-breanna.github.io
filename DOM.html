@@ -34,7 +34,7 @@
     <nav id="ham-menu">
         <div id="introPara"></div>
         <ul id="test-nav">
-            <div id="navigation-menu"></div>
+            <li id="navigation-menu"></li>
         </ul>
     </nav>
 
@@ -49,7 +49,7 @@
             <h2>Link List</h2>
             <ul>
                 <li><a href="https://stackoverflow.com/questions/11128700/create-a-ul-and-fill-it-based-on-a-passed-array" target="_blank">
-                    Create a &ltul&gt and fill it based on a passed array</a>
+                    Create a &lt;ul&gt; and fill it based on a passed array</a>
                 </li>
                 <li><a href="https://www.w3schools.com/jsref/met_node_insertbefore.asp" target="_blank">HTML DOM insertBefore() Method</a></li>
                 <li><a href="https://eloquentjavascript.net/Eloquent_JavaScript.pdf" target="_blank">Eloquent JavaScript</a></li>
@@ -74,7 +74,7 @@
                     How to add a class to DOM element in JavaScript?</a>
                 </li>
                 <li><a href="https://stackoverflow.com/questions/4365246/how-to-change-href-of-a-tag-on-button-click-through-javascript" target="_blank">
-                    How to change href of <a> tag on button click through javascript</a>
+                    How to change href of &lt;a&gt; tag on button click through javascript</a>
                 </li>
                 <li><a href="https://www.youtube.com/watch?v=e0ihEHxd6vI">appendChild() - Javascript DOM</a></li>
                 <li><a href="https://www.youtube.com/watch?v=n0lG2ZCq3Y4">Replace child elements with replaceChild() - Javascript DOM tutorial</a></li>
@@ -94,7 +94,7 @@
             <code>document.getElementBy...</code>
         </p>
 
-        <section>
+        <div>
             <section>
                 <h3>querySelector()</h3>
                 <p>The footer on this page is created using querySelector.</p>
@@ -105,7 +105,7 @@
                 <h3>querySelectorAll()</h3>
                 <p>All links in this website are styled using querySelectorAll.</p>
 <!-- Pre Code--><pre><code>var links = document.querySelectorAll("a");
-    for (var i= 0; i < links.length; i++) {</links.length>
+    for (var i = 0; i &lt; links.length; i++) {
         links[i].style.color = "#2477CA";
     }</code></pre>
             </section>
@@ -140,16 +140,16 @@ document.getElementById("myBtn")
 
             <section>
                 <h3>appendChild()</h3>
-                <p>
-                    <code>
-                    parent.appendChild(child)<br>
-                    Example:<br>
-                    var div = document.querySelector('div');<br>
-                    var strong = document.createElement('strong');<br>
-                    strong.textContent = 'Hello';<br>
-                    div.appendChild(strong);
-                    </code>
-                </p>
+                <p><code>parent.appendChild(child)</code></p>
+
+                <p>Example:</p>
+
+                <code>var div = document.querySelector('div');<br>
+                var strong = document.createElement('strong');<br>
+                strong.textContent = 'Hello';<br>
+                div.appendChild(strong);
+                </code>
+            
             </section>
 
             <section>
@@ -177,6 +177,7 @@ document.getElementById("myBtn")
                         <li><strong>Item 3</strong></li>
                     </ul>
 
+                    <p><code>
                     var em = document.createElement('em');<br>
                     var strong = document.querySelector('strong');<br>
                     var div = document.querySelector('div');<br>
@@ -188,9 +189,8 @@ document.getElementById("myBtn")
                 <h3>cloneNode()</h3>
                     <p>The clone node is used when you want to copy an already existing element. The item in the array is a boolean value.
                         If it is true, the clone will have all the child elements the parent element does. 
-                        <code>var duplicateElement = parent.cloneNode([deep]);<br>
+                        <code>var duplicateElement = parent.cloneNode([deep]);</code></p>
                         <p>Example:</p>
-                        <p><code></code></p>
                         
                         <ul id="cloneEL">
                             <li>Item 1</li>
@@ -204,15 +204,10 @@ document.getElementById("myBtn")
                         cloneEL.appendChild(copy);</code></p>
             </section>
 
-            <section>
-                <h3></h3>
-                <p><code></code></p>
-            </section>
-
             <section id="insertBeforeP">
                 <h3>insertBefore()</h3>
                 <p>Adds a specified element before another child element. The method is called by the parent method.</p>
-                <p><code>parent.insertBefore(newEle, refEle);<br></p>
+                <p><code>parent.insertBefore(newEle, refEle);</code><br></p>
                 <p>Example: </p>
 <!-- Pre Code -->
 <pre><code>var em = document.createElement('em');
@@ -233,7 +228,7 @@ div.insertBefore(em, strong);</code></pre>
                 <h3>getComputedStyle()</h3>
                 <p>This method checks for any CSS styling for an element before you make any changes. It returns the read-only values off
                     all properties of an element. The pseudo element is optional and is for <code>:before</code>, <code>:visited</code>, 
-                    etc.</code>
+                    etc.
                 </p>
                 <p><code>var style = getComputedStyle(element, [pseudoEle])</code></p>
                 <p>Example:</p>
@@ -244,10 +239,10 @@ div.insertBefore(em, strong);</code></pre>
             <section>
                 <h3>setAttribute()</h3>
                 <p>The setAttribute either adds to or changes the attribute of an element.</p>
-                <p><code>element.setAttribute(name, value);</p>
+                <p><code>element.setAttribute(name, value);</code></p>
                     <p>Example: </p>
-                    var div = document.querySelector('div');<br>
-                    div.setAttribute('contenteditable', '')</code></p>
+                    <code>var div = document.querySelector('div');<br>
+                    div.setAttribute('contenteditable', '')</code>
             </section>
 
             <section>
@@ -265,7 +260,7 @@ div.insertBefore(em, strong);</code></pre>
                 var div = document.querySelector('div');<br>
                 div.removeAttribute('contenteditable');</code></p>
             </section>
-        </section>
+        </div>
 
     </main>
 

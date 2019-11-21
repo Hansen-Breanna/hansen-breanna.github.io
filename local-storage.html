@@ -85,11 +85,11 @@ books.onload =  function () {
     JSON.parse(books.responseText);
     var category = "";
     for (var i = 0; 
-        i < booksInfo.results.length; 
+        i &lt; booksInfo.results.length; 
         i++) {
         category += 
             booksInfo.results[i].display_name 
-            + "&ltbr&gt;";
+            + "&lt;br&gt;";
     }
     document.getElementById("bookCategories")
         .innerHTML = category;

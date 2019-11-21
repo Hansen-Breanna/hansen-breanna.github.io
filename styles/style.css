@@ -54,6 +54,9 @@ nav p {
     padding: 10px;
     text-align: center;
 }
+#navigation-menu {
+    text-align: left;
+}
 li.urlList {
     padding: 0 10px;
 }
