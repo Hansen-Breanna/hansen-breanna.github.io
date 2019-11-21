@@ -40,6 +40,11 @@ function addItem(bookTitle, bookURL) {
   addItem.appendChild(listItem);
 } 
 
+
+function removeItem(bookTitle, bookUrl) {
+  localStorage.removeItem(key);
+}
+
 /*
 //Remove Button
 var c = document.getElementsByClassName("removeButtonBox");

@@ -15,7 +15,7 @@ function listInCategory(listID, categoryUrl) {
             //Get book title and change to capitalize
             var bookTitle = listData.results.books[i].title;
             var title = titleCase(bookTitle);
-            function titleCase(str) {
+            function titleCase(str) { //Function obtained from the internet and altered
                 var splitStr = str.toLowerCase().split(' ');
                 for (var i = 0; i < splitStr.length; i++) {
                     // You do not need to check if i is larger than splitStr length, as your for does that for you
@@ -26,9 +26,10 @@ function listInCategory(listID, categoryUrl) {
                 return splitStr.join(' ');
             }
 
-            console.log(title);
             //Get isbn
-            var isbn = listData.results.books[i].isbns[0].isbn10;
+            if (listData.results.books[i].isbns.length > 0) {
+                var isbn = listData.results.books[i].isbns[0].isbn10;
+            }
 
             //Get URL and set to local storage
             var bookURL = listData.results.books[i].amazon_product_url + 
