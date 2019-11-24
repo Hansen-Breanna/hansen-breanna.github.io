@@ -84,12 +84,12 @@ document.getElementById("propInstance").innerHTML = "<pre><code>New properties a
 
 //Object Inheritence
 function fruits() {
-this.name = "fruit 1";
+    this.name = "fruit 1";
 }
 fruits.prototype.color = "green";
 
 function apple() {
-fruits.call(this);
+    fruits.call(this);
 }
 
 apple.prototype = Object.create(fruits.prototype);

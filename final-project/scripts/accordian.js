@@ -6,7 +6,6 @@ function listInCategory(listID, categoryUrl) {
     lists.send();
     lists.onload =  function (details) {
         let listData = JSON.parse(lists.responseText);
-        console.log(listData);
 
         var topBooks = "";
         for (var i = 0; i < listData.results.books.length; i++) {
@@ -55,7 +54,7 @@ function listInCategory(listID, categoryUrl) {
     }
   }
 
-  function toggleDetails(listID, categoryUrl) {
+function toggleDetails(listID, categoryUrl) {
     var details = document.getElementById("catDetails" + listID);
     if (details.style.display == 'none') {
         details.style.display = 'block';

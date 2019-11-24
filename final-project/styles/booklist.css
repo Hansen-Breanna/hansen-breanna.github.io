@@ -1,4 +1,8 @@
-#list {
+.list {
+    display: none;
+}
+
+.display-list {
     background-color: #fff;
     position: fixed;
     top: 45%;
@@ -8,8 +12,10 @@
     height: 85vh;
     max-width: 500px;
     margin: auto;
-    display: none;
+    display: inline-block;
     border: 2px outset #3c76a6;
+    overflow-x: hidden; 
+    overflow-x: auto;
 }
 
 #list h2 {
@@ -24,16 +30,9 @@ hr {
     background-color: #3c76a6;
 }
 
-.close-button {
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 10px 10px;
-    border: 2px outset #f9bf91;
-}
-
 .your-list {
     margin: 15px;
-    border: 2px outset #f9bf91;
+    border: 2px outset #f59548;
     float: left;
 }
 
@@ -48,30 +47,32 @@ hr {
     border: none;
     height: 30px;
     width: 30px;
-    background-color: #f9bf91;
-    border: 1px outset #f9bf91;
-    position: absolute;
+    background-color: #f59548;
+    border: 1px outset #f59548;
 }
 
 .buyButtonBox {
-    right: 15px;
-}
-
-.removeButtonBox {
-    right: 55px;
+    margin: 0 10px;
 }
 
 #addedToList li {
-    height: 30px;
     border-bottom: 1px solid #cecece;
     padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
 }
 
 .titleText {
-    position: relative;
-    top: 10px;
-    width: 80%;
+    position: absolute;
+    left: 100px;
 }
+#list h2 {
+    background-image: radial-gradient(#84a6c2, #2a5381);
+    color: #fff;
+    margin: 0;
+    padding: 10px 0 15px 0;
+}
+
 @media only screen and (min-width: 550px) {
     
     .your-list {
