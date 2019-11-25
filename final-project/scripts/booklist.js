@@ -9,10 +9,13 @@ class Books {
 //Array for book list
 var yourBooks = [];
 var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
-console.log(storageArray.length);
-loadList();
+//console.log(storageArray.length);
+if (localStorage.length > 0) {
+  loadList();
+}
 
 function loadList () {
+  console.log(storageArray);
 //Fill list with items from local storage
 for (i = 0; i < storageArray.length; i++) {
     //create li
@@ -41,6 +44,9 @@ for (i = 0; i < storageArray.length; i++) {
 }
 
 function addItem(bookTitle, bookURL) {
+  if (localStorage.length == 0) {
+    storageArray = [];
+  }
   //Pull local storage to array
   yourBooks = storageArray;
   //Create new book instance
@@ -77,6 +83,8 @@ function reloadList(yourBooks) {
     loadList();
   }
 }
+
+
 /*
 // //Remove Button
 // var c = document.getElementById("removeButtonBox");
