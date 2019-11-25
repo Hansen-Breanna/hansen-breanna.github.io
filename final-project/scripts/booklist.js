@@ -15,7 +15,6 @@ if (localStorage.length > 0) {
 }
 
 function loadList () {
-  console.log(storageArray);
 //Fill list with items from local storage
 for (i = 0; i < storageArray.length; i++) {
     //create li
@@ -30,6 +29,7 @@ for (i = 0; i < storageArray.length; i++) {
     buyBox.classList += 'buyButtonBox'; 
     buyBox.href = storageArray[i].url;
     buyBox.textContent = "$";
+    //buyBox.onclick = removeItem(storageArray[i].title");
     listItem.appendChild(buyBox); 
     //create span
     var spanTitle = document.createElement("span");
@@ -58,14 +58,13 @@ function addItem(bookTitle, bookURL) {
   reloadList(yourBooks);
 }
 
-function removeItem(bookTitle, bookUrl) {
+function removeItem(bookTitle) {
   console.log(bookTitle);
-  console.log(bookUrl);
   var yourBooks = storageArray;
   console.log(yourBooks);
   for (var i = 0; i < yourBooks.length; i++) {
-    if (yourBooks[i].title = bookTitle) {
-      delete yourBooks[i];
+    if (yourBooks[i].title == bookTitle) {
+      yourBooks.splice(i,1);
     }
   }
   //Reload list
