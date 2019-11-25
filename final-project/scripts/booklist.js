@@ -7,10 +7,12 @@ class Books {
 }
 
 //Array for book list
-var yourBooks = new Array();
+var yourBooks = [];
 var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
-console.log(storageArray.length)
+console.log(storageArray.length);
+loadList();
 
+function loadList () {
 //Fill list with items from local storage
 for (i = 0; i < storageArray.length; i++) {
     //create li
@@ -18,10 +20,13 @@ for (i = 0; i < storageArray.length; i++) {
     //create remove button
     var removeBox = document.createElement('button');
     removeBox.classList += 'removeButtonBox';
+    removeBox.textContent = "-";
     listItem.appendChild(removeBox);
     //create buy button
     var buyBox = document.createElement('button');
-    buyBox.classList += 'buyButtonBox';
+    buyBox.classList += 'buyButtonBox'; 
+    buyBox.href = storageArray[i].url;
+    buyBox.textContent = "$";
     listItem.appendChild(buyBox); 
     //create span
     var spanTitle = document.createElement("span");
@@ -32,129 +37,54 @@ for (i = 0; i < storageArray.length; i++) {
     //append li to ul
     var addItem = document.getElementById("addedToList");
     addItem.appendChild(listItem);
+  }
 }
 
 function addItem(bookTitle, bookURL) {
-  console.log(bookTitle);
+  //Pull local storage to array
+  yourBooks = storageArray;
+  //Create new book instance
   var newBook = new Books(bookTitle, bookURL);
+  //Push book to array
   yourBooks.push(newBook);
 
-  // Save books to local storage
-  localStorage.setItem("yourBooks", JSON.stringify(yourBooks));
-
-  // load books from localStorage
-  if (localStorage.getItem("yourBooks")) {
-       yourBooks = JSON.parse(localStorage.getItem("yourBooks"));
-       console.log(yourBooks);
-  }
+  //Reload list
+  reloadList(yourBooks);
 }
 
 function removeItem(bookTitle, bookUrl) {
-  var bookKey = bookTitle;
-  var urlKey = bookUrl;
-  localStorage.removeItem(bookKey);
-  localStorage.removeItem(urlKey);
-  console.log("Is this working?");
+  console.log(bookTitle);
+  console.log(bookUrl);
+  var yourBooks = storageArray;
+  console.log(yourBooks);
+  for (var i = 0; i < yourBooks.length; i++) {
+    if (yourBooks[i].title = bookTitle) {
+      delete yourBooks[i];
+    }
+  }
+  //Reload list
+  reloadList(yourBooks);
 }
 
-// //Arrays for books and urls
-// var yourBooks = new Array();
-// var urlList = new Array();
+function reloadList(yourBooks) {
+  // Save books to local storage
+  localStorage.setItem("yourBooks", JSON.stringify(yourBooks));
 
-// function addItem(bookTitle, bookURL) {
- 
-//   yourBooks.push(bookTitle);
-//   urlList.push(bookURL);
-  
-//   for (var i = 0; i < yourBooks.length; i++) {
-//     localStorage.setItem("title"+ [i], yourBooks[i]);  
-//     localStorage.setItem("urlList" + [i], urlList[i]);
-//   }
-//   //create li
-//   var listItem = document.createElement("LI");
-//   //create span
-//   var spanTitle = document.createElement("span");
-//   spanTitle.innerHTML = bookTitle;
-//   spanTitle.classList += 'titleText';
-//   //append span
-//   listItem.appendChild(spanTitle);
-//   //create remove button
-//   var removeBox = document.createElement('button');
-//   removeBox.classList += 'removeButtonBox';
-//   listItem.appendChild(removeBox);
-//   //create buy button
-//   var buyBox = document.createElement('button');
-//   buyBox.classList += 'buyButtonBox';
-//   listItem.appendChild(buyBox);
-//   //append li to ul
-//   var addItem = document.getElementById("addedToList");
-//   addItem.appendChild(listItem);
-// } 
-
-/*
-
-function GetFromLocalStorage(){
-    for (var i = 0; i < localStorage.length; i++) {
-    var listItem = document.createElement("LI");
-    //create span
-    var spanTitle = document.createElement("span");
-    var key = '"bookObj" + i + ".title"';
-    console.log(key);
-    var itemTitle = JSON.parse(localStorage.getItem("bookObj"));
-    console.log(itemTitle);
-    spanTitle.innerHTML = JSON.stringify(itemTitle);
-    spanTitle.classList += "bookObj" + i;
-    //append span
-    listItem.appendChild(spanTitle);
-    //append li to ul
-    var addItem = document.getElementById("addedToList");
-    addItem.appendChild(listItem);
+  //Reload list
+  if (localStorage.getItem("yourBooks")) {
+    document.getElementById("addedToList").innerHTML = "";
+    yourBooks = JSON.parse(localStorage.getItem("yourBooks"));
+    loadList();
   }
-} 
-*/
-/*
-function addItem(bookTitle, bookUrl) {
-  var i = localStorage.length;
-  var bookObj = {title: bookTitle, url: bookUrl};
-  localStorage.setItem('bookObj' + i, JSON.stringify(bookObj));
-  console.log(bookObj);
-
-  for (var i = 0; i < localStorage.length; i++) {
-    var listItem = document.createElement("LI");
-    //create span
-    var spanTitle = document.createElement("span");
-    var key = '"bookObj" + i + ".title"';
-    console.log(key);
-    var itemTitle = JSON.parse(localStorage.getItem(key));
-    console.log(itemTitle);
-    spanTitle.innerHTML = JSON.stringify(itemTitle);
-    spanTitle.classList += "bookObj" + i;
-    //append span
-    listItem.appendChild(spanTitle);
-    //append li to ul
-    var addItem = document.getElementById("addedToList");
-    addItem.appendChild(listItem);
-  }
-
-  document.getElementById("testList").innerHTML = addItem;
-  //document.getElementById("testList").innerHTML = JSON.stringify(localStorage) + "<br>Hello<br>";
 }
-*/
-
-// for (var a in localStorage) {
-//   console.log(a, ' = ', localStorage[a]);
-// }
-
-
-
 /*
-//Remove Button
-var c = document.getElementsByClassName("removeButtonBox");
-var ctx = c.getContext("2d");
-ctx.moveTo(60,75);
-ctx.lineTo(230,75);
-ctx.lineWidth = 6;
-ctx.stroke();
+// //Remove Button
+// var c = document.getElementById("removeButtonBox");
+// var ctx = c.getContext("2d");
+// ctx.moveTo(10,15);
+// ctx.lineTo(20,15);
+// ctx.lineWidth = 3;
+// ctx.stroke();
 
 //Buy Button
 var c = document.getElementsByClassName("buyButtonBox");
