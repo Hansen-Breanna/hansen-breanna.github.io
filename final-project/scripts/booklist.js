@@ -22,9 +22,13 @@ for (i = 0; i < storageArray.length; i++) {
     var listItem = document.createElement("LI");
     
     //create remove button
-    var removeBox1 = document.createElement('canvas');
-    removeBox1.id = "removeBox";
-    listItem.appendChild(removeBox1);
+    var removeBox = document.createElement('canvas');
+    removeBox.id = "removeBox";
+    removeBox.addEventListener('touchstart', function(event) {
+      var removeTitle = event.target.parentNode.textContent;
+      removeItem(removeTitle);
+    });
+    listItem.appendChild(removeBox);
 
     // var removeBox = document.createElement('button');
     // removeBox.classList += 'removeButtonBox';
@@ -36,7 +40,7 @@ for (i = 0; i < storageArray.length; i++) {
     var buyBox = document.createElement('canvas');
     buyBox.id = "removeBox";
     var url = storageArray[i].url
-    buyBox.onclick = function() {
+    buyBox.ontouchstart = function() {
       window.location.href = url;
     };
     listItem.appendChild(buyBox); 
@@ -76,7 +80,6 @@ function addItem(bookTitle, bookURL) {
 }
 
 function removeItem(bookTitle) {
-  console.log("hello");
   var yourBooks = storageArray;
   for (var i = 0; i < yourBooks.length; i++) {
     if (yourBooks[i].title == bookTitle) {
