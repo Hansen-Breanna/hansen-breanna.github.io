@@ -91,10 +91,6 @@ hr {
     padding: 10px 0 15px 0;
 }
 
-#removeBox {
-    margin-right: 10px;
-}
-
 #buyBox {
     margin-left: 10px;
 }
@@ -112,6 +108,9 @@ hr {
     margin-top: 10px;
 }
 
+.remove {
+    margin-right: 10px;
+}
 
 @media only screen and (min-width: 550px) {
     

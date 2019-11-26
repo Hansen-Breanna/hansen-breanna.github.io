@@ -23,22 +23,17 @@ for (i = 0; i < storageArray.length; i++) {
     
     //create remove button
     var removeBox = document.createElement('canvas');
-    removeBox.id = "removeBox";
+    removeBox.id = "removeBox" + i;
+    removeBox.classList += "remove";
     removeBox.addEventListener('touchstart', function(event) {
       var removeTitle = event.target.parentNode.textContent;
       removeItem(removeTitle);
     });
     listItem.appendChild(removeBox);
-
-    // var removeBox = document.createElement('button');
-    // removeBox.classList += 'removeButtonBox';
-    // removeBox.textContent = "-";
-    // //removeBox.onclick = removeItem(storageArray[i].title);
-    // listItem.appendChild(removeBox);
     
     //create buy button
     var buyBox = document.createElement('canvas');
-    buyBox.id = "removeBox";
+    buyBox.id = "buyBox" + i;
     var url = storageArray[i].url
     buyBox.ontouchstart = function() {
       window.location.href = url;
@@ -101,3 +96,25 @@ function reloadList(yourBooks) {
     loadList();
   }
 }
+
+
+//Canvas Button
+for (var count = 0; count < storageArray.length; count++) {
+  //Remove Button
+  var newID = "removeBox" + count;
+  var c = document.getElementById(newID);
+  var ctx = c.getContext("2d");
+  ctx.moveTo(60,75);
+  ctx.lineTo(230,75);
+  ctx.lineWidth = 5;
+  ctx.stroke();
+  
+  //Buy Button
+  var newBuyId = "buyBox" + count;
+  var b = document.getElementById(newBuyId);
+  var buy = b.getContext("2d");
+  ctx.font = "bold 120px Arial";
+  ctx.textAlign = "center";
+  ctx.fillText("$", 150, 120);
+}
+
