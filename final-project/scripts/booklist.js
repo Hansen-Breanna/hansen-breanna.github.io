@@ -1,8 +1,9 @@
 //Using class to instantiate object
 class Books {
-  constructor(title, url) {
+  constructor(title, url, i) {
       this.title = title;
       this.url = url;
+      this.i = i;
   } 
 }
 
@@ -19,18 +20,33 @@ function loadList () {
 for (i = 0; i < storageArray.length; i++) {
     //create li
     var listItem = document.createElement("LI");
+    
     //create remove button
-    var removeBox = document.createElement('button');
-    removeBox.classList += 'removeButtonBox';
-    removeBox.textContent = "-";
-    listItem.appendChild(removeBox);
+    var removeBox1 = document.createElement('canvas');
+    removeBox1.id = "removeBox";
+    listItem.appendChild(removeBox1);
+
+    // var removeBox = document.createElement('button');
+    // removeBox.classList += 'removeButtonBox';
+    // removeBox.textContent = "-";
+    // //removeBox.onclick = removeItem(storageArray[i].title);
+    // listItem.appendChild(removeBox);
+    
     //create buy button
-    var buyBox = document.createElement('button');
-    buyBox.classList += 'buyButtonBox'; 
-    buyBox.href = storageArray[i].url;
-    buyBox.textContent = "$";
-    //buyBox.onclick = removeItem(storageArray[i].title");
+    var buyBox = document.createElement('canvas');
+    buyBox.id = "removeBox";
+    var url = storageArray[i].url
+    buyBox.onclick = function() {
+      window.location.href = url;
+    };
     listItem.appendChild(buyBox); 
+    
+    // var buyBox = document.createElement('button');
+    // buyBox.classList += 'buyButtonBox'; 
+    // buyBox.href = storageArray[i].url;
+    // buyBox.textContent = "$";
+    // listItem.appendChild(buyBox); 
+
     //create span
     var spanTitle = document.createElement("span");
     spanTitle.innerHTML = storageArray[i].title;
@@ -50,7 +66,8 @@ function addItem(bookTitle, bookURL) {
   //Pull local storage to array
   yourBooks = storageArray;
   //Create new book instance
-  var newBook = new Books(bookTitle, bookURL);
+  var i = yourBooks.length;
+  var newBook = new Books(bookTitle, bookURL, i);
   //Push book to array
   yourBooks.push(newBook);
 
@@ -59,12 +76,12 @@ function addItem(bookTitle, bookURL) {
 }
 
 function removeItem(bookTitle) {
-  console.log(bookTitle);
+  console.log("hello");
   var yourBooks = storageArray;
-  console.log(yourBooks);
   for (var i = 0; i < yourBooks.length; i++) {
     if (yourBooks[i].title == bookTitle) {
       yourBooks.splice(i,1);
+      break;
     }
   }
   //Reload list
@@ -82,23 +99,3 @@ function reloadList(yourBooks) {
     loadList();
   }
 }
-
-
-/*
-// //Remove Button
-// var c = document.getElementById("removeButtonBox");
-// var ctx = c.getContext("2d");
-// ctx.moveTo(10,15);
-// ctx.lineTo(20,15);
-// ctx.lineWidth = 3;
-// ctx.stroke();
-
-//Buy Button
-var c = document.getElementsByClassName("buyButtonBox");
-var ctx = c.getContext("2d");
-ctx.font = "110px Arial";
-ctx.fillText("$", 120, 120);
-ctx.moveTo(120,120);
-ctx.lineTo(120,220);
-ctx.stroke;
-*/

@@ -43,8 +43,7 @@ hr {
 
 /* Buttons */
 
-.addButton, .removeButtonBox, .buyButtonBox {
-    border: none;
+.addButton, .removeButtonBox, .buyButtonBox, canvas {
     height: 30px;
     width: 30px;
     background-color: #f59548;
@@ -73,6 +72,13 @@ hr {
     padding: 10px 0 15px 0;
 }
 
+#removeBox {
+    margin-right: 10px;
+}
+
+#buyBox {
+    margin-left: 10px;
+}
 @media only screen and (min-width: 550px) {
     
     .your-list {
