@@ -70,8 +70,7 @@ function addItem(bookTitle, bookURL) {
   //Pull local storage to array
   yourBooks = storageArray;
   //Create new book instance
-  var i = yourBooks.length;
-  var newBook = new Books(bookTitle, bookURL, i);
+  var newBook = new Books(bookTitle, bookURL);
   //Push book to array
   yourBooks.push(newBook);
 

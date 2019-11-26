@@ -163,12 +163,13 @@ footer {
     background-color: #062148;
     height: 60px;
     position: fixed;
-    bottom: 0;
+    bottom: -1px;
     width: 100%;
 }
 .large-ad {
     display: none;
 }
+
 
 /* ----- ads ----- */
 
