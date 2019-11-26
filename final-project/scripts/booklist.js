@@ -113,8 +113,8 @@ for (var count = 0; count < storageArray.length; count++) {
   var newBuyId = "buyBox" + count;
   var b = document.getElementById(newBuyId);
   var buy = b.getContext("2d");
-  ctx.font = "bold 120px Arial";
-  ctx.textAlign = "center";
-  ctx.fillText("$", 150, 120);
+  buy.font = "500 120px Arial";
+  buy.textAlign = "center";
+  buy.fillText("$", 150, 120);
 }
 
