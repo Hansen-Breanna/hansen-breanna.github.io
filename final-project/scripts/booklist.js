@@ -14,6 +14,7 @@ var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
 if (localStorage.length > 0) {
   loadList();
 }
+designButtons();
 
 function loadList () {
 //Fill list with items from local storage
@@ -56,6 +57,7 @@ for (i = 0; i < storageArray.length; i++) {
     var addItem = document.getElementById("addedToList");
     addItem.appendChild(listItem);
   }
+  designButtons();
 }
 
 function addItem(bookTitle, bookURL) {
@@ -99,22 +101,23 @@ function reloadList(yourBooks) {
 
 
 //Canvas Button
-for (var count = 0; count < storageArray.length; count++) {
-  //Remove Button
-  var newID = "removeBox" + count;
-  var c = document.getElementById(newID);
-  var ctx = c.getContext("2d");
-  ctx.moveTo(60,75);
-  ctx.lineTo(230,75);
-  ctx.lineWidth = 5;
-  ctx.stroke();
-  
-  //Buy Button
-  var newBuyId = "buyBox" + count;
-  var b = document.getElementById(newBuyId);
-  var buy = b.getContext("2d");
-  buy.font = "500 120px Arial";
-  buy.textAlign = "center";
-  buy.fillText("$", 150, 120);
+function designButtons() {
+  for (var count = 0; count < storageArray.length; count++) {
+    //Remove Button
+    var newID = "removeBox" + count;
+    var c = document.getElementById(newID);
+    var ctx = c.getContext("2d");
+    ctx.moveTo(60,75);
+    ctx.lineTo(230,75);
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    
+    //Buy Button
+    var newBuyId = "buyBox" + count;
+    var b = document.getElementById(newBuyId);
+    var buy = b.getContext("2d");
+    buy.font = "500 120px Arial";
+    buy.textAlign = "center";
+    buy.fillText("$", 150, 120);
+  }
 }
-
