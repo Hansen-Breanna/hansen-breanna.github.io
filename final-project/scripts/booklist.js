@@ -16,7 +16,7 @@ if (!!storageArray) {
   designButtons();
 }
 else {
-  console.log("test");
+  console.log("hello");
   localStorage.setItem("yourBooks", []);
 }
 
