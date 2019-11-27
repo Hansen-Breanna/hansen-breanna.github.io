@@ -11,14 +11,10 @@ class Books {
 var yourBooks = [];
 var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
 //console.log(storageArray.length);
-if (localStorage.length > 0) {
+if (!!storageArray) {
   loadList();
 }
-else {
-  storageArray.length = 0;
-  loadList();
-  console.log("hello");
-}
+
 designButtons();
 
 function loadList() {
