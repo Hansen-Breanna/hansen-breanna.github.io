@@ -60,7 +60,7 @@ for (i = 0; i < storageArray.length; i++) {
 }
 
 function addItem(bookTitle, bookURL) {
-  if (localStorage.length == 0) {
+  if (!!storageArray) {
     storageArray = [];
   }
   //Pull local storage to array
