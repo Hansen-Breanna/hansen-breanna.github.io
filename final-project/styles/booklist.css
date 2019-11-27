@@ -97,7 +97,8 @@ hr {
 
 #close-button {
     width: 100%;
-    height: 55px;
+    background-color: #fff;
+    height: 60px;
     position: sticky;
     bottom: 0;
     border: none;

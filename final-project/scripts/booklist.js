@@ -10,7 +10,7 @@ class Books {
 //Array for book list
 var yourBooks = [];
 var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
-//console.log(storageArray.length);
+console.log(storageArray.length);
 if (localStorage.length > 0) {
   loadList();
 }
