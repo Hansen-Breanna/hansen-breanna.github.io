@@ -14,6 +14,9 @@ var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
 if (!!storageArray) {
   loadList();
 }
+else {
+  console.log("test");
+}
 
 designButtons();
 
