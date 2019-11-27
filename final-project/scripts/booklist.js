@@ -61,6 +61,9 @@ for (i = 0; i < storageArray.length; i++) {
 
 function addItem(bookTitle, bookURL) {
   if (!!storageArray) {
+    //Not needed
+  }
+  else {
     storageArray = [];
   }
   //Pull local storage to array
