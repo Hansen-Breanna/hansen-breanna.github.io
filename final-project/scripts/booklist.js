@@ -17,6 +17,7 @@ if (localStorage.length > 0) {
 else {
   storageArray.length = 0;
   loadList();
+  console.log("hello");
 }
 designButtons();
 
