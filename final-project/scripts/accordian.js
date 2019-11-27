@@ -41,10 +41,10 @@ function listInCategory(listID, categoryUrl) {
             + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />"
             + "<p>" + listData.results.books[i].description + "</p>"
             + "<div id='buttons'>"
-            + "<button class='button-trio' type='button' ontouchstart='addItem(&quot;" + title + "&quot;, &quot;" + bookURL + "&quot;)'>Add</button>"
-            + "<button class='button-trio' type='button' ontouchstart='removeItem(&quot;" + title + "&quot;)'>Remove</button>"
+            + "<button class='button-trio' type='button' onclick='addItem(&quot;" + title + "&quot;, &quot;" + bookURL + "&quot;)'>Add</button>"
+            + "<button class='button-trio' type='button' onclick='removeItem(&quot;" + title + "&quot;)'>Remove</button>"
             + "<a href='" + bookURL
-            + "'><button class='button-trio' type='button' ontouchstart='buyItem()'>Buy</button></a></div></div>";
+            + "'><button class='button-trio' type='button' onclick='buyItem()'>Buy</button></a></div></div>";
         }
         var details = document.getElementById("catDetails" + listID);
         var booksContainer = document.createElement('div');
