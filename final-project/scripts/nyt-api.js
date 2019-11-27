@@ -1,3 +1,10 @@
+// //Using class to instantiate object
+// class Categories {
+//   constructor(name, url) {
+//       this.name = name;
+//       this.url = url;
+//   } 
+// }
 //NYT Best Seller Books
 
 //Home page categories
@@ -7,9 +14,10 @@ books.open('GET', bestBooks);
 books.send();
 books.onload =  function () {
     let booksInfo = JSON.parse(books.responseText);
-    //console.log(booksInfo); 
-    var category = "";
     for (var i = 0; i < booksInfo.results.length; i++) {
+      //Instantiate new category
+      //var categories = new Categories(booksInfo.results[i].display_name, booksInfo.results[i].list_name_encoded);
+      //console.log(categories);
       var bookCategories = document.getElementById('bookCategories');
       //Create first div and assign class
       var containerDiv = document.createElement('div');

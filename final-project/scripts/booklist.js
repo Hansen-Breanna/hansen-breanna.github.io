@@ -40,12 +40,6 @@ for (i = 0; i < storageArray.length; i++) {
       window.location.href = url;
     };
     listItem.appendChild(buyBox); 
-    
-    // var buyBox = document.createElement('button');
-    // buyBox.classList += 'buyButtonBox'; 
-    // buyBox.href = storageArray[i].url;
-    // buyBox.textContent = "$";
-    // listItem.appendChild(buyBox); 
 
     //create span
     var spanTitle = document.createElement("span");
@@ -57,6 +51,7 @@ for (i = 0; i < storageArray.length; i++) {
     var addItem = document.getElementById("addedToList");
     addItem.appendChild(listItem);
   }
+  //Redesign buttons
   designButtons();
 }
 

@@ -19,8 +19,7 @@ header {
     text-align: center;
     position: fixed;
     top: 0;
-    left: -8%;
-    width: 105%;
+    width: 100%;
 }
 #header-icons {
     display: flex;
@@ -118,7 +117,7 @@ button.menu-icon {
 main {
     min-height: 400px;
     background-color: #e1e1e1;
-    margin-bottom: 55px;
+    margin: 135px -1px 55px 0;
 }
 
 /* ----- list data ----- */
