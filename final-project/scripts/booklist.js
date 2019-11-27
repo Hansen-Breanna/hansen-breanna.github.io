@@ -13,12 +13,11 @@ var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
 //console.log(storageArray.length);
 if (!!storageArray) {
   loadList();
+  designButtons();
 }
 else {
   console.log("test");
 }
-
-designButtons();
 
 function loadList() {
 //Fill list with items from local storage
