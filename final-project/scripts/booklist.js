@@ -14,6 +14,10 @@ var storageArray = JSON.parse(localStorage.getItem("yourBooks"));
 if (localStorage.length > 0) {
   loadList();
 }
+else {
+  storageArray.length = 0;
+  loadList();
+}
 designButtons();
 
 function loadList() {
