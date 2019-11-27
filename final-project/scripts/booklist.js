@@ -17,7 +17,7 @@ if (!!storageArray) {
 }
 else {
   console.log("test");
-  localStorage.setItem(JSON.stringify("yourBooks", []));
+  localStorage.setItem("yourBooks", JSON.stringify([]));
 }
 
 function loadList() {
