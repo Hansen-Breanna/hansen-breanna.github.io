@@ -44,10 +44,14 @@ hr {
     border: 2px outset #f59548;
     float: left;
 }
+
 #close-list {
     margin: 15px;
     border: 2px outset #f59548;
     float: left;
+}
+.your-list:active, #close-list:active {
+    background-color: #f27918;
 }
 
 #addedToList {
@@ -57,7 +61,7 @@ hr {
 
 /* Buttons */
 
-.addButton, .removeButtonBox, .buyButtonBox, canvas {
+canvas {
     height: 30px;
     width: 30px;
     background-color: #f59548;

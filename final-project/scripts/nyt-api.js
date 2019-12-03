@@ -16,8 +16,6 @@ books.onload =  function () {
     let booksInfo = JSON.parse(books.responseText);
     for (var i = 0; i < booksInfo.results.length; i++) {
       //Instantiate new category
-      //var categories = new Categories(booksInfo.results[i].display_name, booksInfo.results[i].list_name_encoded);
-      //console.log(categories);
       var bookCategories = document.getElementById('bookCategories');
       //Create first div and assign class
       var containerDiv = document.createElement('div');
@@ -29,7 +27,6 @@ books.onload =  function () {
       catDetails.className = "listDetails";
       catDetails.id = "catDetails" + [i];
       var categoryUrl = booksInfo.results[i].list_name_encoded;
-      //catDetails.innerHTML = listInCategory(categoryUrl);
       catDetails.style.display = "none";
       bookCategories.appendChild(catDetails);
 

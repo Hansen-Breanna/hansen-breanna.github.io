@@ -40,8 +40,8 @@
 }
 @keyframes buttonClick {
     0% {background-color: #f59548; border: 2px inset #f59548; transform: scale(1.1);} 
-    15% {background-color: #f9bf91; border: 2px inset #f9bf91; transform: scale(1.1);}
-    90% {background-color: #f9bf91; border: 2px inset #f9bf91; transform: scale(1.1);}
+    15% {background-color: #f27918;; border: 2px inset #f27918;; transform: scale(1.1);}
+    90% {background-color: #f27918;; border: 2px inset #f27918;; transform: scale(1.1);}
     100% {background-color: #f59548; border: 2px outset #f59548; transform: scale(1.1);}
 }
 #buttons {

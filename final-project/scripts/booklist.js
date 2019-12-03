@@ -20,6 +20,7 @@ else {
   localStorage.setItem("yourBooks", JSON.stringify([]));
 }
 
+//Load list at start of page
 function loadList() {
 //Fill list with items from local storage
 for (i = 0; i < storageArray.length; i++) {
@@ -59,6 +60,7 @@ for (i = 0; i < storageArray.length; i++) {
   designButtons();
 }
 
+//Add item to list when add button is clicked
 function addItem(bookTitle, bookURL) {
   if (!!storageArray) {
     storageArray = JSON.parse(localStorage.getItem("yourBooks"));
@@ -77,6 +79,7 @@ function addItem(bookTitle, bookURL) {
   reloadList(yourBooks);
 }
 
+//Remove item from list when buttons are pressed
 function removeItem(bookTitle) {
   var yourBooks = storageArray;
   for (var i = 0; i < yourBooks.length; i++) {
@@ -89,6 +92,7 @@ function removeItem(bookTitle) {
   reloadList(yourBooks);
 }
 
+//Reload list after adding or removing books
 function reloadList(yourBooks) {
   // Save books to local storage
   localStorage.setItem("yourBooks", JSON.stringify(yourBooks));
