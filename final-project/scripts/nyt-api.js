@@ -14,10 +14,11 @@ books.open('GET', bestBooks);
 books.send();
 books.onload =  function () {
     let booksInfo = JSON.parse(books.responseText);
-    for (var i = 0; i < booksInfo.results.length; i++) {
-      //Instantiate new category
+    var sortedCategories = booksInfo.results.sort((a, b) => (a.list_name > b.list_name) ? 1 : -1);
+    console.log(sortedCategories);
+    for (var i = 0; i < sortedCategories.length; i++) {
+      //Create new category div
       var bookCategories = document.getElementById('bookCategories');
-      //Create first div and assign class
       var containerDiv = document.createElement('div');
       containerDiv.className = "categoryContent";
       bookCategories.append(containerDiv);
@@ -26,7 +27,7 @@ books.onload =  function () {
       var catDetails = document.createElement('div');
       catDetails.className = "listDetails";
       catDetails.id = "catDetails" + [i];
-      var categoryUrl = booksInfo.results[i].list_name_encoded;
+      var categoryUrl = sortedCategories[i].list_name_encoded;
       catDetails.style.display = "none";
       bookCategories.appendChild(catDetails);
 
@@ -34,7 +35,7 @@ books.onload =  function () {
       var innerDiv = document.createElement('div');
       innerDiv.className = "buttonAndCategoryName";
       innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick()' onclick='toggleDetails(" 
-      + i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + booksInfo.results[i].display_name;
+      + i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + sortedCategories[i].list_name;
       containerDiv.appendChild(innerDiv);
     }
 }
