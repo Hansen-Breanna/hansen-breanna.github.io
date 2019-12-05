@@ -330,6 +330,10 @@ footer {
   display: none;
 }
 
+#catDetails0, #catDetails1, #catDetails2 {
+  display: none;
+}
+
 @media only screen and (min-width: 700px) {
   main {
     margin-bottom: 70px;

@@ -1,10 +1,3 @@
-// //Using class to instantiate object
-// class Categories {
-//   constructor(name, url) {
-//       this.name = name;
-//       this.url = url;
-//   } 
-// }
 //NYT Best Seller Books
 
 //Home page categories
@@ -25,38 +18,37 @@ books.onload =  function () {
       //Add second div
       var catDetails = document.createElement('div');
       catDetails.classList += "listDetails";
-      catDetails.id = "catDetails" + [i];
-      var categoryUrl = sortedCategories[i].list_name_encoded;
+      var categoryName = "catDetails" + i;
+      catDetails.id = categoryName;
       catDetails.style.display = "none";
+      var categoryUrl = sortedCategories[i].list_name_encoded;
       bookCategories.appendChild(catDetails);
 
       //Add sub div to containerDiv, assign class, and append to containerDiv
       var innerDiv = document.createElement('div');
       innerDiv.className = "buttonAndCategoryName";
 
-      // //Create button
-      // var categoryButton = document.createElement('button');
-      // categoryButton.classList += "categoryItem";
-      // var categoryID = "categoryButton" + i;
-      // categoryButton.id = categoryID;
-      // //categoryButton.addEventListener('touch', toggleDetails(i, categoryUrl));
-      // // Get the element, add a click listener...
-      // document.getElementById(categoryID).addEventListener("touchstart", toggleDetails).bind(i, categoryUrl);
-      // innerDiv.appendChild(categoryButton);
+      //Create button
+      var categoryButton = document.createElement('button');
+      categoryButton.classList += "categoryItem";
+      var categoryID = "categoryButton" + i;
+      categoryButton.id = categoryID;
+      let j = i;
+      categoryButton.addEventListener("touchstart", poppingClick);
+      categoryButton.addEventListener("touchstart", function () { 
+        toggleDetails(j, categoryUrl);
+      });
+      innerDiv.appendChild(categoryButton);
 
-      // //Create arrow for button
-      // var arrowButton = document.createElement('span');
-      // arrowButton.classList += "down-arrow";
-      // categoryButton.appendChild(arrowButton);
+      //Create arrow for button
+      var arrowButton = document.createElement('span');
+      arrowButton.classList += "down-arrow";
+      categoryButton.appendChild(arrowButton);
 
-      // //Add category name
-      // var categoryName = document.createElement('span');
-      // categoryName.textContent = sortedCategories[i].list_name;
-      // innerDiv.appendChild(categoryName);
-
-
-      innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick(), toggleDetails(" 
-      + i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + sortedCategories[i].list_name;
+      //Add category name
+      var categoryName = document.createElement('span');
+      categoryName.textContent = sortedCategories[i].list_name;
+      innerDiv.appendChild(categoryName);
       containerDiv.appendChild(innerDiv);
     }
 }
