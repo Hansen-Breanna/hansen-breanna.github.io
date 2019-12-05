@@ -37,8 +37,14 @@ books.onload =  function () {
       // //Create button
       // var categoryButton = document.createElement('button');
       // categoryButton.classList += "categoryItem";
-      // categoryButton.id = "categoryButton" + i;
-      // categoryButton.addEventListener('touchstart', toggleDetails(i, categoryUrl));
+      // var categoryID = "categoryButton" + i;
+      // categoryButton.id = categoryID;
+      // //categoryButton.addEventListener('touch', toggleDetails(i, categoryUrl));
+      // // Get the element, add a click listener...
+      // document.getElementById(categoryID).addEventListener("touchstart", function openBox(i, categoryUrl) {
+      //     console.log("List opened.");
+      //     openCategory.addEventListener('touch', toggleDetails(i, categoryUrl));
+      // });
       // innerDiv.appendChild(categoryButton);
 
       // //Create arrow for button
@@ -57,10 +63,3 @@ books.onload =  function () {
       containerDiv.appendChild(innerDiv);
     }
 }
-
-// Get the element, add a click listener...
-document.getElementById("bookCategories").addEventListener("click", function(e) {
-  // e.target is the clicked element!
-  // If it was a list item
-      console.log("List opened.");
-   });

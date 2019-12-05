@@ -1,8 +1,0 @@
-{   
-  "urlList":[ 
-      {"name":"Home", "url" : "index.html"},
-      {"name":"About", "url":"about.html"},
-      {"name":"Feedback", "url" :"feedback.html"}]
-}
-
-
