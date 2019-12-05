@@ -29,37 +29,51 @@ $white: #fff;
     overflow-x: auto;
 }
 
-#list ul {
+#list {
+    ul {
     margin: 0;
-}
-
-#addedToList li:first-of-type {
-    padding-top: 0;
-}
-
-#list h2 {
-    text-decoration: none;
-    text-align: center;
+    }
+    h2 {
+        background-color: $dark-background;
+        color: $white;
+        margin: 0;
+        padding: 10px 0 15px 0;
+    }
 }
 
 .your-list {
     margin: 10px 15px;
     border: 2px outset $medium-accent;
     float: left;
+    &:active {
+        background-color: $dark-accent;
+    }
 }
 
 #close-list {
     margin: 15px;
     border: 2px outset $medium-accent;
     float: left;
-}
-.your-list:active, #close-list:active {
-    background-color: $dark-accent;
+    &:active {
+        background-color: $dark-accent;
+    }
 }
 
 #addedToList {
     list-style-type: none;
     padding: 0 15px;
+    li {
+        border-bottom: 1px solid $medium-gray;
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        &:first-of-type {
+            padding-top: 0;
+        }
+        &:last-of-type {
+            border: none;
+        }
+    }
 }
 
 /* Buttons */
@@ -75,26 +89,9 @@ canvas {
     margin: 0 10px;
 }
 
-#addedToList li {
-    border-bottom: 1px solid $medium-gray;
-    padding: 10px 0 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-#addedToList li:last-of-type {
-    border: none;
-}
-
 .titleText {
     position: absolute;
-    left: 95px;
-}
-#list h2 {
-    background-color: $dark-background;
-    color: $white;
-    margin: 0;
-    padding: 10px 0 15px 0;
+    left: 100px;
 }
 
 #buyBox {
@@ -109,11 +106,10 @@ canvas {
     bottom: 0;
     border: none;
     border-top: 1px solid $medium-gray;
-}
-
-#close-button button {
-    margin-top: 15px;
-}
+    button {
+        margin: 20px 15px;
+    }
+} 
 
 .remove {
     margin-right: 10px;
