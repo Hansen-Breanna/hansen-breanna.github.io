@@ -1,11 +1,13 @@
-//Using class to instantiate object
-class Books {
-  constructor(title, url, i) {
-      this.title = title;
-      this.url = url;
-      this.i = i;
-  } 
-}
+import { Books } from './books.js';
+
+// //Using class to instantiate object
+// class Books {
+//   constructor(title, url, i) {
+//       this.title = title;
+//       this.url = url;
+//       this.i = i;
+//   } 
+// }
 
 //Array for book list
 var yourBooks = [];

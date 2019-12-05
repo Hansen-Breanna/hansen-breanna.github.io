@@ -77,23 +77,23 @@ function listInCategory(listID, categoryUrl) {
             buttonsDiv.appendChild(amazonBuy);
     
 
-            // //Loop through and create all book info
-            // topBooks += "<div><h2 class='bookTitle'>" + number + ". " + title + "</h2><p class='noBottomMg'><strong>by:</strong> " 
-            // + listData.results.books[i].author + "</p><p class='noTopMg'><strong>ISBN: </strong>"
-            // + isbn + "</p>"
-            // + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />"
-            // + "<p>" + listData.results.books[i].description + "</p>"
-            // + "<div id='buttons'>"
-            // + "<button class='button-trio' type='button' onclick='addItem(&quot;" + title + "&quot;, &quot;" + bookURL + "&quot;)'>Add</button>"
-            // + "<button class='button-trio' type='button' onclick='removeItem(&quot;" + title + "&quot;)'>Remove</button>"
-            // + "<a href='" + bookURL
-            // + "'><button class='button-trio' type='button' onclick='buyItem()'>Amazon</button></a></div></div>";
+            //Loop through and create all book info
+            topBooks += "<div><h2 class='bookTitle'>" + number + ". " + title + "</h2><p class='noBottomMg'><strong>by:</strong> " 
+            + listData.results.books[i].author + "</p><p class='noTopMg'><strong>ISBN: </strong>"
+            + isbn + "</p>"
+            + "<img class='bookImage' src='" + listData.results.books[i].book_image + "' />"
+            + "<p>" + listData.results.books[i].description + "</p>"
+            + "<div id='buttons'>"
+            + "<button class='button-trio' type='button' onclick='addItem(&quot;" + title + "&quot;, &quot;" + bookURL + "&quot;)'>Add</button>"
+            + "<button class='button-trio' type='button' onclick='removeItem(&quot;" + title + "&quot;)'>Remove</button>"
+            + "<a href='" + bookURL
+            + "'><button class='button-trio' type='button' onclick='buyItem()'>Amazon</button></a></div></div>";
         }
-        // var details = document.getElementById("catDetails" + listID);
-        // var booksContainer = document.createElement('div');
-        // booksContainer.className = "booksContainer";
-        // details.appendChild(booksContainer);
-        // booksContainer.innerHTML = topBooks;
+        var details = document.getElementById("catDetails" + listID);
+        var booksContainer = document.createElement('div');
+        booksContainer.className = "booksContainer";
+        details.appendChild(booksContainer);
+        booksContainer.innerHTML = topBooks;
     }
   }
 

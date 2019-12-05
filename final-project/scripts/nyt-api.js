@@ -34,32 +34,29 @@ books.onload =  function () {
       var innerDiv = document.createElement('div');
       innerDiv.className = "buttonAndCategoryName";
 
-      // //Create button
-      // var categoryButton = document.createElement('button');
-      // categoryButton.classList += "categoryItem";
-      // var categoryID = "categoryButton" + i;
-      // categoryButton.id = categoryID;
-      // //categoryButton.addEventListener('touch', toggleDetails(i, categoryUrl));
-      // // Get the element, add a click listener...
-      // document.getElementById(categoryID).addEventListener("touchstart", function openBox(i, categoryUrl) {
-      //     console.log("List opened.");
-      //     openCategory.addEventListener('touch', toggleDetails(i, categoryUrl));
-      // });
-      // innerDiv.appendChild(categoryButton);
+      //Create button
+      var categoryButton = document.createElement('button');
+      categoryButton.classList += "categoryItem";
+      var categoryID = "categoryButton" + i;
+      categoryButton.id = categoryID;
+      //categoryButton.addEventListener('touch', toggleDetails(i, categoryUrl));
+      // Get the element, add a click listener...
+      document.getElementById(categoryID).addEventListener("touchstart", toggleDetails).bind(i, categoryUrl);
+      innerDiv.appendChild(categoryButton);
 
-      // //Create arrow for button
-      // var arrowButton = document.createElement('span');
-      // arrowButton.classList += "down-arrow";
-      // categoryButton.appendChild(arrowButton);
+      //Create arrow for button
+      var arrowButton = document.createElement('span');
+      arrowButton.classList += "down-arrow";
+      categoryButton.appendChild(arrowButton);
 
-      // //Add category name
-      // var categoryName = document.createElement('span');
-      // categoryName.textContent = sortedCategories[i].list_name;
-      // innerDiv.appendChild(categoryName);
+      //Add category name
+      var categoryName = document.createElement('span');
+      categoryName.textContent = sortedCategories[i].list_name;
+      innerDiv.appendChild(categoryName);
 
 
-      innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick(), toggleDetails(" 
-      + i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + sortedCategories[i].list_name;
+      //innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick(), toggleDetails(" 
+      //+ i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + sortedCategories[i].list_name;
       containerDiv.appendChild(innerDiv);
     }
 }
