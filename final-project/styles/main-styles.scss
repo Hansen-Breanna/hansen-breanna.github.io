@@ -6,35 +6,38 @@
 /* ----- Google fonts ----- */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+/* mixin */
+
+@mixin marg-pad($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
 /* ----- body ----- */
 
 body {
+    @include marg-pad(0, 0);
     font-family: Roboto, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 /* ----- header ----- */
 
 header {
+    @include marg-pad(0, 20px 0);
     background-color: $dark-background;
     color: $white;
-    margin: 0;
-    padding: 20px 0;
-    text-align: center;
     position: fixed;
+    text-align: center;
     top: 0;
     width: 100%;
     h1 {
-        margin: auto;
+        @include marg-pad(auto, 0 0 10px 0);
         font-size: 3em;
-        padding-bottom: 10px;
-        text-transform: uppercase;
-    
+        text-transform: uppercase;    
     }
     h2 {
-        font-weight: normal;
         font-size: 1.5em;
+        font-weight: normal;
         margin: auto;
         width: 90%;
     }
@@ -46,53 +49,52 @@ header {
 /* ----- main ----- */
 
 main {
-    min-height: 400px;
     background-color: $gray;
     margin: 135px -1px 50px 0;
+    min-height: 400px;
 }
 
 button {
     background-color: $medium-accent;
+    border: none;
     color: $dark-text;
     font-weight: bold;
     padding: 8px;
-    border: none;
 }
 
 /* ----- list data ----- */
 
 .buttonAndCategoryName {
+    @include marg-pad(0, 0 15px 0 0);
+    align-items: center;
     background-image: radial-gradient($light-background, $medium-background);
     border: none;
     border-bottom: 5px outset $medium-background;
     color: $white;
-    padding-right: 15px;  
-    margin: 0; 
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
 }
 
 /* ----- list details ----- */
 
 button.categoryItem {
-    height: 40px;
-    width: 40px;
     background: transparent;
     border: none;
     display: flex;
+    height: 40px;
     justify-content: center;
     padding-left: 15px;
+    width: 40px;
 }
 .down-arrow {
-    width: 0;
-    height: 0;
+    align-items: center;
+    border-color: $white transparent transparent transparent;
     border-style: solid;
     border-width: 10px 10px 0 10px;
-    border-color: $white transparent transparent transparent;
-    margin-right: 10px;
+    height: 0;
     line-height: 40px;
-    align-items: center;
+    margin-right: 10px;
+    width: 0;
 }
 
 #display-list {
@@ -103,9 +105,9 @@ button.categoryItem {
  
 footer {
     background-color: $dark-background;
+    bottom: -1px;
     height: 60px;
     position: fixed;
-    bottom: -1px;
     width: 100%;
 }
 
@@ -133,15 +135,14 @@ footer {
         height: 70px;
     }
     .large-ad {
+        border: none;
+        display: inline-block;
+        margin: 10px;
         position: absolute;
         right: 0;
-        display: inline-block;
-        border: none;
         width: 320px;
-        margin: 10px;
     }
     .amazonAd {
         display: none;
     }
-
 }
