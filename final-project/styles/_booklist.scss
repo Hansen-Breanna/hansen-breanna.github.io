@@ -1,0 +1,127 @@
+$dark-background: #062148;
+$medium-background: #2a5381;
+$light-background: #84a6c2;
+$medium-accent: #f59548;
+$dark-accent: #f27918;
+$dark-text: #000000;
+$medium-gray: #cecece;
+$gray: #e1e1e1;
+$white: #fff;
+
+.list {
+    display: none;
+    z-index: 10;
+}
+
+.display-list {
+    background-color: $white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101%;
+    max-height: 101%;
+    max-width: 500px;
+    margin: auto;
+    display: inline-block;
+    border: 3px solid $medium-gray;
+    overflow-x: hidden; 
+    overflow-x: auto;
+}
+
+#list ul {
+    margin: 0;
+}
+
+#addedToList li:first-of-type {
+    padding-top: 0;
+}
+
+#list h2 {
+    text-decoration: none;
+    text-align: center;
+}
+
+.your-list {
+    margin: 10px 15px;
+    border: 2px outset $medium-accent;
+    float: left;
+}
+
+#close-list {
+    margin: 15px;
+    border: 2px outset $medium-accent;
+    float: left;
+}
+.your-list:active, #close-list:active {
+    background-color: $dark-accent;
+}
+
+#addedToList {
+    list-style-type: none;
+    padding: 0 15px;
+}
+
+/* Buttons */
+
+canvas {
+    height: 30px;
+    width: 30px;
+    background-color: $medium-accent;
+    border: 1px outset $medium-accent;
+}
+
+.buyButtonBox {
+    margin: 0 10px;
+}
+
+#addedToList li {
+    border-bottom: 1px solid $medium-gray;
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+#addedToList li:last-of-type {
+    border: none;
+}
+
+.titleText {
+    position: absolute;
+    left: 95px;
+}
+#list h2 {
+    background-color: $dark-background;
+    color: $white;
+    margin: 0;
+    padding: 10px 0 15px 0;
+}
+
+#buyBox {
+    margin-left: 10px;
+}
+
+#close-button {
+    width: 100%;
+    background-color: $white;
+    height: 60px;
+    position: sticky;
+    bottom: 0;
+    border: none;
+    border-top: 1px solid $medium-gray;
+}
+
+#close-button button {
+    margin-top: 15px;
+}
+
+.remove {
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 550px) {
+    
+    .your-list {
+        margin: 20px 0 0 15px;
+    }
+}

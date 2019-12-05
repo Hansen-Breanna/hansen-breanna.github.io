@@ -1,0 +1,147 @@
+@import 'colors';
+@import 'accordian';
+@import 'booklist';
+@import 'pop-ups';
+
+/* ----- Google fonts ----- */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* ----- body ----- */
+
+body {
+    font-family: Roboto, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- header ----- */
+
+header {
+    background-color: $dark-background;
+    color: $white;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    h1 {
+        margin: auto;
+        font-size: 3em;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    
+    }
+    h2 {
+        font-weight: normal;
+        font-size: 1.5em;
+        margin: auto;
+        width: 90%;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+/* ----- main ----- */
+
+main {
+    min-height: 400px;
+    background-color: $gray;
+    margin: 135px -1px 50px 0;
+}
+
+button {
+    background-color: $medium-accent;
+    color: $dark-text;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+}
+
+/* ----- list data ----- */
+
+.buttonAndCategoryName {
+    background-image: radial-gradient($light-background, $medium-background);
+    border: none;
+    border-bottom: 5px outset $medium-background;
+    color: $white;
+    padding-right: 15px;  
+    margin: 0; 
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+/* ----- list details ----- */
+
+button.categoryItem {
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+}
+.down-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: $white transparent transparent transparent;
+    margin-right: 10px;
+    line-height: 40px;
+    align-items: center;
+}
+
+#display-list {
+    display: block;
+}
+
+/* ----- footer ----- */
+ 
+footer {
+    background-color: $dark-background;
+    height: 60px;
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+}
+
+/* ----- ads ----- */
+
+.verticalAd2 {
+    display: none;
+}
+
+.amazonAd {
+    position: absolute;
+    right: 0;
+}
+
+.large-ad {
+    display: none;
+}
+
+@media only screen and (min-width: 550px) {
+
+    main {
+        margin-bottom: 70px;
+    }
+    footer {
+        height: 70px;
+    }
+    .large-ad {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        border: none;
+        width: 320px;
+        margin: 10px;
+    }
+    .amazonAd {
+        display: none;
+    }
+
+}

@@ -1,49 +1,51 @@
 .listDetails {
     display: none;
 }
+
 .booksContainer {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
-    margin-left: 5px;
+    margin: 0 0 10px 5px;
+    div {
+        background-color: $gray;
+        margin: 10px 10px 0 5px;
+        padding: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 40vw;
+    }
 }
-.booksContainer div {
-    background-color: #fff;
-    margin: 10px 10px 0 5px;
-    padding: 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    width: 40vw;
-}
-.booksContainer {
-    margin-bottom: 10px;
-}
+
 .bookTitle {
     margin: 0;
     padding: 0;
-    color: #062148;
+    color: $dark-background;
 }
+
 .bookImage {
     width: 40vw;
     height: auto;
     padding-top: 15px;
     margin: auto;
 }
+
 /* ----- buttons ----- */
 
 .button-trio {
     margin: 5px;
     width: 80px; 
-}
-.button-trio:active, .removeButtonBox:active, .buyButtonBox:active {
-    animation: buttonClick 2s;
+    &:active, &:active, &:active {
+        animation: buttonClick 2s;
+    }
 }
 @keyframes buttonClick {
-    0% {background-color: #f59548; border: 2px inset #f59548; transform: scale(1.1);} 
-    15% {background-color: #f27918; border: 2px inset #f27918;; transform: scale(1.1);}
-    90% {background-color: #f27918; border: 2px inset #f27918;; transform: scale(1.1);}
-    100% {background-color: #f59548; border: 2px outset #f59548; transform: scale(1.1);}
+    0% {background-color: $medium-accent; border: 2px inset $medium-accent; transform: scale(1.1);} 
+    15% {background-color: $dark-accent; border: 2px inset $dark-accent; transform: scale(1.1);}
+    90% {background-color: $dark-accent; border: 2px inset $dark-accent; transform: scale(1.1);}
+    100% {background-color: $medium-accent; border: 2px outset $medium-accent; transform: scale(1.1);}
 }
+
 #buttons {
     display: flex;
     flex-flow: column nowrap;
@@ -68,9 +70,9 @@
 
     .booksContainer {
         grid-template-columns: 33% 33% 33%;
-    }
-    .booksContainer div {
-        width: 30vw;
+        div {
+            width: 30vw;
+        }
     }
     .bookImage {
         margin: auto;

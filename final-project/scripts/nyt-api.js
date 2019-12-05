@@ -25,7 +25,7 @@ books.onload =  function () {
 
       //Add second div
       var catDetails = document.createElement('div');
-      catDetails.className = "listDetails";
+      catDetails.classList += "listDetails";
       catDetails.id = "catDetails" + [i];
       var categoryUrl = sortedCategories[i].list_name_encoded;
       catDetails.style.display = "none";
@@ -34,8 +34,34 @@ books.onload =  function () {
       //Add sub div to containerDiv, assign class, and append to containerDiv
       var innerDiv = document.createElement('div');
       innerDiv.className = "buttonAndCategoryName";
-      innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick()' onclick='toggleDetails(" 
+
+      // //Create button
+      // var categoryButton = document.createElement('button');
+      // categoryButton.classList += "categoryItem";
+      // categoryButton.id = "categoryButton" + i;
+      // categoryButton.addEventListener('touchstart', toggleDetails(i, categoryUrl));
+      // innerDiv.appendChild(categoryButton);
+
+      // //Create arrow for button
+      // var arrowButton = document.createElement('span');
+      // arrowButton.classList += "down-arrow";
+      // categoryButton.appendChild(arrowButton);
+
+      // //Add category name
+      // var categoryName = document.createElement('span');
+      // categoryName.textContent = sortedCategories[i].list_name;
+      // innerDiv.appendChild(categoryName);
+
+
+      innerDiv.innerHTML = "<button type='button' class='categoryItem' ontouchstart='poppingClick(), toggleDetails(" 
       + i + ",&apos;" + categoryUrl + "&apos;)'><span class='down-arrow'></span></button>" + sortedCategories[i].list_name;
       containerDiv.appendChild(innerDiv);
     }
 }
+
+// Get the element, add a click listener...
+document.getElementById("bookCategories").addEventListener("click", function(e) {
+  // e.target is the clicked element!
+  // If it was a list item
+      console.log("List opened.");
+   });
