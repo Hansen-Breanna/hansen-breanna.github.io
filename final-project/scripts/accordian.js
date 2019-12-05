@@ -38,10 +38,8 @@ function listInCategory(listID, categoryUrl) {
             var details = document.getElementById("catDetails" + listID);
             var containerDiv = document.createElement('div');
             containerDiv.classList += "booksContainer";
-            details.appendChild(containerDiv);
             var secondContainer = document.createElement('div');
-            containerDiv.appendChild(secondContainer);
-            //Create book title
+            //Content for second div
             var bookHeader = document.createElement('h2');
             bookHeader.textContent = number + ". " + title;
             secondContainer.appendChild(bookHeader);
@@ -60,6 +58,7 @@ function listInCategory(listID, categoryUrl) {
             var bookDescription = document.createElement('p');
             bookDescription.textContent = listData.results.books[i].description;
             secondContainer.appendChild(bookDescription);
+            //Content for buttons div
             var buttonsDiv = document.createElement('div');
             buttonsDiv.id = "buttons";
             secondContainer.appendChild(buttonsDiv);
@@ -75,6 +74,9 @@ function listInCategory(listID, categoryUrl) {
             buttonsDiv.appendChild(addButton);
             buttonsDiv.appendChild(removeButton);
             buttonsDiv.appendChild(amazonBuy);
+            //Append containerDiv and secondContainer
+            containerDiv.appendChild(secondContainer);
+            details.appendChild(containerDiv);
     
 
             //Loop through and create all book info
