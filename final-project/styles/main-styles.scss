@@ -1,7 +1,6 @@
 @import 'colors';
 @import 'accordian';
 @import 'booklist';
-@import 'pop-ups';
 
 /* ----- Google fonts ----- */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -118,10 +117,6 @@ footer {
 }
 
 /* ----- ads ----- */
-
-.verticalAd2 {
-    display: none;
-}
 
 .amazonAd {
     position: absolute;

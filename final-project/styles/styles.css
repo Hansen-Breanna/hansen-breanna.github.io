@@ -219,38 +219,6 @@ canvas {
     margin: 20px 0 0 15px;
   }
 }
-#pop-up {
-  position: relative;
-  top: 200px;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.verticalAd {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-52%, -50%);
-  height: 500px;
-  width: 160px;
-  opacity: 0;
-  animation: popUp 5s ease forwards;
-}
-
-@keyframes popUp {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    transform: translate(-52%, -50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-52%, -50%) scale(0);
-    opacity: 1;
-  }
-}
 /* ----- Google fonts ----- */
 /* mixin */
 /* ----- body ----- */
@@ -353,10 +321,6 @@ footer {
 }
 
 /* ----- ads ----- */
-.verticalAd2 {
-  display: none;
-}
-
 .amazonAd {
   position: absolute;
   right: 0;
