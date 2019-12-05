@@ -1,3 +1,5 @@
+/* mixin */
+/* main sass */
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 .listDetails {
   display: none;
@@ -10,24 +12,24 @@
   margin: 0 0 10px 5px;
 }
 .booksContainer div {
+  margin: 10px 10px 0 5px;
+  padding: 10px;
   background-color: #fff;
   display: flex;
   flex-flow: column nowrap;
-  margin: 10px 10px 0 5px;
-  padding: 10px;
   width: 40vw;
 }
 
 .bookTitle {
-  color: #062148;
   margin: 0;
   padding: 0;
+  color: #062148;
 }
 
 .bookImage {
-  height: auto;
-  padding-top: 15px;
   margin: auto;
+  padding: 15px 0 0 0;
+  height: auto;
   width: 40vw;
 }
 
@@ -63,12 +65,12 @@
   }
 }
 #buttons {
+  margin: 10px 0 0 0;
+  padding: 0;
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 10px 0 0 0;
-  padding: 0;
 }
 
 /* text styling */
@@ -90,17 +92,17 @@
   }
 
   .bookImage {
-    height: auto;
     margin: auto;
-    padding-top: 15px;
+    padding: 15px 0 0 0;
+    height: auto;
     width: 28vw;
   }
 
   #buttons {
-    display: flex;
-    flex-flow: row nowrap;
     margin: 5px auto 15px auto;
     padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
   }
 }
 .list {
