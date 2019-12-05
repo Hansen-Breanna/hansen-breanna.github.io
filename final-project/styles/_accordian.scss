@@ -5,6 +5,13 @@
     padding: $padding;
 }
 
+@mixin flex($display, $flow, $justify, $align) {
+    display: $display;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 /* main sass */
 
 .listDetails {
@@ -17,10 +24,9 @@
     justify-items: center;
     margin: 0 0 10px 5px;
     div {
+        @include flex(flex, column nowrap, center, flex-start);
         @include marg-pad(10px 10px 0 5px, 10px);
         background-color: $white;
-        display: flex;
-        flex-flow: column nowrap;
         width: 40vw;
     }
 }
@@ -31,7 +37,7 @@
 }
 
 .bookImage {
-    @include marg-pad(auto, 15px 0 0 0);
+    @include marg-pad(auto, 15px 0);
     height: auto;
     width: 40vw;
 }
@@ -53,11 +59,8 @@
 }
 
 #buttons {
+    @include flex(flex, column nowrap, center, center);
     @include marg-pad(10px 0 0 0, 0);
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
 }
 
 /* text styling */
@@ -71,22 +74,23 @@
 
 /* ----- media queries ----- */
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
 
     .booksContainer {
         grid-template-columns: 33% 33% 33%;
         div {
-            width: 30vw;
+            width: 29vw;
+        }
+        p, h2 {
+            @include marg-pad(auto, 0);
+            width: 27vw;
         }
     }
     .bookImage {
-        @include marg-pad(auto, 15px 0 0 0);
-        height: auto;
         width: 28vw;
     }
     #buttons {
+        @include flex(flex, row nowrap, center, center);
         @include marg-pad(5px auto 15px auto, 0);
-        display: flex;
-        flex-flow: row nowrap;
     }
 }

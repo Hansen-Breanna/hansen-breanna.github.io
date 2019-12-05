@@ -1,3 +1,12 @@
+/* mixin */
+
+@mixin marg-pad($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+/* main sass */
+
 .list {
     display: none;
     z-index: 10;
@@ -24,28 +33,28 @@
     margin: 0;
     }
     h2 {
+        @include marg-pad(0, 20px 0);
         background-color: $dark-background;
         color: $white;
-        margin: 20px 0;
+        font-size: 1.875em;
+        text-align: center;
+    }
+}
+
+.your-list, #close-list {
+    border: 2px outset $medium-accent;
+    float: left;
+    &:active {
+        background-color: $dark-accent;
     }
 }
 
 .your-list {
-    border: 2px outset $medium-accent;
-    float: left;
     margin: 15px 0 10px 15px;
-    &:active {
-        background-color: $dark-accent;
-    }
 }
 
 #close-list {
-    border: 2px outset $medium-accent;
-    float: left;
     margin: 15px;
-    &:active {
-        background-color: $dark-accent;
-    }
 }
 
 #addedToList {
@@ -104,7 +113,7 @@ canvas {
     margin-right: 10px;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
     
     .your-list {
         margin: 20px 0 0 15px;

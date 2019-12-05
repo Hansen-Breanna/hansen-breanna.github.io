@@ -12,11 +12,13 @@
   margin: 0 0 10px 5px;
 }
 .booksContainer div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
   margin: 10px 10px 0 5px;
   padding: 10px;
   background-color: #fff;
-  display: flex;
-  flex-flow: column nowrap;
   width: 40vw;
 }
 
@@ -28,7 +30,7 @@
 
 .bookImage {
   margin: auto;
-  padding: 15px 0 0 0;
+  padding: 15px 0;
   height: auto;
   width: 40vw;
 }
@@ -65,12 +67,12 @@
   }
 }
 #buttons {
-  margin: 10px 0 0 0;
-  padding: 0;
-  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  margin: 10px 0 0 0;
+  padding: 0;
 }
 
 /* text styling */
@@ -83,28 +85,34 @@
 }
 
 /* ----- media queries ----- */
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
   .booksContainer {
     grid-template-columns: 33% 33% 33%;
   }
   .booksContainer div {
-    width: 30vw;
+    width: 29vw;
+  }
+  .booksContainer p, .booksContainer h2 {
+    margin: auto;
+    padding: 0;
+    width: 27vw;
   }
 
   .bookImage {
-    margin: auto;
-    padding: 15px 0 0 0;
-    height: auto;
     width: 28vw;
   }
 
   #buttons {
-    margin: 5px auto 15px auto;
-    padding: 0;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto 15px auto;
+    padding: 0;
   }
 }
+/* mixin */
+/* main sass */
 .list {
   display: none;
   z-index: 10;
@@ -130,27 +138,28 @@
   margin: 0;
 }
 #list h2 {
+  margin: 0;
+  padding: 20px 0;
   background-color: #062148;
   color: #fff;
-  margin: 20px 0;
+  font-size: 1.875em;
+  text-align: center;
+}
+
+.your-list, #close-list {
+  border: 2px outset #f59548;
+  float: left;
+}
+.your-list:active, #close-list:active {
+  background-color: #f27918;
 }
 
 .your-list {
-  border: 2px outset #f59548;
-  float: left;
   margin: 15px 0 10px 15px;
-}
-.your-list:active {
-  background-color: #f27918;
 }
 
 #close-list {
-  border: 2px outset #f59548;
-  float: left;
   margin: 15px;
-}
-#close-list:active {
-  background-color: #f27918;
 }
 
 #addedToList {
@@ -208,7 +217,7 @@ canvas {
   margin-right: 10px;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
   .your-list {
     margin: 20px 0 0 15px;
   }
@@ -266,6 +275,10 @@ button {
 
 /* ----- list data ----- */
 .buttonAndCategoryName {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0;
   padding: 0 15px 0 0;
   align-items: center;
@@ -273,8 +286,6 @@ button {
   border: none;
   border-bottom: 5px outset #2a5381;
   color: #fff;
-  display: flex;
-  flex-flow: row nowrap;
 }
 
 /* ----- list details ----- */
@@ -326,7 +337,7 @@ footer {
   display: none;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
   main {
     margin-bottom: 70px;
   }

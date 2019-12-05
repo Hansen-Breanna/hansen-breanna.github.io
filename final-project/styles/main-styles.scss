@@ -13,6 +13,13 @@
     padding: $padding;
 }
 
+@mixin flex($display, $flow, $justify, $align) {
+    display: $display;
+    flex-flow: $flow;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 /* ----- body ----- */
 
 body {
@@ -65,14 +72,13 @@ button {
 /* ----- list data ----- */
 
 .buttonAndCategoryName {
+    @include flex(flex, row nowrap, flex-start, center);
     @include marg-pad(0, 0 15px 0 0);
     align-items: center;
     background-image: radial-gradient($light-background, $medium-background);
     border: none;
     border-bottom: 5px outset $medium-background;
     color: $white;
-    display: flex;
-    flex-flow: row nowrap;
 }
 
 /* ----- list details ----- */
@@ -126,7 +132,7 @@ footer {
     display: none;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 700px) {
 
     main {
         margin-bottom: 70px;
