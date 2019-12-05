@@ -15,7 +15,6 @@ books.send();
 books.onload =  function () {
     let booksInfo = JSON.parse(books.responseText);
     var sortedCategories = booksInfo.results.sort((a, b) => (a.list_name > b.list_name) ? 1 : -1);
-    console.log(sortedCategories);
     for (var i = 0; i < sortedCategories.length; i++) {
       //Create new category div
       var bookCategories = document.getElementById('bookCategories');

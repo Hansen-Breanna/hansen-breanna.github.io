@@ -36,13 +36,12 @@ $white: #fff;
     h2 {
         background-color: $dark-background;
         color: $white;
-        margin: 0;
-        padding: 10px 0 15px 0;
+        margin: 20px 0;
     }
 }
 
 .your-list {
-    margin: 10px 15px;
+    margin: 15px 0 10px 15px;
     border: 2px outset $medium-accent;
     float: left;
     &:active {
