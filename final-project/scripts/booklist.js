@@ -105,7 +105,6 @@ function reloadList(yourBooks) {
   }
 }
 
-
 //Canvas Button
 function designButtons() {
   for (var count = 0; count < storageArray.length; count++) {
