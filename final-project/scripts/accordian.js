@@ -84,12 +84,13 @@ function listInCategory(listID, categoryUrl) {
             removeButton.textContent = "Remove";
             removeButton.addEventListener("touchstart", poppingClick);
             removeButton.addEventListener("touchstart", function () {
-                removeItem(title);
+                removeItem(passedTitle);
             });
             //Buy button
             var amazonBuy = document.createElement('button');
             amazonBuy.classList += "button-trio";
             amazonBuy.textContent = "Amazon";
+            amazonBuy.src = bookURL;
             amazonBuy.addEventListener("touchstart", poppingClick);
             //Appending
             buttonsDiv.appendChild(addButton);
