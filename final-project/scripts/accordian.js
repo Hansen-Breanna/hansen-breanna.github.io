@@ -92,6 +92,9 @@ function listInCategory(listID, categoryUrl) {
             amazonBuy.textContent = "Amazon";
             amazonBuy.href = bookURL;
             amazonBuy.addEventListener("touchstart", poppingClick);
+            amazonBuy.addEventListener("touchstart", function () {
+                window.alert("hello");
+            });
             //Appending
             buttonsDiv.appendChild(addButton);
             buttonsDiv.appendChild(removeButton);
@@ -107,7 +110,7 @@ function listInCategory(listID, categoryUrl) {
 function toggleDetails(listID, categoryUrl) {
     var categoryName = "catDetails" + listID;
     var details = document.getElementById(categoryName);
-    console.log(categoryName);
+    console.log(categoryUrl);
     if (details.style.display == 'none') {
         details.style.display = 'block';
         listInCategory(listID, categoryUrl);
