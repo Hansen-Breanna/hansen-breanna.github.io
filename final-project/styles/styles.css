@@ -301,10 +301,6 @@ button.categoryItem {
   width: 40px;
 }
 
-.categoryItem span {
-  font-size: 1.275em;
-}
-
 .down-arrow {
   align-items: center;
   border-color: #fff transparent transparent transparent;
