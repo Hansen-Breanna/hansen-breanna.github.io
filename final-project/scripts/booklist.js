@@ -39,7 +39,7 @@ for (i = 0; i < storageArray.length; i++) {
     //create buy button
     var buyBox = document.createElement('canvas');
     buyBox.id = "buyBox" + i;
-    var url = storageArray[i].url;
+    let url = storageArray[i].url;
     buyBox.ontouchstart = function() {
       window.location.href = url;
     };
