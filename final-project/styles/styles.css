@@ -96,7 +96,7 @@
   .booksContainer div {
     width: 29vw;
   }
-  .booksContainer p, .booksContainer h2 {
+  .booksContainer h2, .booksContainer p {
     margin: auto;
     padding: 0;
     width: 27vw;

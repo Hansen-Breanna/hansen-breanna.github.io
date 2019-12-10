@@ -6,8 +6,6 @@ function listInCategory(listID, categoryUrl) {
     lists.send();
     lists.onload =  function (details) {
         let listData = JSON.parse(lists.responseText);
-
-        var topBooks = "";
     
         //Create divs
         var details = document.getElementById("catDetails" + listID);
@@ -24,7 +22,6 @@ function listInCategory(listID, categoryUrl) {
             function titleCase(str) { //Function obtained from the internet and altered
                 var splitStr = str.toLowerCase().split(' ');
                 for (var i = 0; i < splitStr.length; i++) {
-                    // You do not need to check if i is larger than splitStr length, as your for does that for you
                     // Assign it back to the array
                     splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
                 }
@@ -119,4 +116,3 @@ function toggleDetails(listID, categoryUrl) {
         details.style.display = 'none';
     }
 }
-

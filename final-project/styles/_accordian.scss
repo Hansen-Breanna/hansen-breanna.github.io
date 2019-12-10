@@ -85,7 +85,7 @@
         div {
             width: 29vw;
         }
-        p, h2 {
+        h2, p {
             @include marg-pad(auto, 0);
             width: 27vw;
         }
