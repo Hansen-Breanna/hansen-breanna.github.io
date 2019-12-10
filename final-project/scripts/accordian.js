@@ -90,10 +90,11 @@ function listInCategory(listID, categoryUrl) {
             var amazonBuy = document.createElement('button');
             amazonBuy.classList += "button-trio";
             amazonBuy.textContent = "Amazon";
-            amazonBuy.href = bookURL;
+            let passedURL = bookURL;
+            amazonBuy.href = passedURL;
             amazonBuy.addEventListener("touchstart", poppingClick);
             amazonBuy.addEventListener("touchstart", function () {
-                window.open(bookURL);
+                window.open(passedURL);
             });
             //Appending
             buttonsDiv.appendChild(addButton);
