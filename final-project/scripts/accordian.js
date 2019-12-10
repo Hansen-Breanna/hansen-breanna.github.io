@@ -66,14 +66,17 @@ function listInCategory(listID, categoryUrl) {
             //Content for buttons div
             var buttonsDiv = document.createElement('div');
             buttonsDiv.id = "buttons";
+            
             //Add button
             var addButton = document.createElement('button');
             addButton.classList += "button-trio";
             addButton.textContent = "Add";
             let passedTitle = title;
+            let passedURL = bookURL;
+            console.log(passedURL);
             addButton.addEventListener("touchstart", poppingClick);
             addButton.addEventListener("touchstart", function () {
-                addItem(passedTitle, bookURL);
+                addItem(passedTitle, passedURL);
             });
             //Remove button
             var removeButton = document.createElement('button');
@@ -87,7 +90,6 @@ function listInCategory(listID, categoryUrl) {
             var amazonBuy = document.createElement('button');
             amazonBuy.classList += "button-trio";
             amazonBuy.textContent = "Amazon";
-            let passedURL = bookURL;
             amazonBuy.href = passedURL;
             amazonBuy.addEventListener("touchstart", poppingClick);
             amazonBuy.addEventListener("touchstart", function () {

@@ -16,7 +16,6 @@ if (!!storageArray) {
   designButtons();
 }
 else {
-  console.log("test");
   localStorage.setItem("yourBooks", JSON.stringify([]));
 }
 
@@ -31,7 +30,6 @@ for (i = 0; i < storageArray.length; i++) {
     var removeBox = document.createElement('canvas');
     removeBox.id = "removeBox" + i;
     removeBox.classList += "remove";
-    removeBox.addEventListener("touchstart", poppingClick);
     removeBox.addEventListener('touchstart', function(event) {
       var removeTitle = event.target.parentNode.textContent;
       removeItem(removeTitle);
@@ -41,7 +39,7 @@ for (i = 0; i < storageArray.length; i++) {
     //create buy button
     var buyBox = document.createElement('canvas');
     buyBox.id = "buyBox" + i;
-    var url = storageArray[i].url
+    var url = storageArray[i].url;
     buyBox.ontouchstart = function() {
       window.location.href = url;
     };
