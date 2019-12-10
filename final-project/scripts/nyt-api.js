@@ -13,6 +13,7 @@ books.onload =  function () {
       var bookCategories = document.getElementById('bookCategories');
       var containerDiv = document.createElement('div');
       containerDiv.className = "categoryContent";
+      bookCategories.append(containerDiv);
 
       //Add second div
       var catDetails = document.createElement('div');
@@ -49,7 +50,6 @@ books.onload =  function () {
       var categoryName = document.createElement('span');
       categoryName.textContent = sortedCategories[i].list_name;
       innerDiv.appendChild(categoryName);
-      bookCategories.append(containerDiv);
       containerDiv.appendChild(innerDiv);
     }
 }
