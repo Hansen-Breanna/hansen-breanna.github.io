@@ -73,8 +73,8 @@ function listInCategory(listID, categoryUrl) {
             addButton.textContent = "Add";
             let passedTitle = title;
             let passedURL = bookURL;
-            addButton.addEventListener("touchstart", poppingClick);
-            addButton.addEventListener("touchstart", function () {
+            addButton.addEventListener("click", poppingClick);
+            addButton.addEventListener("click", function () {
                 addItem(passedTitle, passedURL);
             });
             //Remove button
