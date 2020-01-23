@@ -29,7 +29,7 @@ for (i = 0; i < storageArray.length; i++) {
     var removeBox = document.createElement('canvas');
     removeBox.id = "removeBox" + i;
     removeBox.classList += "remove";
-    removeBox.addEventListener('touchstart', function(event) {
+    removeBox.addEventListener('click', function(event) {
       var removeTitle = event.target.parentNode.textContent;
       removeItem(removeTitle);
     });
