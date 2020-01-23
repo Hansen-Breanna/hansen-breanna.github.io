@@ -29,7 +29,7 @@ for (i = 0; i < storageArray.length; i++) {
     var removeBox = document.createElement('canvas');
     removeBox.id = "removeBox" + i;
     removeBox.classList += "remove";
-    removeBox.addEventListener('click', function(event) {
+    removeBox.addEventListener('touchstart', function(event) {
       var removeTitle = event.target.parentNode.textContent;
       removeItem(removeTitle);
     });
@@ -39,7 +39,7 @@ for (i = 0; i < storageArray.length; i++) {
     var buyBox = document.createElement('canvas');
     buyBox.id = "buyBox" + i;
     let url = storageArray[i].url;
-    buyBox.onclick = function() {
+    buyBox.ontouchstart = function() {
       window.location.href = url;
     };
     listItem.appendChild(buyBox); 
