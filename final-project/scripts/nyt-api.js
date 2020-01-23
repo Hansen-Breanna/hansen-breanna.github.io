@@ -35,8 +35,8 @@ books.onload =  function () {
       categoryButton.id = categoryID;
       let j = i;
       let catURL = categoryUrl;
-      categoryButton.addEventListener("click", poppingClick);
-      categoryButton.addEventListener("click", function () { 
+      categoryButton.addEventListener("touchstart", poppingClick);
+      categoryButton.addEventListener("touchstart", function () { 
         toggleDetails(j, catURL);
       });
       innerDiv.appendChild(categoryButton);
