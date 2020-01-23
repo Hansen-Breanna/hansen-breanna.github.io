@@ -81,8 +81,8 @@ function listInCategory(listID, categoryUrl) {
             var removeButton = document.createElement('button');
             removeButton.classList += "button-trio";
             removeButton.textContent = "Remove";
-            removeButton.addEventListener("touchstart", poppingClick);
-            removeButton.addEventListener("touchstart", function () {
+            removeButton.addEventListener("click", poppingClick);
+            removeButton.addEventListener("click", function () {
                 removeItem(passedTitle);
             });
             //Buy button
@@ -90,8 +90,8 @@ function listInCategory(listID, categoryUrl) {
             amazonBuy.classList += "button-trio";
             amazonBuy.textContent = "Amazon";
             amazonBuy.href = passedURL;
-            amazonBuy.addEventListener("touchstart", poppingClick);
-            amazonBuy.addEventListener("touchstart", function () {
+            amazonBuy.addEventListener("click", poppingClick);
+            amazonBuy.addEventListener("click", function () {
                 window.open(passedURL);
             });
             //Appending
