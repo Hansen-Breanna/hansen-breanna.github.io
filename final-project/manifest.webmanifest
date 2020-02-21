@@ -3,17 +3,17 @@
     "short_name": "Best Reads",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color": "ffffff",
+    "background_color": "#ffffff",
     "description": "NYT Best Sellers Book List",
     "icons": [
         {
-            "src": "images/best-reads-favicon.png",
-            "sizes": "16x16",
+            "src": "images/best-reads-icon-144.png",
+            "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "images/best-reads-favicon.png",
-            "sizes": "16x16",
+            "src": "images/best-reads-icon-144.png",
+            "sizes": "144x144",
             "type": "image/png"  
         }
     ]
