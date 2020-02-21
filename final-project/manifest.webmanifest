@@ -1,0 +1,20 @@
+{
+    "name": "Best Reads",
+    "short_name": "Best Reads",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "ffffff",
+    "description": "NYT Best Sellers Book List",
+    "icons": [
+        {
+            "src": "images/best-reads-favicon.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "images/best-reads-favicon.png",
+            "sizes": "16x16",
+            "type": "image/png"  
+        }
+    ]
+}

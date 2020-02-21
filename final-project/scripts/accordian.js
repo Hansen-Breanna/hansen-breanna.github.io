@@ -1,6 +1,7 @@
 //Lists data
 function listInCategory(listID, categoryUrl) {
     let currentLists = 'https://api.nytimes.com/svc/books/v3/lists/current/' + categoryUrl + '?api-key=diIY45XysDkQAiOZr6dGSPoNM5ARPGeg';
+    console.log(currentLists);
     let lists = new XMLHttpRequest();
     lists.open('GET', currentLists);
     lists.send();
