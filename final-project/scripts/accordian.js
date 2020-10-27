@@ -74,16 +74,16 @@ function listInCategory(listID, categoryUrl) {
             addButton.textContent = "Add";
             let passedTitle = title;
             let passedURL = bookURL;
-            addButton.addEventListener("onclick", poppingClick);
-            addButton.addEventListener("onclick", function () {
+            addButton.addEventListener("click", poppingClick);
+            addButton.addEventListener("click", function () {
                 addItem(passedTitle, passedURL);
             });
             //Remove button
             var removeButton = document.createElement('button');
             removeButton.classList += "button-trio";
             removeButton.textContent = "Remove";
-            removeButton.addEventListener("onclick", poppingClick);
-            removeButton.addEventListener("onclick", function () {
+            removeButton.addEventListener("click", poppingClick);
+            removeButton.addEventListener("click", function () {
                 removeItem(passedTitle);
             });
             //Buy button
@@ -91,8 +91,8 @@ function listInCategory(listID, categoryUrl) {
             amazonBuy.classList += "button-trio";
             amazonBuy.textContent = "Amazon";
             amazonBuy.href = passedURL;
-            amazonBuy.addEventListener("onclick", poppingClick);
-            amazonBuy.addEventListener("onclick", function () {
+            amazonBuy.addEventListener("click", poppingClick);
+            amazonBuy.addEventListener("click", function () {
                 window.open(passedURL);
             });
             //Appending
